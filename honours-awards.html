@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <head>
+   <!-- Include Meta Tags Here -->
+   <meta charset="utf-8"/>
+   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+   <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+   <meta content="width=device-width, height=device-height, initial-scale=1 user-scalable=no, shrink-to-fit=no" name="viewport"/>
+   <meta content="#000000" name="theme-color">
+    <meta content="Portfolio, Programmer, GameDev" name="keywords"/>
+    <title>
+     Behram Khan | Honours &amp; Awards
+    </title>
+    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta content="Behram Khan | Honours &amp; Awards" name="og:title"/>
+    <meta content="I'm a Gameplay Programmer!" name="og:description"/>
+    <meta content="/amy-portfolio/assets/images/meta.jpg" name="og:image"/>
+    <meta content="Behram Khan | Honours &amp; Awards" name="og:image:alt"/>
+    <meta content="/honours-awards" name="og:url"/>
+    <meta content="https://www.facebook.com/" name="article:author"/>
+    <meta content="Behram Khan | Honours &amp; Awards" name="og:site_name"/>
+    <meta content="website" name="og:type"/>
+    <!-- Twitter -->
+    <meta content="summary_large_image" property="twitter:card">
+     <meta content="Behram Khan | Honours &amp; Awards" name="twitter:title"/>
+     <meta content="I'm a Gameplay Programmer!" name="twitter:description"/>
+     <meta content="@" name="twitter:site"/>
+     <meta content="@" name="twitter:creator"/>
+     <meta content="/amy-portfolio/assets/images/meta.jpg" name="twitter:image:src"/>
+     <!-- Search Engine -->
+     <meta content="I'm a Gameplay Programmer!" name="description"/>
+     <meta content="/amy-portfolio/assets/images/meta.jpg" name="image"/>
+     <!-- Schema.org for Google -->
+     <meta content="Behram Khan | Honours &amp; Awards" itemprop="name"/>
+     <meta content="Behram Khan" name="author">
+      <meta content="I'm a Gameplay Programmer!" itemprop="description"/>
+      <meta content="/amy-portfolio/assets/images/meta.jpg" itemprop="image"/>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SJTTGX1K8N">
+      </script>
+      <script>
+       window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-SJTTGX1K8N');
+      </script>
+      <title>
+       Behram Khan
+      </title>
+      <link href="assets\css\style.css" rel="stylesheet"/>
+      <script crossorigin="anonymous" src="https://kit.fontawesome.com/6a97161b76.js">
+      </script>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+      <link href="assets\images\logo.png" rel="shortcut icon" type="image/x-icon"/>
+      <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js">
+      </script>
+     </meta>
+    </meta>
+   </meta>
+  </head>
+  <style>
+   .experience-card {
+            position: relative;
+            cursor: pointer;
+            background-color: #f5f5f5;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+            .experience-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            .experience-card .title {
+                font-size: clamp(1rem, 2vw, 1.25rem);
+                font-weight: bold;
+                margin-bottom: 0.5rem;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+
+            .experience-card .position {
+                font-size: 0.9rem;
+                font-weight: bold;
+                padding: 0.25em 0.5em;
+                border-radius: 0.25rem;
+                margin-bottom: 0.5rem;
+                display: inline-block;
+                color: white;
+            }
+
+            .experience-card .dates {
+                font-size: 0.9rem;
+                color: #777;
+            }
+
+        .tag {
+            margin: 5px !important;
+        }
+
+        @media (max-width: 768px) {
+            .column.is-two-fifths-mobile {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        #modal-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.25rem;
+        }
+
+        #modal-dates {
+            font-size: 0.9rem;
+            color: #777;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        #modal-description {
+            line-height: 1.6;
+        }
+
+        #modal-links-container .button {
+            background-color: #3273dc;
+            color: #fff;
+            border: none;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.85rem;
+        }
+
+            #modal-links-container .button:hover {
+                background-color: #275fad;
+            }
+
+        .modal-content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 90%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            overflow-y: auto;
+            max-height: 80%;
+            position: relative;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: #aaa;
+        }
+
+            .close-button:hover {
+                color: #333;
+            }
+
+        .card-image .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+  </style>
+ </head>
+ <body>
+  <nav aria-label="main navigation" class="navbar is-black is-fixed-top" id="navbar" role="navigation">
+   <div class="container">
+    <!-- logo or branding image on left side -->
+    <div class="navbar-brand">
+     <a class="navbar-item" href="index.html">
+      <strong>
+       Behram Khan
+      </strong>
+     </a>
+     <div class="navbar-burger" data-target="navbar-menu">
+      <span>
+      </span>
+      <span>
+      </span>
+      <span>
+      </span>
+     </div>
+    </div>
+    <!-- children of navbar-menu must be navbar-start and/or navbar-end -->
+    <div class="navbar-menu has-background-black" id="navbar-menu">
+     <!-- navbar items | left side -->
+     <!-- <div class="navbar-start">
+            </div> -->
+     <!-- navbar items | right side -->
+     <div class="navbar-end">
+      <a class="navbar-item" href="index.html">
+       HOME
+      </a>
+      <a class="navbar-item" href="index.html">
+       HIGHLIGHTS
+      </a>
+      <a class="navbar-item" href="index.html">
+       ABOUT
+      </a>
+      <a class="navbar-item" href="games.html">
+       GAMES
+      </a>
+      <a class="navbar-item" href="projects.html">
+       PROJECTS
+      </a>
+      <a class="navbar-item" href="blog.html">
+       BLOG
+      </a>
+      <div class="navbar-item has-dropdown is-hoverable">
+       <a class="navbar-link">
+        MORE
+       </a>
+       <div class="navbar-dropdown has-background-black is-left">
+        <a class="navbar-item has-text-grey-light" href="curriculum-vitae.html">
+         Curriculum Vitae
+        </a>
+        <a class="navbar-item has-text-grey-light" href="devblogs.html">
+         All Dev Blogs
+        </a>
+        <a class="navbar-item has-text-grey-light is-active" href="honours-awards.html">
+         Honours &amp; Awards
+        </a>
+        <a class="navbar-item has-text-grey-light" href="studying.html">
+         Studying
+        </a>
+        <a class="navbar-item has-text-grey-light" href="volunteering.html">
+         Volunteering
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </nav>
+  <!-- Bulma Navbar JS -->
+  <script>
+   document.addEventListener('DOMContentLoaded', function () {
+        /* Get all "navbar-burger" elements */
+        var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+        /* Check if there are any navbar burgers */
+        if ($navbarBurgers.length > 0) {
+            /* Add a click event on each of them */
+            $navbarBurgers.forEach(function ($el) {
+                $el.addEventListener('click', function () {
+                    /* Get the target from the "data-target" attribute */
+                    var target = $el.dataset.target;
+                    var $target = document.getElementById(target);
+                    /* Toggle the class on both the "navbar-burger" and the "navbar-menu" */
+                    $el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+                });
+            });
+        }
+    });
+  </script>
+  <section class="hero is-fullheight">
+   <div class="hero-body">
+    <div class="container has-text-centered">
+     <div class="section">
+      <div style="display: flex; justify-content: center; align-items: center; position: relative; flex-wrap: wrap;">
+       <h1 class="title is-uppercase has-text-weight-bold" style="flex: 1 1 100%; text-align: center;">
+        Honours &amp; Awards
+       </h1>
+       <p>
+        Here are the honours and awards I've received. Click on a card for more information.
+       </p>
+       <label class="checkbox-label" style="margin-left: 50px; font-size: 0.875rem; text-align: right; flex: 0 1 auto;">
+        <input checked="" id="hide-nominee-checkbox" type="checkbox"/>
+        Hide Nominee Positions
+       </label>
+      </div>
+      <hr/>
+      <div class="columns is-centered is-multiline is-mobile">
+       <div class="column has-text-centered is-marginless is-one-third-widescreen is-one-third-desktop is-one-third-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch">
+        <div class="card experience-card" onclick="openModal(0)">
+         <div class="card-image">
+          <figure class="image is-2by1">
+           <img alt="MCV/Develop Women In Games Awards (Games Campaigner)" src="https://mcvuk.com/wp-content/uploads/women-in-games-awards-2025-header-img.jpg"/>
+          </figure>
+         </div>
+         <div class="card-content">
+          <h2 class="title">
+           MCV/Develop Women In Games Awards (Games Campaigner)
+          </h2>
+          <span class="tag" style="background-color: #ffdd57; color: #000;">
+           FINALIST
+          </span>
+          <p class="dates">
+           August 2025
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="column has-text-centered is-marginless is-one-third-widescreen is-one-third-desktop is-one-third-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch">
+        <div class="card experience-card" onclick="openModal(1)">
+         <div class="card-image">
+          <figure class="image is-2by1">
+           <img alt="DevelopHER Awards (Game Development Award)" src="https://developher-awards-photos.s3.eu-west-2.amazonaws.com/2024/0046_TS205888__TimStephensonPhotography.jpg"/>
+          </figure>
+         </div>
+         <div class="card-content">
+          <h2 class="title">
+           DevelopHER Awards (Game Development Award)
+          </h2>
+          <span class="tag" style="background-color: #ddd; color: #000;">
+           Nominee
+          </span>
+          <p class="dates">
+           July 2025
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="column has-text-centered is-marginless is-one-third-widescreen is-one-third-desktop is-one-third-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch">
+        <div class="card experience-card" onclick="openModal(2)">
+         <div class="card-image">
+          <figure class="image is-2by1">
+           <img alt="DevelopHER Awards (Inspiration Award)" src="https://developher-awards-photos.s3.eu-west-2.amazonaws.com/2024/0046_TS205888__TimStephensonPhotography.jpg"/>
+          </figure>
+         </div>
+         <div class="card-content">
+          <h2 class="title">
+           DevelopHER Awards (Inspiration Award)
+          </h2>
+          <span class="tag" style="background-color: #ddd; color: #000;">
+           Nominee
+          </span>
+          <p class="dates">
+           July 2025
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="column has-text-centered is-marginless is-one-third-widescreen is-one-third-desktop is-one-third-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch">
+        <div class="card experience-card" onclick="openModal(3)">
+         <div class="card-image">
+          <figure class="image is-2by1">
+           <img alt="Graduate of the Year: Programmer" src="assets\images\covers\Awards\TIGAProgrammer.jpg"/>
+          </figure>
+         </div>
+         <div class="card-content">
+          <h2 class="title">
+           Graduate of the Year: Programmer
+          </h2>
+          <span class="tag" style="background-color: #28a745; color: #fff;">
+           WINNER
+          </span>
+          <p class="dates">
+           October 2024
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="column has-text-centered is-marginless is-one-third-widescreen is-one-third-desktop is-one-third-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch">
+        <div class="card experience-card" onclick="openModal(4)">
+         <div class="card-image">
+          <figure class="image is-2by1">
+           <img alt="Graduate of the Year: Computer Games Technology" src="assets\images\covers\Awards\TIGAComputerGamesTech.jpg"/>
+          </figure>
+         </div>
+         <div class="card-content">
+          <h2 class="title">
+           Graduate of the Year: Computer Games Technology
+          </h2>
+          <span class="tag" style="background-color: #ffdd57; color: #000;">
+           FINALIST
+          </span>
+          <p class="dates">
+           September 2024
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="column has-text-centered is-marginless is-one-third-widescreen is-one-third-desktop is-one-third-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch">
+        <div class="card experience-card" onclick="openModal(5)">
+         <div class="card-image">
+          <figure class="image is-2by1">
+           <img alt="Develop: Star Awards 2024 (Tomorrow's Star)" src="assets\images\covers\Awards\DevStarAwards2024.jpg"/>
+          </figure>
+         </div>
+         <div class="card-content">
+          <h2 class="title">
+           Develop: Star Awards 2024 (Tomorrow's Star)
+          </h2>
+          <span class="tag" style="background-color: #28a745; color: #fff;">
+           WINNER
+          </span>
+          <p class="dates">
+           July 2024
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="column has-text-centered is-marginless is-one-third-widescreen is-one-third-desktop is-one-third-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch">
+        <div class="card experience-card" onclick="openModal(6)">
+         <div class="card-image">
+          <figure class="image is-2by1">
+           <img alt="TIGA Prize in Recognition for Outstanding Industry Engagement" src="assets\images\covers\Awards\TIGAOutstandingIndustryEngagement.jpg"/>
+          </figure>
+         </div>
+         <div class="card-content">
+          <h2 class="title">
+           TIGA Prize in Recognition for Outstanding Industry Engagement
+          </h2>
+          <span class="tag" style="background-color: #28a745; color: #fff;">
+           WINNER
+          </span>
+          <p class="dates">
+           July 2024
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="column has-text-centered is-marginless is-one-third-widescreen is-one-third-desktop is-one-third-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch">
+        <div class="card experience-card" onclick="openModal(7)">
+         <div class="card-image">
+          <figure class="image is-2by1">
+           <img alt="MCV/DEVELOP 30 Under 30 2023" src="assets\images\covers\Awards\MCVDev30Under30.jpg"/>
+          </figure>
+         </div>
+         <div class="card-content">
+          <h2 class="title">
+           MCV/DEVELOP 30 Under 30 2023
+          </h2>
+          <span class="tag" style="background-color: #ddd; color: #000;">
+           Nominee
+          </span>
+          <p class="dates">
+           November 2023
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="column has-text-centered is-marginless is-one-third-widescreen is-one-third-desktop is-one-third-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch">
+        <div class="card experience-card" onclick="openModal(8)">
+         <div class="card-image">
+          <figure class="image is-2by1">
+           <img alt="The*gameHERS Awards 2022 (Best Intern)" src="assets\images\covers\Awards\GameHers2022.jpg"/>
+          </figure>
+         </div>
+         <div class="card-content">
+          <h2 class="title">
+           The*gameHERS Awards 2022 (Best Intern)
+          </h2>
+          <span class="tag" style="background-color: #ffdd57; color: #000;">
+           FINALIST
+          </span>
+          <p class="dates">
+           December 2022
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="column has-text-centered is-marginless is-one-third-widescreen is-one-third-desktop is-one-third-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch">
+        <div class="card experience-card" onclick="openModal(9)">
+         <div class="card-image">
+          <figure class="image is-2by1">
+           <img alt="She Plays Games 100" src="assets\images\covers\Awards\ShePlayGames100.png"/>
+          </figure>
+         </div>
+         <div class="card-content">
+          <h2 class="title">
+           She Plays Games 100
+          </h2>
+          <span class="tag" style="background-color: #ddd; color: #000;">
+           Nominee
+          </span>
+          <p class="dates">
+           January 2022
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="column has-text-centered is-marginless is-one-third-widescreen is-one-third-desktop is-one-third-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch">
+        <div class="card experience-card" onclick="openModal(10)">
+         <div class="card-image">
+          <figure class="image is-2by1">
+           <img alt="Women In Games Awards 2022 (Rising Star)" src="assets\images\covers\Awards\WomenInGamesAwards2022.jpg"/>
+          </figure>
+         </div>
+         <div class="card-content">
+          <h2 class="title">
+           Women In Games Awards 2022 (Rising Star)
+          </h2>
+          <span class="tag" style="background-color: #ddd; color: #000;">
+           Nominee
+          </span>
+          <p class="dates">
+           January 2022
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="column has-text-centered is-marginless is-one-third-widescreen is-one-third-desktop is-one-third-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch">
+        <div class="card experience-card" onclick="openModal(11)">
+         <div class="card-image">
+          <figure class="image is-2by1">
+           <img alt="The*gameHERS Awards 2021 (Rising Star)" src="assets\images\covers\Awards\GameHers2021.jpg"/>
+          </figure>
+         </div>
+         <div class="card-content">
+          <h2 class="title">
+           The*gameHERS Awards 2021 (Rising Star)
+          </h2>
+          <span class="tag" style="background-color: #ffdd57; color: #000;">
+           FINALIST
+          </span>
+          <p class="dates">
+           December 2021
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="modal" id="modal" onclick="closeModal(event)">
+    <div class="modal-content">
+     <span class="close-button" onclick="closeModal(event)">
+      ×
+     </span>
+     <h2 id="modal-title">
+     </h2>
+     <span class="tag" id="modal-tag">
+     </span>
+     <p id="modal-dates">
+     </p>
+     <hr/>
+     <div id="modal-links-container" style="margin-bottom: 1rem; text-align: left;">
+     </div>
+     <div id="modal-description">
+     </div>
+    </div>
+   </div>
+   <footer id="footer">
+    <!--Footer Button-->
+    <div class="container has-text-centered has-background-grey-darker footer-overlay" id="backtotop">
+     <a class="has-text-white" onclick="window.scroll(0,0)">
+      BACK TO TOP
+     </a>
+    </div>
+    <!--Footer Main Section-->
+    <div class="has-background-grey-darker footer-overlay">
+     <div class="container columns">
+      <!--Name Section-->
+      <div class="column has-text-left-desktop has-text-centered-mobile">
+       <a href="index.html">
+        <div class="columns">
+         <div class="column is-one-fifth-desktop is-one-fifth-fullhd is-one-quarter-tablet">
+          <figure class="image is-64x64">
+           <img class="is-rounded" src="assets\images\profile.png"/>
+          </figure>
+         </div>
+         <div class="column is-marginless">
+          <h5 class="has-text-grey-lighter">
+           Behram Khan
+          </h5>
+          <div class="content has-text-grey">
+           <p>
+            Hi! I'm Amy, a UK-based programmer. I love technical and creative experimentation, often participating in game jams and small projects. I...
+           </p>
+          </div>
+         </div>
+        </div>
+       </a>
+      </div>
+      <!--Social Media Section-->
+      <div class="column has-text-white">
+       <h3>
+        Follow Me
+       </h3>
+       <div class="social-media-icons">
+        <a class="has-text-grey" href="https://www.linkedin.com/in/amy-m-elliott" target="_blank">
+         <i class="fab fa-linkedin">
+         </i>
+        </a>
+        <a class="has-text-grey" href="https://www.github.com/AmyE123" target="_blank">
+         <i class="fab fa-github">
+         </i>
+        </a>
+        <a class="has-text-grey" href="https://amyme.me" target="_blank">
+         <i class="fa fa-house">
+         </i>
+        </a>
+       </div>
+      </div>
+      <!--Blog-post Section-->
+      <div class="column has-text-white">
+       <h3>
+        Recent Posts
+       </h3>
+       <li>
+        <a href="blog\navigating-my-programming-career.html">
+         Navigating My Programming Career: Insights From University
+        </a>
+       </li>
+       <li>
+        <a href="blog\i-learnt-about-sfml-cmake-heres-my-process.html">
+         I Learnt About SFML &amp; CMake. Here's My Process.
+        </a>
+       </li>
+       <li>
+        <a href="blog\collaborating-on-a-game-pitch.html">
+         Collaborating on a Game Pitch
+        </a>
+       </li>
+      </div>
+     </div>
+    </div>
+   </footer>
+  </section>
+  <script>
+   const data = [{"title":"MCV/Develop Women In Games Awards (Games Campaigner)","position":"FINALIST","date":"August 2025","image":"https://mcvuk.com/wp-content/uploads/women-in-games-awards-2025-header-img.jpg","content":"/content/honours-awards/WomenInGamesAwards2025.md","link":"https://mcvuk.com/business-news/heres-the-shortlist-for-the-mcv-develop-women-in-games-awards-2025/","links":[{"title":"Shortlist News Post","url":"https://mcvuk.com/business-news/heres-the-shortlist-for-the-mcv-develop-women-in-games-awards-2025/"}]},{"title":"DevelopHER Awards (Game Development Award)","position":"Nominee","date":"July 2025","image":"https://developher-awards-photos.s3.eu-west-2.amazonaws.com/2024/0046_TS205888__TimStephensonPhotography.jpg","content":"/content/honours-awards/DevelopHerAwards-GameDev.md"},{"title":"DevelopHER Awards (Inspiration Award)","position":"Nominee","date":"July 2025","image":"https://developher-awards-photos.s3.eu-west-2.amazonaws.com/2024/0046_TS205888__TimStephensonPhotography.jpg","content":"/content/honours-awards/DevelopHerAwards-Inspiration.md"},{"title":"Graduate of the Year: Programmer","position":"WINNER","date":"October 2024","image":"/assets/images/covers/Awards/TIGAProgrammer.jpg","content":"/content/honours-awards/GraduateOfTheYearProgrammer.md","link":"https://tiga.org/news/tiga-uk-games-education-awards-2024-the-winners-revealed","links":[{"title":"TIGA 2024 Education Awards Video","url":"https://tiga.org/education-awards/2024-winners"},{"title":"Winners Revealed News Post","url":"https://tiga.org/news/tiga-uk-games-education-awards-2024-the-winners-revealed"},{"title":"University of Portsmouth News Post","url":"https://www.port.ac.uk/news-events-and-blogs/news/university-of-portsmouth-graduates-win-big-at-national-video-game-development-awards"}]},{"title":"Graduate of the Year: Computer Games Technology","position":"FINALIST","date":"September 2024","image":"/assets/images/covers/Awards/TIGAComputerGamesTech.jpg","content":"/content/honours-awards/GraduateOfTheYearComputerGamesTechnology.md","links":[{"title":"TIGA 2024 Education Awards Video","url":"https://tiga.org/education-awards/2024-winners"},{"title":"Finalists News Post","url":"https://tiga.org/news/cream-of-the-crop-tiga-reveals-shortlist-for-uk-games-education-awards-2024"}]},{"title":"Develop: Star Awards 2024 (Tomorrow's Star)","position":"WINNER","date":"July 2024","image":"/assets/images/covers/Awards/DevStarAwards2024.jpg","content":"/content/honours-awards/DevelopStarAwards2024.md","links":[{"title":"DSA 2024 Highlights","url":"https://youtu.be/ACXLS4hTdiU?si=69rmwH0tGkF5z7zv"},{"title":"DSA 2024 Winners Announced","url":"https://www.developconference.com/latest-news/developstar-awards-2024-winners-announced"},{"title":"LinkedIn Post","url":"https://www.linkedin.com/feed/update/urn:li:activity:7217655156920774657/"},{"title":"University of Portsmouth News Post","url":"https://www.port.ac.uk/news-events-and-blogs/news/university-of-portsmouth-graduates-win-big-at-national-video-game-development-awards"}]},{"title":"TIGA Prize in Recognition for Outstanding Industry Engagement","position":"WINNER","date":"July 2024","image":"/assets/images/covers/Awards/TIGAOutstandingIndustryEngagement.jpg","description":"I was awarded this Tiga prize during my graduation at the University of Portsmouth. Along with an accolade in 'Outstanding TIGA Graduate of the Year Computer Games Technology' and 'Outstanding TIGA Graduate of the Year Programmer'","links":[{"title":"TIGA Graduate of the Year 2024 Accolades","url":"https://tiga.org/news/tiga-awards-66-students-tiga-graduate-of-the-year-2024-accolade"},{"title":"Graduation Clip","url":"https://app.mygraduationclip.com/clip/portsmouth/decbc613-6538-41dd-8a99-5eb36c27554a"}]},{"title":"MCV/DEVELOP 30 Under 30 2023","position":"Nominee","date":"November 2023","image":"/assets/images/covers/Awards/MCVDev30Under30.jpg","description":"I've been nominated by Sumo Digital for the MCV/DEVELOP 30 Under 30 awards."},{"title":"The*gameHERS Awards 2022 (Best Intern)","position":"FINALIST","date":"December 2022","image":"/assets/images/covers/Awards/GameHers2022.jpg","description":"I've been nominated by Sumo Digital for The gameHERS Rising Star / Best Intern award. I got to the Finalist position.","links":[{"title":"the*gameHERs Awards 2022 Video (Timestamped)","url":"https://youtu.be/mamqwrS-oao?si=GpWsAgEQAdR-QP_G&t=2453"}]},{"title":"She Plays Games 100","position":"Nominee","date":"January 2022","image":"/assets/images/covers/Awards/ShePlayGames100.png","description":"I've been nominated by Sumo Digital for the She Plays Games 100 awards!","link":"https://www.sheplaysgames.co/spg-100"},{"title":"Women In Games Awards 2022 (Rising Star)","position":"Nominee","date":"January 2022","image":"/assets/images/covers/Awards/WomenInGamesAwards2022.jpg","description":"I've been nominated by Sumo Digital for the Woman In Games' Rising Star Award.","link":"https://www.womeningamesawards.com/"},{"title":"The*gameHERS Awards 2021 (Rising Star)","position":"FINALIST","date":"December 2021","image":"/assets/images/covers/Awards/GameHers2021.jpg","description":"I've been nominated by someone for The gameHERS Rising Star award. I got to the Finalist position.","links":[{"title":"The*gameHERs Awards 2021 Featurette","url":"https://www.youtube.com/watch?v=tbWe_5WZL4w"}]}];
+    const tagColours = [{"name":"C++","colour":"#add8e6"},{"name":"C#","colour":"#add8e6"},{"name":"TypeScript","colour":"#add8e6"},{"name":"JavaScript","colour":"#add8e6"},{"name":"Unreal Engine","colour":"#c5e5c0"},{"name":"Unity","colour":"#c5e5c0"},{"name":"PlayCanvas","colour":"#c5e5c0"},{"name":"WINNER","tag-colour":"#28a745","text-colour":"#fff"},{"name":"FINALIST","tag-colour":"#ffdd57","text-colour":"#000"},{"name":"Nominee","tag-colour":"#ddd","text-colour":"#000"}];
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const hideNomineeCheckbox = document.getElementById('hide-nominee-checkbox');
+
+        function toggleNomineeCards() {
+            document.querySelectorAll('.column').forEach(column => {
+                const tag = column.querySelector('.tag');
+                if (tag && tag.innerText.trim() === 'Nominee') {
+                    column.style.display = hideNomineeCheckbox.checked ? 'none' : '';
+                }
+            });
+        }
+
+        // Initially hide nominee cards based on the checkbox being checked
+        toggleNomineeCards();
+
+        // Add event listener for checkbox change
+        hideNomineeCheckbox.addEventListener('change', toggleNomineeCards);
+    });
+
+    function openModal(index) {
+        const honour = data[index];
+        const tagColour = tagColours.find(t => t.name === honour.position);
+
+        document.getElementById('modal-title').innerText = honour.title;
+
+        const modalTag = document.getElementById('modal-tag');
+        modalTag.innerText = honour.position;
+        modalTag.style.backgroundColor = tagColour ? tagColour['tag-colour'] : '#3273dc';
+        modalTag.style.color = tagColour ? tagColour['text-colour'] : '#fff';
+
+        document.getElementById('modal-dates').innerText = honour.date;
+
+        const linksContainer = document.getElementById('modal-links-container');
+        if (honour.links && honour.links.length > 0) {
+            linksContainer.innerHTML = honour.links.map(link =>
+                `<a href="${link.url}" target="_blank" class="button is-primary" style="margin: 0.25rem;">${link.title}</a>`
+            ).join('');
+        } else {
+            linksContainer.innerHTML = ''; // Clear the container if no links are provided
+        }
+
+        // Fetch Markdown content and render it
+        if (honour.content) {
+            fetch(honour.content)
+                .then(response => response.text())
+                .then(markdown => {
+                    const htmlContent = marked.parse(markdown); // Using 'marked.js' to convert markdown
+                    document.getElementById('modal-description').innerHTML = htmlContent;
+                })
+                .catch(error => {
+                    console.error('Error loading content:', error);
+                    document.getElementById('modal-description').innerText = 'Content unavailable.';
+                });
+        } else {
+            document.getElementById('modal-description').innerText = honour.description;
+        }
+
+        document.getElementById('modal').style.display = 'flex';
+    }
+
+    function closeModal(event) {
+        if (event.target.classList.contains('modal') || event.target.classList.contains('close-button')) {
+            document.getElementById('modal').style.display = 'none';
+        }
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const hideNomineeCheckbox = document.getElementById('hide-nominee-checkbox');
+
+            function adjustTitlePadding() {
+                const titles = document.querySelectorAll('.experience-card .title');
+
+                titles.forEach(title => {
+                    const cardColumn = title.closest('.column');
+
+                    // Skip if the card is hidden
+                    if (window.getComputedStyle(cardColumn).display === 'none') {
+                        title.style.paddingBottom = ''; // Reset padding
+                        return;
+                    }
+
+                    // Reset padding before recalculation
+                    title.style.paddingBottom = '';
+
+                    const lineHeight = parseFloat(window.getComputedStyle(title).lineHeight);
+                    const height = title.getBoundingClientRect().height;
+
+                    // Check if title occupies only one line
+                    if (height <= lineHeight * 1.2) {
+                        title.style.paddingBottom = `${lineHeight}px`;
+                    }
+                });
+            }
+
+            // Initial padding adjustment
+            adjustTitlePadding();
+
+            // Adjust padding when checkbox state changes
+            hideNomineeCheckbox.addEventListener('change', adjustTitlePadding);
+
+            // Adjust on window resize for responsiveness
+            window.addEventListener('resize', adjustTitlePadding);
+        });
+  </script>
+ </body>
+</html>

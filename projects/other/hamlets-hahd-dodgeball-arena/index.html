@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<style>
+ #relevant-blogs-section .is-full, #relevant-blogs-section .is-half-desktop, #relevant-blogs-section .is-one-third-desktop { display: flex; justify-content: center; } .tag-row { display: flex; justify-content: space-between; gap: 1rem; align-items: flex-start; } .tag-section { background-color: #f9f9f9; /* Subtle background to distinguish sections */ border-radius: 10px; padding: 1rem; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Light shadow for depth */ margin-bottom: 1.5rem; } .tag-section-title { font-weight: bold; text-transform: uppercase; margin-bottom: 0.5rem; font-size: 1rem; } .tag { display: inline-block; margin-right: 8px; padding: 0.4em 0.8em; font-size: 0.85rem; font-weight: bold; border-radius: 25px; background-color: #f5f5f5; color: #000; text-transform: uppercase; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); border: none; } /* Custom colors for each tag category */ .tag.is-info { background-color: #007bff; color: #fff; } .tag.is-primary { background-color: #28a745; color: #fff; } .tag.is-warning { background-color: #ffc107; color: #fff; } .tag.is-light { background-color: #6c757d; color: #fff; } .tag.is-link { background-color: #343a40; color: #fff; } .subtitle { font-size: 1rem; font-weight: bold; align-items: center; gap: 0.5rem; } .subtitle i { color: #343a40; } /* Spacing for icon tags */ .icon-tag { display: inline-flex; align-items: center; gap: 0.5rem; background-color: #6c757d; color: white; border-radius: 25px; padding: 0.4em 0.8em; font-size: 0.85rem; font-weight: bold; text-transform: uppercase; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); } .icon-tag i { margin-right: 0.3rem; } /* Description Styling */ .description-section { background-color: #f9f9f9; padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); } .description-text { margin-bottom: 0px !important; font-size: 1.1rem; font-weight: 500; line-height: 1.6; color: #333; } @media (max-width: 768px) { .tag-row { flex-direction: column; align-items: flex-start; } .tag-section { width: 100%; margin-bottom: 1rem; } } .image img { width: 100%; height: auto; } @media (max-width: 768px) { .columns { display: block; } .column { width: 100%; margin-bottom: 1rem; } } @media (max-width: 768px) { .title { font-size: 1.5rem; } .tag { font-size: 0.75rem; padding: 0.3em 0.6em; } } @media (max-width: 768px) { .project-overview { text-align: center; } }
+</style>
+<html>
+ <head>
+  <head>
+   <!-- Include Meta Tags Here -->
+   <meta charset="utf-8"/>
+   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+   <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+   <meta content="width=device-width, height=device-height, initial-scale=1 user-scalable=no, shrink-to-fit=no" name="viewport"/>
+   <meta content="#000000" name="theme-color">
+    <meta content="Portfolio, Programmer, GameDev" name="keywords"/>
+    <title>
+     Amy Elliott | Hamlet's HAHD Dodgeball Arena
+    </title>
+    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta content="Amy Elliott | Hamlet's HAHD Dodgeball Arena" name="og:title"/>
+    <meta content="I'm a Gameplay Programmer!" name="og:description"/>
+    <meta content="/amy-portfolio/assets/images/meta.jpg" name="og:image"/>
+    <meta content="Amy Elliott | Hamlet's HAHD Dodgeball Arena" name="og:image:alt"/>
+    <meta content="/projects/other/hamlets-hahd-dodgeball-arena/" name="og:url"/>
+    <meta content="https://www.facebook.com/" name="article:author"/>
+    <meta content="Amy Elliott | Hamlet's HAHD Dodgeball Arena" name="og:site_name"/>
+    <meta content="website" name="og:type"/>
+    <!-- Twitter -->
+    <meta content="summary_large_image" property="twitter:card">
+     <meta content="Amy Elliott | Hamlet's HAHD Dodgeball Arena" name="twitter:title"/>
+     <meta content="I'm a Gameplay Programmer!" name="twitter:description"/>
+     <meta content="@" name="twitter:site"/>
+     <meta content="@" name="twitter:creator"/>
+     <meta content="/amy-portfolio/assets/images/meta.jpg" name="twitter:image:src"/>
+     <!-- Search Engine -->
+     <meta content="I'm a Gameplay Programmer!" name="description"/>
+     <meta content="/amy-portfolio/assets/images/meta.jpg" name="image"/>
+     <!-- Schema.org for Google -->
+     <meta content="Amy Elliott | Hamlet's HAHD Dodgeball Arena" itemprop="name"/>
+     <meta content="Amy Elliott" name="author">
+      <meta content="I'm a Gameplay Programmer!" itemprop="description"/>
+      <meta content="/amy-portfolio/assets/images/meta.jpg" itemprop="image"/>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SJTTGX1K8N">
+      </script>
+      <script>
+       window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-SJTTGX1K8N');
+      </script>
+      <title>
+       Amy Elliott
+      </title>
+      <link href="..\..\..\assets\css\style.css" rel="stylesheet"/>
+      <script crossorigin="anonymous" src="https://kit.fontawesome.com/6a97161b76.js">
+      </script>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+      <link href="assets\images\logo.png" rel="shortcut icon" type="image/x-icon"/>
+      <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js">
+      </script>
+     </meta>
+    </meta>
+   </meta>
+  </head>
+ </head>
+ <body>
+  <nav aria-label="main navigation" class="navbar is-black is-fixed-top" id="navbar" role="navigation">
+   <div class="container">
+    <!-- logo or branding image on left side -->
+    <div class="navbar-brand">
+     <a class="navbar-item" href="..\..\..\index.html">
+      <strong>
+       Amy Elliott
+      </strong>
+     </a>
+     <div class="navbar-burger" data-target="navbar-menu">
+      <span>
+      </span>
+      <span>
+      </span>
+      <span>
+      </span>
+     </div>
+    </div>
+    <!-- children of navbar-menu must be navbar-start and/or navbar-end -->
+    <div class="navbar-menu has-background-black" id="navbar-menu">
+     <!-- navbar items | left side -->
+     <!--<div class="navbar-start"></div>-->
+     <!-- navbar items | right side -->
+     <div class="navbar-end">
+      <a class="navbar-item" href="..\..\..\index.html">
+       HOME
+      </a>
+      <a class="navbar-item" href="..\..\..\index.html">
+       HIGHLIGHTS
+      </a>
+      <a class="navbar-item" href="..\..\..\index.html">
+       ABOUT
+      </a>
+      <a class="navbar-item" href="..\..\..\games.html">
+       GAMES
+      </a>
+      <a class="navbar-item" href="..\..\..\projects.html">
+       PROJECTS
+      </a>
+      <a class="navbar-item" href="..\..\..\blog.html">
+       BLOG
+      </a>
+      <div class="navbar-item has-dropdown is-hoverable">
+       <a class="navbar-link">
+        MORE
+       </a>
+       <div class="navbar-dropdown has-background-black is-left">
+        <a class="navbar-item has-text-grey-light" href="..\..\..\curriculum-vitae.html">
+         Curriculum Vitae
+        </a>
+        <a class="navbar-item has-text-grey-light" href="..\..\..\devblogs.html">
+         All Dev Blogs
+        </a>
+        <a class="navbar-item has-text-grey-light" href="..\..\..\honours-awards.html">
+         Honours &amp; Awards
+        </a>
+        <a class="navbar-item has-text-grey-light" href="..\..\..\studying.html">
+         Studying
+        </a>
+        <a class="navbar-item has-text-grey-light" href="..\..\..\volunteering.html">
+         Volunteering
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </nav>
+  <!-- Bulma Navbar JS -->
+  <script>
+   document.addEventListener('DOMContentLoaded', function () { /* Get all "navbar-burger" elements */ var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0); /* Check if there are any navbar burgers */ if ($navbarBurgers.length > 0) { /* Add a click event on each of them */ $navbarBurgers.forEach(function ($el) { $el.addEventListener('click', function () { /* Get the target from the "data-target" attribute */ var target = $el.dataset.target; var $target = document.getElementById(target); /* Toggle the class on both the "navbar-burger" and the "navbar-menu" */ $el.classList.toggle('is-active'); $target.classList.toggle('is-active'); }); }); } });
+  </script>
+  <section class="hero is-fullheight has-text-centered" id="post">
+   <div class="hero-body">
+    <div class="container">
+     <!-- Title Section -->
+     <a class="has-text-black" href="index.html" id="title">
+      <h1 class="title has-text-centered is-2 has-text-weight-semibold">
+       Hamlet's HAHD Dodgeball Arena
+      </h1>
+     </a>
+     <hr class="has-background-black"/>
+     <div class="columns is-variable is-5">
+      <!-- IMAGE -->
+      <div class="column is-6">
+       <!-- IMAGE -->
+       <figure class="image is-16by9 has-shadow">
+        <img alt="Hamlet's HAHD Dodgeball Arena" id="post-image" src="https://1drv.ms/i/s!Ap7Df9xJ6JSVg9wfn0eFOyPKbzeGbw?embed=1&amp;width=1920&amp;height=1634"/>
+       </figure>
+      </div>
+      <!-- CONTENT -->
+      <div class="column is-5 has-text-left project-overview">
+       <!-- Description Section -->
+       <div class="description-section">
+        <p class="description-text" id="description">
+         Hamlet's Dodgeball Arena (or HAHD), is a massively multiplayer dodgeball game aimed at younger players.
+        </p>
+       </div>
+       <!-- Type, Duration, Status Section -->
+       <div class="tag-row">
+        <div class="tag-section">
+         <div class="tag-section-title">
+          Type of Project:
+         </div>
+         <span class="tag is-info">
+          Marketing Pitch
+         </span>
+        </div>
+        <div class="tag-section">
+         <div class="tag-section-title">
+          Development Duration:
+         </div>
+         <span class="tag is-primary">
+          ~4 Months
+         </span>
+        </div>
+        <div class="tag-section">
+         <div class="tag-section-title">
+          Status:
+         </div>
+         <span class="tag is-warning">
+          Completed
+         </span>
+        </div>
+       </div>
+       <!-- Developers Section -->
+       <p class="subtitle is-uppercase">
+        <i class="fas fa-users">
+        </i>
+        <span class="tag is-link">
+         Amy Elliott
+        </span>
+        <span class="tag is-link">
+         Ethan Cardus
+        </span>
+        <span class="tag is-link">
+         George Rose
+        </span>
+        <span class="tag is-link">
+         Lewis Truong
+        </span>
+        <span class="tag is-link">
+         Ethan Hartup
+        </span>
+       </p>
+       <!-- Roles Section -->
+       <p class="subtitle is-uppercase">
+        <i class="fas fa-user-tag">
+        </i>
+        <span class="tag is-link">
+         Pitching
+        </span>
+        <span class="tag is-link">
+         Designing
+        </span>
+       </p>
+       <!-- Tags Section -->
+       <p class="subtitle is-uppercase">
+        <i class="fas fa-tags">
+        </i>
+        <span class="tag is-link">
+         Marketing Pitch
+        </span>
+       </p>
+       <!-- Last Updated Information -->
+       <p class="subtitle is-6 is-uppercase has-text-weight-normal has-text-black-ter">
+        Last Updated on
+        <b>
+         December 16, 2022
+        </b>
+        by
+        <a href="https://github.com/AmyE123" target="_blank">
+         <b class="has-text-link">
+          <u>
+           Amy Elliott
+          </u>
+         </b>
+        </a>
+       </p>
+      </div>
+     </div>
+     <div class="content has-text-justified-desktop has-text-justified-fullhd has-text-justified has-text-justified-tablet has-text-left-mobile">
+      <hr/>
+      <div style="margin-bottom: 20px;">
+       <div style="display: flex; align-items: center; background-color: #e3f2fd; padding: 10px; margin-top: 20px; border-radius: 5px; border-left: 5px solid #1976d2;">
+        <div style="margin-right: 10px; font-size: 24px; color: #1976d2;">
+         <i class="fas fa-info-circle">
+         </i>
+        </div>
+        <div>
+         <p style="margin: 0; color: #424242;">
+          Read the scripts and more on the related blog post.
+         </p>
+        </div>
+       </div>
+      </div>
+      <p>
+       <h1 id="formative-review">
+        Formative Review
+       </h1>
+       <div class="video-container" style="height: 500px; margin: 0 auto; padding: 10px !important">
+        <iframe frameborder="0" height="100%" src="https://drive.google.com/file/d/1yxXZFQhBi5CU-m_3LHfQTjBE5x8Acbk1/preview" width="100%">
+        </iframe>
+       </div>
+       <h1 id="the-pitch">
+        The Pitch
+       </h1>
+       <div class="video-container" style="height: 500px; margin: 0 auto; padding: 10px !important">
+        <iframe frameborder="0" height="100%" src="https://drive.google.com/file/d/13FVKbgBaiuOaFCk_4MJzxSsFtQd85HcC/preview" width="100%">
+        </iframe>
+       </div>
+      </p>
+     </div>
+     <hr/>
+     <!-- Relevant Blogs Section -->
+     <section id="relevant-blogs-section">
+      <div class="container">
+       <h2 class="title is-2 has-text-centered" style="padding-bottom: 20px">
+        Relevant Blogs
+       </h2>
+       <div class="columns is-multiline is-variable is-3">
+        <div class="column is-full has-text-centered">
+         <div class="blog-highlight-card" data-tags="Misc, Game Pitching, Project-Based Learning, University">
+          <div class="blog-highlight-card" id="blog-highlight-card">
+           <div class="image" style="background-image: url(/assets/images/covers/Blogs/CollaboratingOnAGamePitch.png);">
+           </div>
+           <a href="..\..\..\blog\collaborating-on-a-game-pitch.html" target="_blank">
+            <div class="content" style="padding:5px">
+             <h1>
+              Collaborating on a Game Pitch
+             </h1>
+             <div class="has-text-grey truncated-description">
+              For one of my University modules, I worked with a group to pitch a game idea. Experience in pitch...
+             </div>
+             <div class="has-text-grey">
+              Published on
+              <span class="has-text-weight-semibold">
+               December 16, 2022
+              </span>
+              |
+              <i class="fas fa-clock">
+              </i>
+              <span class="has-text-weight-semibold">
+               2 min
+              </span>
+              read
+             </div>
+            </div>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </section>
+     <hr/>
+     <!-- Comments Section -->
+     <div class="disqus-comments" id="disqus_thread">
+     </div>
+    </div>
+   </div>
+  </section>
+  <footer id="footer">
+   <!--Footer Button-->
+   <div class="container has-text-centered has-background-grey-darker footer-overlay" id="backtotop">
+    <a class="has-text-white" onclick="window.scroll(0,0)">
+     BACK TO TOP
+    </a>
+   </div>
+   <!--Footer Main Section-->
+   <div class="has-background-grey-darker footer-overlay">
+    <div class="container columns">
+     <!--Name Section-->
+     <div class="column has-text-left-desktop has-text-centered-mobile">
+      <a href="..\..\..\index.html">
+       <div class="columns">
+        <div class="column is-one-fifth-desktop is-one-fifth-fullhd is-one-quarter-tablet">
+         <figure class="image is-64x64">
+          <img class="is-rounded" src="..\..\..\assets\images\profile.png"/>
+         </figure>
+        </div>
+        <div class="column is-marginless">
+         <h5 class="has-text-grey-lighter">
+          Amy Elliott
+         </h5>
+         <div class="content has-text-grey">
+          <p>
+           Hi! I'm Amy, a UK-based programmer. I love technical and creative experimentation, often participating in game jams and small projects. I...
+          </p>
+         </div>
+        </div>
+       </div>
+      </a>
+     </div>
+     <!--Social Media Section-->
+     <div class="column has-text-white">
+      <h3>
+       Follow Me
+      </h3>
+      <div class="social-media-icons">
+       <a class="has-text-grey" href="https://www.linkedin.com/in/amy-m-elliott" target="_blank">
+        <i class="fab fa-linkedin">
+        </i>
+       </a>
+       <a class="has-text-grey" href="https://www.github.com/AmyE123" target="_blank">
+        <i class="fab fa-github">
+        </i>
+       </a>
+       <a class="has-text-grey" href="https://amyme.me" target="_blank">
+        <i class="fa fa-house">
+        </i>
+       </a>
+      </div>
+     </div>
+     <!--Blog-post Section-->
+     <div class="column has-text-white">
+      <h3>
+       Recent Posts
+      </h3>
+      <li>
+       <a href="..\..\..\blog\navigating-my-programming-career.html">
+        Navigating My Programming Career: Insights From University
+       </a>
+      </li>
+      <li>
+       <a href="..\..\..\blog\i-learnt-about-sfml-cmake-heres-my-process.html">
+        I Learnt About SFML &amp; CMake. Here's My Process.
+       </a>
+      </li>
+      <li>
+       <a href="..\..\..\blog\collaborating-on-a-game-pitch.html">
+        Collaborating on a Game Pitch
+       </a>
+      </li>
+     </div>
+    </div>
+   </div>
+  </footer>
+ </body>
+ <script>
+  /** * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS. * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/ /* var disqus_config = function () { this.page.url = PAGE_URL; Replace PAGE_URL with your page's canonical URL variable this.page.identifier = PAGE_IDENTIFIER; Replace PAGE_IDENTIFIER with your page's unique identifier variable }; */ (function () { /* DON'T EDIT BELOW THIS LINE */ var d = document, s = d.createElement('script'); s.src = 'https://amy-portfolio.disqus.com/embed.js'; s.setAttribute('data-timestamp', +new Date()); (d.head || d.body).appendChild(s); })();
+ </script>
+</html>

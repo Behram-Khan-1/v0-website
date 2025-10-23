@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <head>
+   <!-- Include Meta Tags Here -->
+   <meta charset="utf-8"/>
+   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+   <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+   <meta content="width=device-width, height=device-height, initial-scale=1 user-scalable=no, shrink-to-fit=no" name="viewport"/>
+   <meta content="#000000" name="theme-color">
+    <meta content="Portfolio, Programmer, GameDev" name="keywords"/>
+    <title>
+     Amy Elliott | Collaborating on a Game Pitch
+    </title>
+    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta content="Amy Elliott | Collaborating on a Game Pitch" name="og:title"/>
+    <meta content="For one of my University modules, I worked with a group to pitch a game idea. Experience in pitching gave me a different perspective on game development as a whole." name="og:description"/>
+    <meta content="/assets/images/covers/Blogs/CollaboratingOnAGamePitch.png" name="og:image"/>
+    <meta content="Amy Elliott | Collaborating on a Game Pitch" name="og:image:alt"/>
+    <meta content="/blog/collaborating-on-a-game-pitch" name="og:url"/>
+    <meta content="https://www.facebook.com/" name="article:author"/>
+    <meta content="Amy Elliott | Collaborating on a Game Pitch" name="og:site_name"/>
+    <meta content="website" name="og:type"/>
+    <!-- Twitter -->
+    <meta content="summary_large_image" property="twitter:card">
+     <meta content="Amy Elliott | Collaborating on a Game Pitch" name="twitter:title"/>
+     <meta content="For one of my University modules, I worked with a group to pitch a game idea. Experience in pitching gave me a different perspective on game development as a whole." name="twitter:description"/>
+     <meta content="@" name="twitter:site"/>
+     <meta content="@" name="twitter:creator"/>
+     <meta content="/assets/images/covers/Blogs/CollaboratingOnAGamePitch.png" name="twitter:image:src"/>
+     <!-- Search Engine -->
+     <meta content="For one of my University modules, I worked with a group to pitch a game idea. Experience in pitching gave me a different perspective on game development as a whole." name="description"/>
+     <meta content="/assets/images/covers/Blogs/CollaboratingOnAGamePitch.png" name="image"/>
+     <!-- Schema.org for Google -->
+     <meta content="Amy Elliott | Collaborating on a Game Pitch" itemprop="name"/>
+     <meta content="Amy Elliott" name="author">
+      <meta content="For one of my University modules, I worked with a group to pitch a game idea. Experience in pitching gave me a different perspective on game development as a whole." itemprop="description"/>
+      <meta content="/assets/images/covers/Blogs/CollaboratingOnAGamePitch.png" itemprop="image"/>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SJTTGX1K8N">
+      </script>
+      <script>
+       window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-SJTTGX1K8N');
+      </script>
+      <title>
+       Amy Elliott
+      </title>
+      <link href="..\assets\css\style.css" rel="stylesheet"/>
+      <script crossorigin="anonymous" src="https://kit.fontawesome.com/6a97161b76.js">
+      </script>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+      <link href="assets\images\logo.png" rel="shortcut icon" type="image/x-icon"/>
+      <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js">
+      </script>
+     </meta>
+    </meta>
+   </meta>
+  </head>
+ </head>
+ <body>
+  <nav aria-label="main navigation" class="navbar is-black is-fixed-top" id="navbar" role="navigation">
+   <div class="container">
+    <!-- logo or branding image on left side -->
+    <div class="navbar-brand">
+     <a class="navbar-item" href="..\index.html">
+      <strong>
+       Amy Elliott
+      </strong>
+     </a>
+     <div class="navbar-burger" data-target="navbar-menu">
+      <span>
+      </span>
+      <span>
+      </span>
+      <span>
+      </span>
+     </div>
+    </div>
+    <!-- children of navbar-menu must be navbar-start and/or navbar-end -->
+    <div class="navbar-menu has-background-black" id="navbar-menu">
+     <!-- navbar items | left side -->
+     <!--<div class="navbar-start"></div>-->
+     <!-- navbar items | right side -->
+     <div class="navbar-end">
+      <a class="navbar-item" href="..\index.html">
+       HOME
+      </a>
+      <a class="navbar-item" href="..\index.html">
+       HIGHLIGHTS
+      </a>
+      <a class="navbar-item" href="..\index.html">
+       ABOUT
+      </a>
+      <a class="navbar-item" href="..\games.html">
+       GAMES
+      </a>
+      <a class="navbar-item" href="..\projects.html">
+       PROJECTS
+      </a>
+      <a class="navbar-item" href="..\blog.html">
+       BLOG
+      </a>
+      <div class="navbar-item has-dropdown is-hoverable">
+       <a class="navbar-link">
+        MORE
+       </a>
+       <div class="navbar-dropdown has-background-black is-left">
+        <a class="navbar-item has-text-grey-light" href="..\curriculum-vitae.html">
+         Curriculum Vitae
+        </a>
+        <a class="navbar-item has-text-grey-light" href="..\devblogs.html">
+         All Dev Blogs
+        </a>
+        <a class="navbar-item has-text-grey-light" href="..\honours-awards.html">
+         Honours &amp; Awards
+        </a>
+        <a class="navbar-item has-text-grey-light" href="..\studying.html">
+         Studying
+        </a>
+        <a class="navbar-item has-text-grey-light" href="..\volunteering.html">
+         Volunteering
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </nav>
+  <!-- Bulma Navbar JS -->
+  <script>
+   document.addEventListener('DOMContentLoaded', function () { /* Get all "navbar-burger" elements */ var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0); /* Check if there are any navbar burgers */ if ($navbarBurgers.length > 0) { /* Add a click event on each of them */ $navbarBurgers.forEach(function ($el) { $el.addEventListener('click', function () { /* Get the target from the "data-target" attribute */ var target = $el.dataset.target; var $target = document.getElementById(target); /* Toggle the class on both the "navbar-burger" and the "navbar-menu" */ $el.classList.toggle('is-active'); $target.classList.toggle('is-active'); }); }); } });
+  </script>
+  <section class="hero is-fullheight has-text-centered" id="post">
+   <div class="hero-body">
+    <div class="container">
+     <a class="has-text-black" href="collaborating-on-a-game-pitch.html" id="title">
+      <h1 class="title has-text-centered is-2 has-text-weight-semibold">
+       Collaborating on a Game Pitch
+      </h1>
+     </a>
+     <hr class="has-background-black"/>
+     <div class="columns is-variable is-5">
+      <div class="column is-6">
+       <figure class="image is-16by9 has-shadow">
+        <img alt="Collaborating on a Game Pitch" id="post-image" src="..\assets\images\covers\Blogs\CollaboratingOnAGamePitch.png"/>
+       </figure>
+      </div>
+      <div class="subtitle column is-5 has-text-left-desktop has-text-left-fullhd has-text-left-tablet has-text-center-mobile">
+       <p class="content is-small has-text-weight-medium is-uppercase" id="description">
+        For one of my University modules, I worked with a group to pitch a game idea. Experience in pitching gave me a different perspective on game development as a whole.
+       </p>
+       <p class="subtitle is-6 is-uppercase has-text-weight-normal has-text-black-ter">
+        Published on
+        <b>
+         December 16, 2022
+        </b>
+        by
+        <a href="https://github.com/AmyE123" target="_blank">
+         <b class="has-text-link">
+          <u>
+           Amy Elliott
+          </u>
+         </b>
+        </a>
+       </p>
+       <p class="subtitle is-uppercase">
+        <i class="fas fa-tags">
+        </i>
+        <span class="tag is-link">
+         Misc
+        </span>
+        <span class="tag is-link">
+         Game Pitching
+        </span>
+        <span class="tag is-link">
+         Project-Based Learning
+        </span>
+        <span class="tag is-link">
+         University
+        </span>
+       </p>
+       <p class="subtitle is-uppercase">
+        <i class="fas fa-clock">
+        </i>
+        <b class="has-text-link">
+         2 min
+        </b>
+        READ
+       </p>
+       <!-- Previous & Next Navigation -->
+       <div class="navigation is-flex is-justify-content-space-between is-align-items-center" style="margin-top: 1rem;">
+        <a class="tag is-link is-medium has-text-centered prev-button" href="game-pitch-challenge-at-west-coventry-academy.html" style="width: 45%; display: flex; justify-content: center; align-items: center; text-decoration: none; white-space: normal; text-align: center; height: auto; min-height: 3rem;">
+         <span class="arrow" style="margin-right: 0.5rem;">
+          ←
+         </span>
+         <span class="text">
+          Previous: Game Pitch Challenge At West Coventry...
+         </span>
+        </a>
+        <a class="tag is-link is-medium has-text-centered next-button" href="i-learnt-about-sfml-cmake-heres-my-process.html" style="width: 45%; display: flex; justify-content: center; align-items: center; text-decoration: none; white-space: normal; text-align: center; height: auto; min-height: 3rem;">
+         <span class="text" style="margin-right: 0.5rem;">
+          Next: I Learnt About SFML &amp; CMake. Here's M...
+         </span>
+         <span class="arrow">
+          →
+         </span>
+        </a>
+       </div>
+      </div>
+     </div>
+     <div class="content has-text-justified-desktop has-text-justified-fullhd has-text-justified has-text-justified-tablet has-text-left-mobile">
+      <hr/>
+      <div style="margin-bottom: 20px;">
+       <h2 style="font-size: 1.5em; font-weight: normal; color: #333; text-align: center; padding: 10px 0; border-bottom: 2px solid #1976d2; display: inline-block; margin: 0 auto;">
+        Updates From The Future
+       </h2>
+       <div style="display: flex; align-items: center; background-color: #e3f2fd; padding: 10px; margin-top: 20px; border-radius: 5px; border-left: 5px solid #1976d2;">
+        <div style="margin-right: 10px; font-size: 24px; color: #1976d2;">
+         <i class="fas fa-clock">
+         </i>
+        </div>
+        <div>
+         <h3 style="margin: 0; font-weight: bold; color: #1976d2;">
+          October 2024
+         </h3>
+         <p style="margin: 0; color: #424242;">
+          I've had chances to participate in pitching ideas, and the marketing research I've done as part of this project has been really handy at knowing where to look, and how to identify market gaps to make a strong pitch!
+         </p>
+        </div>
+       </div>
+      </div>
+      <hr/>
+      <p>
+       <h1 id="overview">
+        Overview
+       </h1>
+       <p>
+        For one of my University modules, I had the opportunity to work with a group to pitch a game idea. Experience in pitching gave me a different perspective on game development as a whole.
+       </p>
+       <p>
+        The game we pitched, called “Hamlet’s Dodgeball Arena” (or
+        <strong>
+         HAHD
+        </strong>
+        ), is a massively multiplayer dodgeball game aimed at younger players. The idea was to create a fun, lighthearted competitive experience, where teams could come together in a fast-paced environment inspired by dodgeball, similar to titles like
+        <em>
+         Knockout City
+        </em>
+        . Whilst this concept wasn’t too unique as Knockout City has already been created, we focused on emphasising teamwork and strategic play over a typical kill-count based game.
+       </p>
+       <h1 id="how-this-project-helped-me-learn">
+        How This Project Helped Me Learn
+       </h1>
+       <p>
+        As a team, we all worked on everything from brainstorming the pitch, to putting together concepts and finally pitching to our lecturer.
+       </p>
+       <p>
+        While I primarily work in gameplay programming, this project allowed me to step back and look at the bigger picture, considering not just technical aspects, but also design and marketing strategies that would help the game succeed. For example, we envisioned
+        <em>
+         unique arenas
+        </em>
+        with
+        <strong>
+         interactive structures
+        </strong>
+        and
+        <em>
+         power-ups
+        </em>
+        like a
+        <strong>
+         “human cannonball” move
+        </strong>
+        , where a player could sacrifice themselves by becoming a powerful huge dodgeball.
+       </p>
+       <h1 id="the-collaborative-pitch">
+        The Collaborative Pitch
+       </h1>
+       <p>
+        This project helped me with learning teamwork skills, as it was very collaborative. We researched the game’s competition, and even attended real-life dodgeball to play - I was absolutely awful at dodgeball! And I fell over and bruised my knee pretty badly, I don’t think I’ll be playing in real life any time soon, but I would play HAHD if it were to be made! Playing dodgeball in real life allowed us to get a better feel for how we could translate those mechanics into our game.
+       </p>
+       <p>
+        It was also interesting to learn about market research for games, and see what games are out there for this genre and age group.
+       </p>
+       <h1 id="formative-review">
+        Formative Review
+       </h1>
+       <div class="video-container" style="height: 500px; margin: 0 auto; padding: 10px !important">
+        <iframe frameborder="0" height="100%" src="https://drive.google.com/file/d/1yxXZFQhBi5CU-m_3LHfQTjBE5x8Acbk1/preview" width="100%">
+        </iframe>
+       </div>
+       <div style="text-align: center; padding-top: 10px">
+        <iframe frameborder="0" height="900" scrolling="no" src="https://1drv.ms/b/s!Ap7Df9xJ6JSVg-E15w7TiXw2XACUXQ?embed=1&amp;em=2" width="80%">
+        </iframe>
+       </div>
+       <h1 id="the-pitch">
+        The Pitch
+       </h1>
+       <div class="video-container" style="height: 500px; margin: 0 auto; padding: 10px !important">
+        <iframe frameborder="0" height="100%" src="https://drive.google.com/file/d/13FVKbgBaiuOaFCk_4MJzxSsFtQd85HcC/preview" width="100%">
+        </iframe>
+       </div>
+       <div style="text-align: center; padding-top: 10px">
+        <iframe frameborder="0" height="900" scrolling="no" src="https://1drv.ms/b/s!Ap7Df9xJ6JSVg-E2XJQkZc_IuO8EqA?embed=1&amp;em=2" width="80%">
+        </iframe>
+       </div>
+       <hr/>
+      </p>
+     </div>
+     <div class="disqus-comments" id="disqus_thread">
+     </div>
+    </div>
+   </div>
+  </section>
+  <footer id="footer">
+   <!--Footer Button-->
+   <div class="container has-text-centered has-background-grey-darker footer-overlay" id="backtotop">
+    <a class="has-text-white" onclick="window.scroll(0,0)">
+     BACK TO TOP
+    </a>
+   </div>
+   <!--Footer Main Section-->
+   <div class="has-background-grey-darker footer-overlay">
+    <div class="container columns">
+     <!--Name Section-->
+     <div class="column has-text-left-desktop has-text-centered-mobile">
+      <a href="..\index.html">
+       <div class="columns">
+        <div class="column is-one-fifth-desktop is-one-fifth-fullhd is-one-quarter-tablet">
+         <figure class="image is-64x64">
+          <img class="is-rounded" src="..\assets\images\profile.png"/>
+         </figure>
+        </div>
+        <div class="column is-marginless">
+         <h5 class="has-text-grey-lighter">
+          Amy Elliott
+         </h5>
+         <div class="content has-text-grey">
+          <p>
+           Hi! I'm Amy, a UK-based programmer. I love technical and creative experimentation, often participating in game jams and small projects. I...
+          </p>
+         </div>
+        </div>
+       </div>
+      </a>
+     </div>
+     <!--Social Media Section-->
+     <div class="column has-text-white">
+      <h3>
+       Follow Me
+      </h3>
+      <div class="social-media-icons">
+       <a class="has-text-grey" href="https://www.linkedin.com/in/amy-m-elliott" target="_blank">
+        <i class="fab fa-linkedin">
+        </i>
+       </a>
+       <a class="has-text-grey" href="https://www.github.com/AmyE123" target="_blank">
+        <i class="fab fa-github">
+        </i>
+       </a>
+       <a class="has-text-grey" href="https://amyme.me" target="_blank">
+        <i class="fa fa-house">
+        </i>
+       </a>
+      </div>
+     </div>
+     <!--Blog-post Section-->
+     <div class="column has-text-white">
+      <h3>
+       Recent Posts
+      </h3>
+      <li>
+       <a href="navigating-my-programming-career.html">
+        Navigating My Programming Career: Insights From University
+       </a>
+      </li>
+      <li>
+       <a href="i-learnt-about-sfml-cmake-heres-my-process.html">
+        I Learnt About SFML &amp; CMake. Here's My Process.
+       </a>
+      </li>
+      <li>
+       <a href="collaborating-on-a-game-pitch.html">
+        Collaborating on a Game Pitch
+       </a>
+      </li>
+     </div>
+    </div>
+   </div>
+  </footer>
+ </body>
+ <style>
+  /* Mobile view: hide text and only show arrows */ @media (max-width: 768px) { .prev-button .text, .next-button .text { display: none; } .prev-button .arrow, .next-button .arrow { font-size: 1.5rem; } #post-image { display: none; } /* Ensure the column holding the image collapses */ .columns .column:first-child { display: none; } /* Make the title smaller */ #title h1 { font-size: 1.5rem; /* Adjust size as needed */ } /* Optional: Adjust the overall alignment for mobile */ #title { text-align: center; } } /* Desktop view: keep text wrapping */ @media (min-width: 769px) { .prev-button .text, .next-button .text { display: inline; /* Keep text visible on desktop */ white-space: normal; /* Ensure proper wrapping */ } .prev-button .arrow, .next-button .arrow { font-size: 1rem; /* Match tag style for arrows */ } }
+ </style>
+ <script>
+  /** * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS. * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/ /* var disqus_config = function () { this.page.url = PAGE_URL; Replace PAGE_URL with your page's canonical URL variable this.page.identifier = PAGE_IDENTIFIER; Replace PAGE_IDENTIFIER with your page's unique identifier variable }; */ (function () { /* DON'T EDIT BELOW THIS LINE */ var d = document, s = d.createElement('script'); s.src = 'https://amy-portfolio.disqus.com/embed.js'; s.setAttribute('data-timestamp', +new Date()); (d.head || d.body).appendChild(s); })();
+ </script>
+</html>

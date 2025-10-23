@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <head>
+   <!-- Include Meta Tags Here -->
+   <meta charset="utf-8"/>
+   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+   <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+   <meta content="width=device-width, height=device-height, initial-scale=1 user-scalable=no, shrink-to-fit=no" name="viewport"/>
+   <meta content="#000000" name="theme-color">
+    <meta content="Portfolio, Programmer, GameDev" name="keywords"/>
+    <title>
+     Behram Khan | Studying
+    </title>
+    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta content="Behram Khan | Studying" name="og:title"/>
+    <meta content="I'm a Gameplay Programmer!" name="og:description"/>
+    <meta content="/amy-portfolio/assets/images/meta.jpg" name="og:image"/>
+    <meta content="Behram Khan | Studying" name="og:image:alt"/>
+    <meta content="/studying" name="og:url"/>
+    <meta content="https://www.facebook.com/" name="article:author"/>
+    <meta content="Behram Khan | Studying" name="og:site_name"/>
+    <meta content="website" name="og:type"/>
+    <!-- Twitter -->
+    <meta content="summary_large_image" property="twitter:card">
+     <meta content="Behram Khan | Studying" name="twitter:title"/>
+     <meta content="I'm a Gameplay Programmer!" name="twitter:description"/>
+     <meta content="@" name="twitter:site"/>
+     <meta content="@" name="twitter:creator"/>
+     <meta content="/amy-portfolio/assets/images/meta.jpg" name="twitter:image:src"/>
+     <!-- Search Engine -->
+     <meta content="I'm a Gameplay Programmer!" name="description"/>
+     <meta content="/amy-portfolio/assets/images/meta.jpg" name="image"/>
+     <!-- Schema.org for Google -->
+     <meta content="Behram Khan | Studying" itemprop="name"/>
+     <meta content="Behram Khan" name="author">
+      <meta content="I'm a Gameplay Programmer!" itemprop="description"/>
+      <meta content="/amy-portfolio/assets/images/meta.jpg" itemprop="image"/>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SJTTGX1K8N">
+      </script>
+      <script>
+       window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-SJTTGX1K8N');
+      </script>
+      <title>
+       Behram Khan
+      </title>
+      <link href="assets\css\style.css" rel="stylesheet"/>
+      <script crossorigin="anonymous" src="https://kit.fontawesome.com/6a97161b76.js">
+      </script>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+      <link href="assets\images\logo.png" rel="shortcut icon" type="image/x-icon"/>
+      <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js">
+      </script>
+     </meta>
+    </meta>
+   </meta>
+  </head>
+  <style>
+   .experience-card {
+            position: relative;
+            cursor: pointer;
+            background-color: #f5f5f5;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+            .experience-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            .experience-card .title {
+                font-size: clamp(1rem, 2vw, 1.25rem);
+                font-weight: bold;
+                margin-bottom: 0.5rem;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+
+            .experience-card .subtitle-org {
+                font-size: 1rem;
+                font-weight: bold;
+                margin-bottom: 0.5rem;
+            }
+
+            .experience-card .subtitle {
+                font-size: 1.1rem;
+                color: #555;
+            }
+
+            .experience-card .dates {
+                font-size: 0.9rem;
+                color: #777;
+            }
+
+            .experience-card .completion-bar {
+                height: 6px;
+                background-color: #e0e0e0; /* Light background for the bar */
+                border-radius: 3px;
+                margin-top: 0.5rem; /* Space below the bar */
+                overflow: hidden; /* Ensures inner bar stays within the outer bar */
+            }
+
+            .experience-card .completion-fill {
+                height: 100%;
+                background-color: #4CAF50; /* Green for progress */
+                border-radius: 3px;
+                width: 0; /* Default to zero unless filled dynamically */
+                transition: width 0.5s ease-in-out;
+            }
+
+            /* Placeholder padding if no completion data */
+            .experience-card .completion-placeholder {
+                height: 6px;
+                visibility: hidden; /* Adds space but stays invisible */
+                margin-bottom: 0.5rem;
+            }
+
+        .section-divider {
+            position: absolute;
+            top: 0;
+            height: 100%; /* Aligns with the completion bar's height */
+            width: 2px; /* Thin line for dividers */
+            background-color: #ffffff; /* White line for clear contrast */
+            opacity: 1; /* Visible but subtle */
+            transform: translateX(-50%); /* Centers the divider exactly on the percentage mark */
+            z-index: 2; /* Ensures dividers are above the green fill */
+        }
+
+        .modal-section-divider {
+            position: absolute;
+            top: 0;
+            height: 100%; /* Aligns with the completion bar's height */
+            width: 4px; /* Thin line for dividers */
+            background-color: #ffffff; /* White line for clear contrast */
+            opacity: 1; /* Visible but subtle */
+            transform: translateX(-50%); /* Centers the divider exactly on the percentage mark */
+            z-index: 2; /* Ensures dividers are above the green fill */
+        }
+
+        @media (max-width: 768px) {
+            .column.is-two-fifths-mobile {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        .tag {
+            color: white;
+            font-size: 0.6rem;
+            margin: 0.5rem 0.25rem !important;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            display: inline-block;
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        #modal-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.25rem;
+        }
+
+        #modal-dates {
+            font-size: 0.9rem;
+            color: #777;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        #modal-description {
+            line-height: 1.6;
+        }
+
+        #modal-links-container .button {
+            background-color: #3273dc;
+            color: #fff;
+            border: none;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.85rem;
+        }
+
+            #modal-links-container .button:hover {
+                background-color: #275fad;
+            }
+
+        @media (max-width: 768px) {
+            #modal-links-container {
+                flex-direction: column; /* Stack buttons vertically on mobile */
+                gap: 0.4rem; /* Reduced gap to save space */
+            }
+
+                #modal-links-container .button {
+                    font-size: 0.85rem; /* Slightly smaller for mobile readability */
+                    padding: 0.4rem 0.8rem;
+                    min-width: unset; /* Allows buttons to adjust for mobile size */
+                }
+        }
+
+        #modal-completion-bar {
+            height: 6px;
+            background-color: #e0e0e0;
+            border-radius: 3px;
+            margin-top: 0.5rem;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #modal-completion-fill {
+            height: 100%;
+            background-color: #4CAF50;
+            border-radius: 3px;
+            width: 0; /* Filled by JavaScript */
+        }
+
+        #modal-completion-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0.75rem;
+            background-color: #f0f9f0; /* Light green background */
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            border: 1px solid #4CAF50;
+            flex-wrap: wrap; /* Ensures content wraps properly on smaller screens */
+        }
+
+        #modal-completion-percentage {
+            color: #4CAF50;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        #modal-sections-completed {
+            color: #555;
+            font-weight: normal;
+            font-size: 0.9rem;
+        }
+
+        /* MOBILE-FRIENDLY ADJUSTMENTS */
+        @media (max-width: 768px) {
+            #modal-completion-info {
+                flex-direction: column; /* Stack elements vertically */
+                text-align: center;
+                padding: 0.5rem;
+            }
+
+            #modal-completion-percentage {
+                font-size: 1rem; /* Slightly smaller for mobile */
+                margin-bottom: 0.25rem; /* Adds space between elements */
+            }
+
+            #modal-sections-completed {
+                font-size: 0.8rem; /* Smaller text for better mobile scaling */
+            }
+
+            #modal-completion-bar {
+                height: 5px; /* Slightly smaller bar for mobile */
+            }
+        }
+
+        .modal-content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 90%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            overflow-y: auto;
+            max-height: 80%;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: #aaa;
+        }
+
+            .close-button:hover {
+                color: #333;
+            }
+
+        .card-image .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .completion-fill.initial {
+            transition: none !important;
+        }
+
+        .completed-tag {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #4CAF50;
+            color: #fff;
+            font-weight: bold;
+            font-size: 0.75rem;
+            padding: 0.25rem 0.5rem;
+            margin: 0.5rem;
+            border-radius: 0.25rem;
+            z-index: 2;
+        }
+
+        .completed-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(76, 175, 80, 0.2); /* Transparent green overlay */
+            border-radius: 0.25rem;
+            z-index: 1;
+        }
+  </style>
+ </head>
+ <body>
+  <nav aria-label="main navigation" class="navbar is-black is-fixed-top" id="navbar" role="navigation">
+   <div class="container">
+    <!-- logo or branding image on left side -->
+    <div class="navbar-brand">
+     <a class="navbar-item" href="index.html">
+      <strong>
+       Behram Khan
+      </strong>
+     </a>
+     <div class="navbar-burger" data-target="navbar-menu">
+      <span>
+      </span>
+      <span>
+      </span>
+      <span>
+      </span>
+     </div>
+    </div>
+    <!-- children of navbar-menu must be navbar-start and/or navbar-end -->
+    <div class="navbar-menu has-background-black" id="navbar-menu">
+     <!-- navbar items | left side -->
+     <!-- <div class="navbar-start">
+            </div> -->
+     <!-- navbar items | right side -->
+     <div class="navbar-end">
+      <a class="navbar-item" href="index.html">
+       HOME
+      </a>
+      <a class="navbar-item" href="index.html">
+       HIGHLIGHTS
+      </a>
+      <a class="navbar-item" href="index.html">
+       ABOUT
+      </a>
+      <a class="navbar-item" href="games.html">
+       GAMES
+      </a>
+      <a class="navbar-item" href="projects.html">
+       PROJECTS
+      </a>
+      <a class="navbar-item" href="blog.html">
+       BLOG
+      </a>
+      <div class="navbar-item has-dropdown is-hoverable">
+       <a class="navbar-link">
+        MORE
+       </a>
+       <div class="navbar-dropdown has-background-black is-left">
+        <a class="navbar-item has-text-grey-light" href="curriculum-vitae.html">
+         Curriculum Vitae
+        </a>
+        <a class="navbar-item has-text-grey-light" href="devblogs.html">
+         All Dev Blogs
+        </a>
+        <a class="navbar-item has-text-grey-light" href="honours-awards.html">
+         Honours &amp; Awards
+        </a>
+        <a class="navbar-item has-text-grey-light is-active" href="studying.html">
+         Studying
+        </a>
+        <a class="navbar-item has-text-grey-light" href="volunteering.html">
+         Volunteering
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </nav>
+  <!-- Bulma Navbar JS -->
+  <script>
+   document.addEventListener('DOMContentLoaded', function () {
+        /* Get all "navbar-burger" elements */
+        var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+        /* Check if there are any navbar burgers */
+        if ($navbarBurgers.length > 0) {
+            /* Add a click event on each of them */
+            $navbarBurgers.forEach(function ($el) {
+                $el.addEventListener('click', function () {
+                    /* Get the target from the "data-target" attribute */
+                    var target = $el.dataset.target;
+                    var $target = document.getElementById(target);
+                    /* Toggle the class on both the "navbar-burger" and the "navbar-menu" */
+                    $el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+                });
+            });
+        }
+    });
+  </script>
+  <section class="hero is-fullheight">
+   <div class="hero-body">
+    <div class="container has-text-centered">
+     <div class="section">
+      <h1 class="title is-uppercase has-text-weight-bold">
+       Studying
+      </h1>
+      <p>
+       Here are some of the courses, subjects, and areas I'm studying.
+      </p>
+      <p>
+       Click a card for details or see my up-to-date study board
+       <a href="https://github.com/users/AmyE123/projects/11/views/7" target="_blank">
+        here
+       </a>
+       .
+      </p>
+      <hr/>
+      <div class="columns is-centered is-multiline is-mobile">
+       <div class="column has-text-centered is-marginless is-one-third-widescreen is-one-third-desktop is-one-third-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch">
+        <div class="card experience-card" onclick="openModal(0)">
+         <div class="card-image">
+          <figure class="image is-2by1">
+           <img alt="Learning about Dependency Injection" src="https://stackify.com/wp-content/uploads/2018/06/Design-Patterns-Explained-%E2%80%93-Dependency-Injection-with-Code-Examples-881x440-1.png"/>
+          </figure>
+         </div>
+         <div class="card-content">
+          <h2 class="title">
+           Learning about Dependency Injection
+          </h2>
+          <div>
+           <span class="tag" style="background-color: #add8e6;">
+            C#
+           </span>
+          </div>
+          <p class="dates">
+           Aug 2025 - Ongoing
+          </p>
+          <div class="completion-bar" style="position: relative;">
+           <div class="completion-fill" style="width: 20%;">
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="column has-text-centered is-marginless is-one-third-widescreen is-one-third-desktop is-one-third-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch">
+        <div class="card experience-card" onclick="openModal(1)">
+         <div class="card-image">
+          <figure class="image is-2by1">
+           <img alt="Unreal Engine 5 C++ Developer: Learn C++ &amp; Make Video Games" src="assets\images\covers\Studying\UE5CPPDeveloperLearnCpp.jpg"/>
+          </figure>
+         </div>
+         <div class="card-content">
+          <h2 class="title">
+           Unreal Engine 5 C++ Developer: Learn C++ &amp; Make Video Games
+          </h2>
+          <div>
+           <span class="tag" style="background-color: #c5e5c0;">
+            Unreal Engine
+           </span>
+           <span class="tag" style="background-color: #add8e6;">
+            C++
+           </span>
+          </div>
+          <p class="dates">
+           Mar 2025 - Ongoing
+          </p>
+          <div class="completion-bar" style="position: relative;">
+           <div class="section-divider" style="left: 3%;">
+           </div>
+           <div class="section-divider" style="left: 16%;">
+           </div>
+           <div class="section-divider" style="left: 32%;">
+           </div>
+           <div class="section-divider" style="left: 52%;">
+           </div>
+           <div class="section-divider" style="left: 73%;">
+           </div>
+           <div class="completion-fill" style="width: 24%;">
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="column has-text-centered is-marginless is-one-third-widescreen is-one-third-desktop is-one-third-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch">
+        <div class="card experience-card" onclick="openModal(2)">
+         <div class="card-image">
+          <figure class="image is-2by1">
+           <img alt="Unreal Engine 5 C++: Create Custom Editor Tools" src="assets\images\covers\Studying\UE5CPPCreateCustomEditorTools.png"/>
+          </figure>
+         </div>
+         <div class="card-content">
+          <h2 class="title">
+           Unreal Engine 5 C++: Create Custom Editor Tools
+          </h2>
+          <div>
+           <span class="tag" style="background-color: #c5e5c0;">
+            Unreal Engine
+           </span>
+           <span class="tag" style="background-color: #add8e6;">
+            C++
+           </span>
+          </div>
+          <p class="dates">
+           Mar 2025 - On Hold
+          </p>
+          <div class="completion-bar" style="position: relative;">
+           <div class="completion-fill" style="width: 2%;">
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="column has-text-centered is-marginless is-one-third-widescreen is-one-third-desktop is-one-third-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch">
+        <div class="card experience-card" onclick="openModal(3)">
+         <div class="card-image">
+          <div class="completed-tag">
+           Completed
+          </div>
+          <div class="completed-overlay">
+          </div>
+          <figure class="image is-2by1">
+           <img alt="Learning How To Use PlayCanvas By Recreating Blocky Road" src="assets\images\covers\Studying\PlayCanvas.jpg"/>
+          </figure>
+         </div>
+         <div class="card-content">
+          <h2 class="title">
+           Learning How To Use PlayCanvas By Recreating Blocky Road
+          </h2>
+          <div>
+           <span class="tag" style="background-color: #c5e5c0;">
+            PlayCanvas
+           </span>
+           <span class="tag" style="background-color: #add8e6;">
+            JavaScript
+           </span>
+           <span class="tag" style="background-color: #add8e6;">
+            TypeScript
+           </span>
+          </div>
+          <p class="dates">
+           3 Mar 2025 - 6 Mar 2025
+          </p>
+          <div class="completion-bar" style="position: relative;">
+           <div class="completion-fill" style="width: 100%;">
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="modal" id="modal" onclick="closeModal(event)">
+    <div class="modal-content">
+     <span class="close-button" onclick="closeModal(event)">
+      ×
+     </span>
+     <h2 id="modal-title">
+     </h2>
+     <div id="modal-tags">
+     </div>
+     <p id="modal-dates">
+     </p>
+     <div class="completion-bar" id="modal-completion-bar" style="position: relative;">
+      <div class="completion-fill" id="modal-completion-fill">
+      </div>
+     </div>
+     <div id="modal-completion-info">
+      <p id="modal-completion-percentage">
+      </p>
+      <p id="modal-sections-completed">
+      </p>
+     </div>
+     <hr/>
+     <div id="modal-links-container" style="margin-bottom: 1rem; text-align: left;">
+     </div>
+     <div id="modal-description">
+     </div>
+    </div>
+   </div>
+   <footer id="footer">
+    <!--Footer Button-->
+    <div class="container has-text-centered has-background-grey-darker footer-overlay" id="backtotop">
+     <a class="has-text-white" onclick="window.scroll(0,0)">
+      BACK TO TOP
+     </a>
+    </div>
+    <!--Footer Main Section-->
+    <div class="has-background-grey-darker footer-overlay">
+     <div class="container columns">
+      <!--Name Section-->
+      <div class="column has-text-left-desktop has-text-centered-mobile">
+       <a href="index.html">
+        <div class="columns">
+         <div class="column is-one-fifth-desktop is-one-fifth-fullhd is-one-quarter-tablet">
+          <figure class="image is-64x64">
+           <img class="is-rounded" src="assets\images\profile.png"/>
+          </figure>
+         </div>
+         <div class="column is-marginless">
+          <h5 class="has-text-grey-lighter">
+           Behram Khan
+          </h5>
+          <div class="content has-text-grey">
+           <p>
+            Hi! I'm Amy, a UK-based programmer. I love technical and creative experimentation, often participating in game jams and small projects. I...
+           </p>
+          </div>
+         </div>
+        </div>
+       </a>
+      </div>
+      <!--Social Media Section-->
+      <div class="column has-text-white">
+       <h3>
+        Follow Me
+       </h3>
+       <div class="social-media-icons">
+        <a class="has-text-grey" href="https://www.linkedin.com/in/amy-m-elliott" target="_blank">
+         <i class="fab fa-linkedin">
+         </i>
+        </a>
+        <a class="has-text-grey" href="https://www.github.com/AmyE123" target="_blank">
+         <i class="fab fa-github">
+         </i>
+        </a>
+        <a class="has-text-grey" href="https://amyme.me" target="_blank">
+         <i class="fa fa-house">
+         </i>
+        </a>
+       </div>
+      </div>
+      <!--Blog-post Section-->
+      <div class="column has-text-white">
+       <h3>
+        Recent Posts
+       </h3>
+       <li>
+        <a href="blog\navigating-my-programming-career.html">
+         Navigating My Programming Career: Insights From University
+        </a>
+       </li>
+       <li>
+        <a href="blog\i-learnt-about-sfml-cmake-heres-my-process.html">
+         I Learnt About SFML &amp; CMake. Here's My Process.
+        </a>
+       </li>
+       <li>
+        <a href="blog\collaborating-on-a-game-pitch.html">
+         Collaborating on a Game Pitch
+        </a>
+       </li>
+      </div>
+     </div>
+    </div>
+   </footer>
+  </section>
+  <script>
+   document.addEventListener("DOMContentLoaded", function () {
+            function animateCompletionBars() {
+                const completionBars = document.querySelectorAll('.completion-bar');
+
+                completionBars.forEach(bar => {
+                    const fill = bar.querySelector('.completion-fill');
+                    const finalWidth = fill.getAttribute('data-final-width') || fill.style.width;
+                    fill.classList.add('initial');
+                    fill.style.width = '0';
+
+                    setTimeout(() => {
+                        fill.classList.remove('initial');
+                        fill.style.transition = 'width 1.5s ease-out';
+                        fill.style.width = finalWidth;
+
+                        // Animate section dividers if present
+                        const dividers = bar.querySelectorAll('.section-divider');
+                        dividers.forEach(divider => {
+                            divider.style.transition = 'opacity 1.5s ease-out';
+                            divider.style.opacity = '0.5'; // Fade in
+                        });
+                    }, 500);
+                });
+            }
+
+            function adjustTitlePadding() {
+                const titles = document.querySelectorAll('.experience-card .title');
+
+                titles.forEach(title => {
+                    title.style.paddingBottom = '';
+                    const lineHeight = parseFloat(window.getComputedStyle(title).lineHeight);
+                    const height = title.getBoundingClientRect().height;
+
+                    if (height <= lineHeight * 1.2) {
+                        title.style.paddingBottom = `${lineHeight}px`;
+                    }
+                });
+            }
+
+            adjustTitlePadding();
+            animateCompletionBars(); // Trigger animation on load
+
+            window.addEventListener('resize', adjustTitlePadding);
+        });
+
+        const data = [{"role":"Learning about Dependency Injection","start_date":"Aug 2025","completion":20,"image":"https://stackify.com/wp-content/uploads/2018/06/Design-Patterns-Explained-%E2%80%93-Dependency-Injection-with-Code-Examples-881x440-1.png","content":"/content/studying/LearningDependencyInjection.md","tags":["C#"]},{"role":"Unreal Engine 5 C++ Developer: Learn C++ & Make Video Games","start_date":"Mar 2025","image":"/assets/images/covers/Studying/UE5CPPDeveloperLearnCpp.jpg","lectures_completed":51,"number_of_lectures":210,"content":"/content/studying/UnrealEngine5CPPDeveloperLearnCppMakeVideoGames.md","tags":["Unreal Engine","C++"],"links":[{"title":"Warehouse Wreckage Repository","url":"https://github.com/AmyE123/Warehouse-Wreckage"},{"title":"Obstacle Assault Repository","url":"https://github.com/AmyE123/Obstacle-Assault"}],"sections":[{"section_completion_amount":8},{"section_completion_amount":35},{"section_completion_amount":68},{"section_completion_amount":111},{"section_completion_amount":154}]},{"role":"Unreal Engine 5 C++: Create Custom Editor Tools","start_date":"Mar 2025","end_date":"On Hold","image":"/assets/images/covers/Studying/UE5CPPCreateCustomEditorTools.png","completion":2,"content":"/content/studying/UnrealEngine5CppCreateCustomEditorTools.md","tags":["Unreal Engine","C++"]},{"role":"Learning How To Use PlayCanvas By Recreating Blocky Road","start_date":"3 Mar 2025","end_date":"6 Mar 2025","image":"/assets/images/covers/Studying/PlayCanvas.jpg","completion":100,"content":"/content/studying/LearningPlayCanvas.md","tags":["PlayCanvas","JavaScript","TypeScript"],"links":[{"title":"PlayCanvas Project","url":"https://playcanvas.com/project/1311870/overview/blocky-road"},{"title":"GitHub Repository","url":"https://github.com/AmyE123/Blocky-Road-PlayCanvasEditor"}]}];
+        const tagColours = [{"name":"C++","colour":"#add8e6"},{"name":"C#","colour":"#add8e6"},{"name":"TypeScript","colour":"#add8e6"},{"name":"JavaScript","colour":"#add8e6"},{"name":"Unreal Engine","colour":"#c5e5c0"},{"name":"Unity","colour":"#c5e5c0"},{"name":"PlayCanvas","colour":"#c5e5c0"},{"name":"WINNER","tag-colour":"#28a745","text-colour":"#fff"},{"name":"FINALIST","tag-colour":"#ffdd57","text-colour":"#000"},{"name":"Nominee","tag-colour":"#ddd","text-colour":"#000"}];
+
+        function openModal(index) {
+            const experience = data[index];
+            document.getElementById('modal-title').innerText = experience.role;
+
+            let modalTags = document.getElementById('modal-tags');
+            modalTags.innerHTML = '';
+            experience.tags.forEach(tag => {
+                const tagColour = tagColours.find(t => t.name === tag);
+                modalTags.innerHTML += `<span class="tag" style="background-color:${tagColour ? tagColour.colour : '#3273dc'};">${tag}</span>`;
+            });
+
+            document.getElementById('modal-dates').innerText = `${experience.start_date} - ${experience.end_date || 'Ongoing'}`;
+
+            // Progress Bar for Modal
+            const modalCompletionFill = document.getElementById('modal-completion-fill');
+            const modalCompletionBar = document.getElementById('modal-completion-bar');
+            const modalCompletionPercentage = document.getElementById('modal-completion-percentage');
+            const modalSectionsCompleted = document.getElementById('modal-sections-completed');
+
+            const completionValue = experience.completion
+                || (experience.lectures_completed && experience.number_of_lectures
+                    ? (experience.lectures_completed / experience.number_of_lectures) * 100
+                    : 0);
+
+            const roundedCompletion = Math.round(completionValue);
+            modalCompletionFill.style.width = `${roundedCompletion}%`;
+
+            // Clear existing section dividers
+            modalCompletionBar.querySelectorAll('.modal-section-divider').forEach(div => div.remove());
+
+            // Add Section Dividers for Modal
+            if (experience.sections) {
+                let completedSections = 0;
+
+                experience.sections.forEach(section => {
+                    const sectionPercentage = (section.section_completion_amount / experience.number_of_lectures) * 100;
+                    const sectionDivider = document.createElement('div');
+                    sectionDivider.className = 'modal-section-divider';
+                    sectionDivider.style.left = `${sectionPercentage}%`;
+                    modalCompletionBar.appendChild(sectionDivider);
+
+                    if (completionValue >= sectionPercentage) {
+                        completedSections++;
+                    }
+                });
+
+                // Add +1 to total sections count
+                const totalSections = experience.sections.length + 1;
+
+                modalCompletionPercentage.textContent = `${roundedCompletion}% Completed`;
+                modalSectionsCompleted.textContent = `${completedSections}/${totalSections} Sections Completed`;
+            } else {
+                modalCompletionPercentage.textContent = `${roundedCompletion}% Completed`;
+                modalSectionsCompleted.textContent = ''; // Clear if no sections
+            }
+
+            const linksContainer = document.getElementById('modal-links-container');
+            if (experience.links && experience.links.length > 0) {
+                linksContainer.innerHTML = experience.links.map(link =>
+                    `<a href="${link.url}" target="_blank" class="button is-primary" style="margin: 0.25rem;">${link.title}</a>`
+                ).join('');
+            } else {
+                linksContainer.innerHTML = ''; // Clear the container if no links are provided
+            }
+
+            // Fetch Markdown content and render it
+            if (experience.content) {
+                fetch(experience.content)
+                    .then(response => response.text())
+                    .then(markdown => {
+                        const htmlContent = marked.parse(markdown);
+                        document.getElementById('modal-description').innerHTML = htmlContent;
+                    })
+                    .catch(error => {
+                        console.error('Error loading content:', error);
+                        document.getElementById('modal-description').innerText = 'Content unavailable.';
+                    });
+            } else {
+                document.getElementById('modal-description').innerText = experience.description;
+            }
+
+            document.getElementById('modal').style.display = 'flex';
+        }
+
+        function closeModal(event) {
+            if (event.target.classList.contains('modal') || event.target.classList.contains('close-button')) {
+                document.getElementById('modal').style.display = 'none';
+            }
+        }
+  </script>
+ </body>
+</html>

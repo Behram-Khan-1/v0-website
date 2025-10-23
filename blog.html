@@ -1,0 +1,2353 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <!-- Include Meta Tags Here -->
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, height=device-height, initial-scale=1 user-scalable=no, shrink-to-fit=no" name="viewport"/>
+  <meta content="#000000" name="theme-color">
+   <meta content="Portfolio, Programmer, GameDev" name="keywords"/>
+   <title>
+    Behram Khan | Blog
+   </title>
+   <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+   <meta content="Behram Khan | Blog" name="og:title"/>
+   <meta content="I'm a Gameplay Programmer!" name="og:description"/>
+   <meta content="/amy-portfolio/assets/images/meta.jpg" name="og:image"/>
+   <meta content="Behram Khan | Blog" name="og:image:alt"/>
+   <meta content="/blog" name="og:url"/>
+   <meta content="https://www.facebook.com/" name="article:author"/>
+   <meta content="Behram Khan | Blog" name="og:site_name"/>
+   <meta content="website" name="og:type"/>
+   <!-- Twitter -->
+   <meta content="summary_large_image" property="twitter:card">
+    <meta content="Behram Khan | Blog" name="twitter:title"/>
+    <meta content="I'm a Gameplay Programmer!" name="twitter:description"/>
+    <meta content="@" name="twitter:site"/>
+    <meta content="@" name="twitter:creator"/>
+    <meta content="/amy-portfolio/assets/images/meta.jpg" name="twitter:image:src"/>
+    <!-- Search Engine -->
+    <meta content="I'm a Gameplay Programmer!" name="description"/>
+    <meta content="/amy-portfolio/assets/images/meta.jpg" name="image"/>
+    <!-- Schema.org for Google -->
+    <meta content="Behram Khan | Blog" itemprop="name"/>
+    <meta content="Behram Khan" name="author">
+     <meta content="I'm a Gameplay Programmer!" itemprop="description"/>
+     <meta content="/amy-portfolio/assets/images/meta.jpg" itemprop="image"/>
+     <!-- Global site tag (gtag.js) - Google Analytics -->
+     <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SJTTGX1K8N">
+     </script>
+     <script>
+      window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-SJTTGX1K8N');
+     </script>
+     <title>
+      Behram Khan
+     </title>
+     <link href="assets\css\style.css" rel="stylesheet"/>
+     <script crossorigin="anonymous" src="https://kit.fontawesome.com/6a97161b76.js">
+     </script>
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+     <link href="assets\images\logo.png" rel="shortcut icon" type="image/x-icon"/>
+     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js">
+     </script>
+    </meta>
+   </meta>
+  </meta>
+ </head>
+ <body>
+  <nav aria-label="main navigation" class="navbar is-black is-fixed-top" id="navbar" role="navigation">
+   <div class="container">
+    <!-- logo or branding image on left side -->
+    <div class="navbar-brand">
+     <a class="navbar-item" href="index.html">
+      <strong>
+       Behram Khan
+      </strong>
+     </a>
+     <div class="navbar-burger" data-target="navbar-menu">
+      <span>
+      </span>
+      <span>
+      </span>
+      <span>
+      </span>
+     </div>
+    </div>
+    <!-- children of navbar-menu must be navbar-start and/or navbar-end -->
+    <div class="navbar-menu has-background-black" id="navbar-menu">
+     <!-- navbar items | left side -->
+     <!-- <div class="navbar-start">
+            </div> -->
+     <!-- navbar items | right side -->
+     <div class="navbar-end">
+      <a class="navbar-item" href="index.html">
+       HOME
+      </a>
+      <a class="navbar-item" href="index.html">
+       HIGHLIGHTS
+      </a>
+      <a class="navbar-item" href="index.html">
+       ABOUT
+      </a>
+      <a class="navbar-item" href="games.html">
+       GAMES
+      </a>
+      <a class="navbar-item" href="projects.html">
+       PROJECTS
+      </a>
+      <a class="navbar-item is-active" href="blog.html">
+       BLOG
+      </a>
+      <div class="navbar-item has-dropdown is-hoverable">
+       <a class="navbar-link">
+        MORE
+       </a>
+       <div class="navbar-dropdown has-background-black is-left">
+        <a class="navbar-item has-text-grey-light" href="curriculum-vitae.html">
+         Curriculum Vitae
+        </a>
+        <a class="navbar-item has-text-grey-light" href="devblogs.html">
+         All Dev Blogs
+        </a>
+        <a class="navbar-item has-text-grey-light" href="honours-awards.html">
+         Honours &amp; Awards
+        </a>
+        <a class="navbar-item has-text-grey-light" href="studying.html">
+         Studying
+        </a>
+        <a class="navbar-item has-text-grey-light" href="volunteering.html">
+         Volunteering
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </nav>
+  <!-- Bulma Navbar JS -->
+  <script>
+   document.addEventListener('DOMContentLoaded', function () {
+        /* Get all "navbar-burger" elements */
+        var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+        /* Check if there are any navbar burgers */
+        if ($navbarBurgers.length > 0) {
+            /* Add a click event on each of them */
+            $navbarBurgers.forEach(function ($el) {
+                $el.addEventListener('click', function () {
+                    /* Get the target from the "data-target" attribute */
+                    var target = $el.dataset.target;
+                    var $target = document.getElementById(target);
+                    /* Toggle the class on both the "navbar-burger" and the "navbar-menu" */
+                    $el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+                });
+            });
+        }
+    });
+  </script>
+  <section class="hero is-fullheight" id="blog">
+   <div class="hero-body">
+    <div class="container">
+     <!-- Main container -->
+     <nav class="level has-text-centered">
+      <!-- Left side -->
+      <div class="level-left">
+       <a href="https://forms.gle/G5bm2S1QXDn7SqRX7" target="_blank">
+        <i class="fas fa-bug">
+        </i>
+        Report Bug/Issue Here
+       </a>
+      </div>
+      <!-- Right side -->
+      <div class="level-right">
+       <div class="level-item">
+        <div class="field has-addons has-text-weight-medium has-text-grey" id="search">
+         <p class="control">
+          <input class="input is-shadowless is-uppercase has-text-grey has-text-weight-normal" id="search-input" placeholder="Search Here" type="text"/>
+         </p>
+         <p class="control">
+          <button class="button">
+           <i class="fas fa-search has-text-grey">
+           </i>
+          </button>
+         </p>
+        </div>
+       </div>
+      </div>
+     </nav>
+    </div>
+   </div>
+   <div id="results-container">
+   </div>
+   <!-- Blog Highlights Section -->
+   <div class="highlight-section" id="blog-highlights-section">
+    <div class="container">
+     <h2 class="title is-2 has-text-centered highlight-title" style="padding-bottom: 20px">
+      Blog Highlights
+     </h2>
+     <div class="columns is-multiline">
+      <div class="column is-one-quarter-desktop" style="flex: auto !important;">
+       <div class="blog-highlight-card" data-tags="C++ Programming, SFML, CMake, Project-Based Learning, University">
+        <div class="blog-highlight-card" id="blog-highlight-card">
+         <div class="image" style="background-image: url(/assets/images/covers/Blogs/ILearntAboutSFMLCMake.png);">
+         </div>
+         <a href="blog\i-learnt-about-sfml-cmake-heres-my-process.html" target="_blank">
+          <div class="content" style="padding:5px">
+           <h1>
+            I Learnt About SFML &amp; CMake...
+           </h1>
+           <div class="has-text-grey truncated-description">
+            From some research, learning about build tools and graphics libraries is beneficial for my future...
+           </div>
+           <div class="has-text-grey">
+            Published on
+            <span class="has-text-weight-semibold">
+             December 18, 2022
+            </span>
+            |
+            <i class="fas fa-clock">
+            </i>
+            <span class="has-text-weight-semibold">
+             26 min
+            </span>
+            read
+           </div>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="column is-one-quarter-desktop" style="flex: auto !important;">
+       <div class="blog-highlight-card" data-tags="Volunteering, Public Speaking, Sumo Digital">
+        <div class="blog-highlight-card" id="blog-highlight-card">
+         <div class="image" style="background-image: url(/assets/images/covers/Blogs/GirlsTechWMConference2022.png);">
+         </div>
+         <a href="blog\girlstechwm-conference.html" target="_blank">
+          <div class="content" style="padding:5px">
+           <h1>
+            #GirlsTechWM Conference 2022
+           </h1>
+           <div class="has-text-grey truncated-description">
+            I attended #GirlsTechWM 2022 to represent Sumo Digital. I helped run a game dev workshop with 2 c...
+           </div>
+           <div class="has-text-grey">
+            Published on
+            <span class="has-text-weight-semibold">
+             April 29, 2022
+            </span>
+            |
+            <i class="fas fa-photo-video">
+            </i>
+            <span class="has-text-weight-semibold">
+             Multimedia
+            </span>
+           </div>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="column is-one-quarter-desktop" style="flex: auto !important;">
+       <div class="blog-highlight-card" data-tags="Sumo Digital, Internship/Placement">
+        <div class="blog-highlight-card" id="blog-highlight-card">
+         <div class="image" style="background-image: url(/assets/images/covers/Blogs/6MonthsAtSumoDigital.png);">
+         </div>
+         <a href="blog\six-months-at-sumo-digital.html" target="_blank">
+          <div class="content" style="padding:5px">
+           <h1>
+            6 Months At Sumo Digital
+           </h1>
+           <div class="has-text-grey truncated-description">
+            In August, I started my year-long placement at Sumo Leamington, and in that time, I've learned an...
+           </div>
+           <div class="has-text-grey">
+            Published on
+            <span class="has-text-weight-semibold">
+             March 06, 2022
+            </span>
+            |
+            <i class="fas fa-clock">
+            </i>
+            <span class="has-text-weight-semibold">
+             8 min
+            </span>
+            read
+           </div>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <!-- Tag Filters Section -->
+   <div class="tag-filters">
+    <div class="container">
+     <input checked="" id="hideMiscPosts" name="hideMiscPosts" type="checkbox"/>
+     <label for="hideMiscPosts">
+      Hide Miscellaneous Posts
+     </label>
+     <div class="tags" id="tag-filters-container">
+     </div>
+    </div>
+   </div>
+   <!-- Blog Cards Section -->
+   <div id="blog-cards-section">
+    <div class="blog-card" data-tags="University">
+     <div class="columns has-text-centered" id="blog-card">
+      <div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet">
+       <div class="image is-16by9" style="background-image: url(/assets/images/covers/Blogs/NavigatingMyProgrammingCareerUni.png);">
+       </div>
+      </div>
+      <a href="blog\navigating-my-programming-career.html">
+       <div class="column has-text-left-desktop has-text-left-tablet">
+        <h1 class="title is-size-4-touch">
+         Navigating My Programming Career: Insights From University
+        </h1>
+        <div class="content has-text-grey">
+         I had a University module where I could research how I want to progress my career. This allowed me to learn about all the different pathways a programmer can take.
+         <hr class="styled-hr"/>
+         <p>
+          <i class="fas fa-tags">
+          </i>
+          <span class="tag is-link tag-default">
+           University
+          </span>
+         </p>
+         <span class="has-text-grey">
+          Published on
+          <span class="has-text-weight-semibold">
+           April 23, 2023
+          </span>
+         </span>
+         |
+         <i class="fas fa-photo-video">
+         </i>
+         <span class="has-text-weight-semibold">
+          Multimedia
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="blog-card" data-tags="C++ Programming, SFML, CMake, Project-Based Learning, University">
+     <div class="columns has-text-centered" id="blog-card">
+      <div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet">
+       <div class="image is-16by9" style="background-image: url(/assets/images/covers/Blogs/ILearntAboutSFMLCMake.png);">
+       </div>
+      </div>
+      <a href="blog\i-learnt-about-sfml-cmake-heres-my-process.html">
+       <div class="column has-text-left-desktop has-text-left-tablet">
+        <h1 class="title is-size-4-touch">
+         I Learnt About SFML &amp; CMake. Here's My Process.
+        </h1>
+        <div class="content has-text-grey">
+         From some research, learning about build tools and graphics libraries is beneficial for my future roles in the games industry. This was a University assignment.
+         <hr class="styled-hr"/>
+         <p>
+          <i class="fas fa-tags">
+          </i>
+          <span class="tag is-link tag-default">
+           C++ Programming
+          </span>
+          <span class="tag is-link tag-default">
+           SFML
+          </span>
+          <span class="tag is-link tag-default">
+           CMake
+          </span>
+          <span class="tag is-link tag-default">
+           Project-Based Learning
+          </span>
+          <span class="tag is-link tag-default">
+           University
+          </span>
+         </p>
+         <span class="has-text-grey">
+          Published on
+          <span class="has-text-weight-semibold">
+           December 18, 2022
+          </span>
+         </span>
+         |
+         <i class="fas fa-clock">
+         </i>
+         <span class="has-text-weight-semibold">
+          26 min
+         </span>
+         read
+        </div>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="blog-card" data-tags="Misc, Game Pitching, Project-Based Learning, University">
+     <div class="columns has-text-centered" id="blog-card">
+      <div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet">
+       <div class="image is-16by9" style="background-image: url(/assets/images/covers/Blogs/CollaboratingOnAGamePitch.png);">
+       </div>
+      </div>
+      <a href="blog\collaborating-on-a-game-pitch.html">
+       <div class="column has-text-left-desktop has-text-left-tablet">
+        <h1 class="title is-size-4-touch">
+         Collaborating on a Game Pitch
+        </h1>
+        <div class="content has-text-grey">
+         For one of my University modules, I worked with a group to pitch a game idea. Experience in pitching gave me a different perspective on game development as a whole.
+         <hr class="styled-hr"/>
+         <p>
+          <i class="fas fa-tags">
+          </i>
+          <span class="tag is-link tag-default">
+           Misc
+          </span>
+          <span class="tag is-link tag-default">
+           Game Pitching
+          </span>
+          <span class="tag is-link tag-default">
+           Project-Based Learning
+          </span>
+          <span class="tag is-link tag-default">
+           University
+          </span>
+         </p>
+         <span class="has-text-grey">
+          Published on
+          <span class="has-text-weight-semibold">
+           December 16, 2022
+          </span>
+         </span>
+         |
+         <i class="fas fa-clock">
+         </i>
+         <span class="has-text-weight-semibold">
+          2 min
+         </span>
+         read
+        </div>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="blog-card" data-tags="Volunteering, Mentoring, Sumo Digital">
+     <div class="columns has-text-centered" id="blog-card">
+      <div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet">
+       <div class="image is-16by9" style="background-image: url(/assets/images/covers/Blogs/GamePitchChallengeAtWestCoventryAcademy.png);">
+       </div>
+      </div>
+      <a href="blog\game-pitch-challenge-at-west-coventry-academy.html">
+       <div class="column has-text-left-desktop has-text-left-tablet">
+        <h1 class="title is-size-4-touch">
+         Game Pitch Challenge At West Coventry Academy
+        </h1>
+        <div class="content has-text-grey">
+         I attended West Coventry Academy to represent Sumo Digital. I helped run a game pitch day with some colleagues.
+         <hr class="styled-hr"/>
+         <p>
+          <i class="fas fa-tags">
+          </i>
+          <span class="tag is-link tag-default">
+           Volunteering
+          </span>
+          <span class="tag is-link tag-default">
+           Mentoring
+          </span>
+          <span class="tag is-link tag-default">
+           Sumo Digital
+          </span>
+         </p>
+         <span class="has-text-grey">
+          Published on
+          <span class="has-text-weight-semibold">
+           July 13, 2022
+          </span>
+         </span>
+         |
+         <i class="fas fa-photo-video">
+         </i>
+         <span class="has-text-weight-semibold">
+          Multimedia
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="blog-card" data-tags="Volunteering, Public Speaking, Sumo Digital">
+     <div class="columns has-text-centered" id="blog-card">
+      <div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet">
+       <div class="image is-16by9" style="background-image: url(/assets/images/covers/Blogs/GirlsTechWMConference2022.png);">
+       </div>
+      </div>
+      <a href="blog\girlstechwm-conference.html">
+       <div class="column has-text-left-desktop has-text-left-tablet">
+        <h1 class="title is-size-4-touch">
+         #GirlsTechWM Conference 2022
+        </h1>
+        <div class="content has-text-grey">
+         I attended #GirlsTechWM 2022 to represent Sumo Digital. I helped run a game dev workshop with 2 colleagues, and did a talk for ~160 secondary school-aged students about how they can use their current school subjects to help them start up a portfolio for the Tech Industry.
+         <hr class="styled-hr"/>
+         <p>
+          <i class="fas fa-tags">
+          </i>
+          <span class="tag is-link tag-default">
+           Volunteering
+          </span>
+          <span class="tag is-link tag-default">
+           Public Speaking
+          </span>
+          <span class="tag is-link tag-default">
+           Sumo Digital
+          </span>
+         </p>
+         <span class="has-text-grey">
+          Published on
+          <span class="has-text-weight-semibold">
+           April 29, 2022
+          </span>
+         </span>
+         |
+         <i class="fas fa-photo-video">
+         </i>
+         <span class="has-text-weight-semibold">
+          Multimedia
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="blog-card" data-tags="Mentoring, Unity">
+     <div class="columns has-text-centered" id="blog-card">
+      <div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet">
+       <div class="image is-16by9" style="background-image: url(/assets/images/covers/Blogs/GDMMakingFPSGamejams.png);">
+       </div>
+      </div>
+      <a href="blog\game-dev-mentoring-making-fps-gamejams.html">
+       <div class="column has-text-left-desktop has-text-left-tablet">
+        <h1 class="title is-size-4-touch">
+         Game Dev Mentoring - Making FPS Gamejams
+        </h1>
+        <div class="content has-text-grey">
+         After working on his prophunt game for a while, Thomas wanted to try out different game ideas, and so I helped him with making some of his own FPS Gamejam Games inspired by some games he enjoyed playing!
+         <hr class="styled-hr"/>
+         <p>
+          <i class="fas fa-tags">
+          </i>
+          <span class="tag is-link tag-default">
+           Mentoring
+          </span>
+          <span class="tag is-link tag-default">
+           Unity
+          </span>
+         </p>
+         <span class="has-text-grey">
+          Published on
+          <span class="has-text-weight-semibold">
+           April 12, 2022
+          </span>
+         </span>
+         |
+         <i class="fas fa-clock">
+         </i>
+         <span class="has-text-weight-semibold">
+          6 min
+         </span>
+         read
+        </div>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="blog-card" data-tags="Sumo Digital, Internship/Placement">
+     <div class="columns has-text-centered" id="blog-card">
+      <div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet">
+       <div class="image is-16by9" style="background-image: url(/assets/images/covers/Blogs/6MonthsAtSumoDigital.png);">
+       </div>
+      </div>
+      <a href="blog\six-months-at-sumo-digital.html">
+       <div class="column has-text-left-desktop has-text-left-tablet">
+        <h1 class="title is-size-4-touch">
+         6 Months At Sumo Digital
+        </h1>
+        <div class="content has-text-grey">
+         In August, I started my year-long placement at Sumo Leamington, and in that time, I've learned and done so much at work!
+         <hr class="styled-hr"/>
+         <p>
+          <i class="fas fa-tags">
+          </i>
+          <span class="tag is-link tag-default">
+           Sumo Digital
+          </span>
+          <span class="tag is-link tag-default">
+           Internship/Placement
+          </span>
+         </p>
+         <span class="has-text-grey">
+          Published on
+          <span class="has-text-weight-semibold">
+           March 06, 2022
+          </span>
+         </span>
+         |
+         <i class="fas fa-clock">
+         </i>
+         <span class="has-text-weight-semibold">
+          8 min
+         </span>
+         read
+        </div>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="blog-card" data-tags="Mentoring, Design &amp; Research, Greyboxing, Roblox, Lua">
+     <div class="columns has-text-centered" id="blog-card">
+      <div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet">
+       <div class="image is-16by9" style="background-image: url(/assets/images/covers/Blogs/GDMGreyboxingDesign.png);">
+       </div>
+      </div>
+      <a href="blog\game-dev-mentoring-greyboxing-design.html">
+       <div class="column has-text-left-desktop has-text-left-tablet">
+        <h1 class="title is-size-4-touch">
+         Game Dev Mentoring - Greyboxing &amp; Design
+        </h1>
+        <div class="content has-text-grey">
+         I've been mentoring Thomas in Games Development, and his next step after making his GDD was designing! I helped him with this process and in this blog, I talk about his work.
+         <hr class="styled-hr"/>
+         <p>
+          <i class="fas fa-tags">
+          </i>
+          <span class="tag is-link tag-default">
+           Mentoring
+          </span>
+          <span class="tag is-link tag-default">
+           Design &amp; Research
+          </span>
+          <span class="tag is-link tag-default">
+           Greyboxing
+          </span>
+          <span class="tag is-link tag-default">
+           Roblox
+          </span>
+          <span class="tag is-link tag-default">
+           Lua
+          </span>
+         </p>
+         <span class="has-text-grey">
+          Published on
+          <span class="has-text-weight-semibold">
+           February 21, 2022
+          </span>
+         </span>
+         |
+         <i class="fas fa-clock">
+         </i>
+         <span class="has-text-weight-semibold">
+          9 min
+         </span>
+         read
+        </div>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="blog-card" data-tags="Volunteering, Public Speaking">
+     <div class="columns has-text-centered" id="blog-card">
+      <div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet">
+       <div class="image is-16by9" style="background-image: url(/assets/images/covers/Blogs/CollegeIndustryDayTalk.png);">
+       </div>
+      </div>
+      <a href="blog\college-industry-day-talk.html">
+       <div class="column has-text-left-desktop has-text-left-tablet">
+        <h1 class="title is-size-4-touch">
+         College Industry Day Talk
+        </h1>
+        <div class="content has-text-grey">
+         I got invited back to my old college to talk to students studying Games Development at an industry day, this talk was a few months after my first talk, so I was able to reflect upon my speaking and presentation from then.
+         <hr class="styled-hr"/>
+         <p>
+          <i class="fas fa-tags">
+          </i>
+          <span class="tag is-link tag-default">
+           Volunteering
+          </span>
+          <span class="tag is-link tag-default">
+           Public Speaking
+          </span>
+         </p>
+         <span class="has-text-grey">
+          Published on
+          <span class="has-text-weight-semibold">
+           January 25, 2022
+          </span>
+         </span>
+         |
+         <i class="fas fa-clock">
+         </i>
+         <span class="has-text-weight-semibold">
+          5 min
+         </span>
+         read
+        </div>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="blog-card" data-tags="C++ Programming, Algorithms, Project-Based Learning, University">
+     <div class="columns has-text-centered" id="blog-card">
+      <div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet">
+       <div class="image is-16by9" style="background-image: url(/assets/images/covers/Blogs/ILearntAboutTheDifferentPathfindingAlgorithms.png);">
+       </div>
+      </div>
+      <a href="blog\i-learnt-about-the-different-pathfinding-algorithms-made-a-tool-in-cpp.html">
+       <div class="column has-text-left-desktop has-text-left-tablet">
+        <h1 class="title is-size-4-touch">
+         I Learnt About The Different Pathfinding Algorithms &amp; Made A Tool In C++. Here's My Process.
+        </h1>
+        <div class="content has-text-grey">
+         Pathfinding algorithms have always been something which interests me, and so I decided to make myself a pathfinding tool!
+         <hr class="styled-hr"/>
+         <p>
+          <i class="fas fa-tags">
+          </i>
+          <span class="tag is-link tag-default">
+           C++ Programming
+          </span>
+          <span class="tag is-link tag-default">
+           Algorithms
+          </span>
+          <span class="tag is-link tag-default">
+           Project-Based Learning
+          </span>
+          <span class="tag is-link tag-default">
+           University
+          </span>
+         </p>
+         <span class="has-text-grey">
+          Published on
+          <span class="has-text-weight-semibold">
+           January 10, 2022
+          </span>
+         </span>
+         |
+         <i class="fas fa-clock">
+         </i>
+         <span class="has-text-weight-semibold">
+          30 min
+         </span>
+         read
+        </div>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="blog-card" data-tags="Volunteering, Public Speaking">
+     <div class="columns has-text-centered" id="blog-card">
+      <div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet">
+       <div class="image is-16by9" style="background-image: url(/assets/images/covers/Blogs/IGaveATalkInPersonForTheFirstTime.png);">
+       </div>
+      </div>
+      <a href="blog\i-gave-a-talk-in-person-for-the-first-time.html">
+       <div class="column has-text-left-desktop has-text-left-tablet">
+        <h1 class="title is-size-4-touch">
+         I Gave a Talk In-Person For The First Time
+        </h1>
+        <div class="content has-text-grey">
+         I delivered a talk to students in my old high school, this was my first time talking in front of a large audience in person, as up to this point, a lot of the stuff I had done was online due to covid!
+         <hr class="styled-hr"/>
+         <p>
+          <i class="fas fa-tags">
+          </i>
+          <span class="tag is-link tag-default">
+           Volunteering
+          </span>
+          <span class="tag is-link tag-default">
+           Public Speaking
+          </span>
+         </p>
+         <span class="has-text-grey">
+          Published on
+          <span class="has-text-weight-semibold">
+           December 14, 2021
+          </span>
+         </span>
+         |
+         <i class="fas fa-clock">
+         </i>
+         <span class="has-text-weight-semibold">
+          6 min
+         </span>
+         read
+        </div>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="blog-card" data-tags="Mentoring, Design &amp; Research">
+     <div class="columns has-text-centered" id="blog-card">
+      <div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet">
+       <div class="image is-16by9" style="background-image: url(/assets/images/covers/Blogs/GDMDesignDocuments.png);">
+       </div>
+      </div>
+      <a href="blog\game-dev-mentoring-design-documents.html">
+       <div class="column has-text-left-desktop has-text-left-tablet">
+        <h1 class="title is-size-4-touch">
+         Game Dev Mentoring - Design Documents
+        </h1>
+        <div class="content has-text-grey">
+         In this blog, I talk about my process of setting up a games development course for a student I've began mentoring 1 to 1, and the process of helping him make a design document for a game which he wants to make.
+         <hr class="styled-hr"/>
+         <p>
+          <i class="fas fa-tags">
+          </i>
+          <span class="tag is-link tag-default">
+           Mentoring
+          </span>
+          <span class="tag is-link tag-default">
+           Design &amp; Research
+          </span>
+         </p>
+         <span class="has-text-grey">
+          Published on
+          <span class="has-text-weight-semibold">
+           November 21, 2021
+          </span>
+         </span>
+         |
+         <i class="fas fa-clock">
+         </i>
+         <span class="has-text-weight-semibold">
+          9 min
+         </span>
+         read
+        </div>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="blog-card" data-tags="Volunteering, Mentoring, Project Management &amp; Production">
+     <div class="columns has-text-centered" id="blog-card">
+      <div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet">
+       <div class="image is-16by9" style="background-image: url(/assets/images/covers/Blogs/GuidingStudentsThroughDesigningPrototypingAGame.png);">
+       </div>
+      </div>
+      <a href="blog\guiding-students-through-designing-prototyping-a-game.html">
+       <div class="column has-text-left-desktop has-text-left-tablet">
+        <h1 class="title is-size-4-touch">
+         Guiding Students Through Designing &amp; Prototyping a Game
+        </h1>
+        <div class="content has-text-grey">
+         Back in July, I volunteered at Into Games to help a group of students with project management for designing and prototyping a mining game loop. This was my first ever mentoring experience.
+         <hr class="styled-hr"/>
+         <p>
+          <i class="fas fa-tags">
+          </i>
+          <span class="tag is-link tag-default">
+           Volunteering
+          </span>
+          <span class="tag is-link tag-default">
+           Mentoring
+          </span>
+          <span class="tag is-link tag-default">
+           Project Management &amp; Production
+          </span>
+         </p>
+         <span class="has-text-grey">
+          Published on
+          <span class="has-text-weight-semibold">
+           November 17, 2021
+          </span>
+         </span>
+         |
+         <i class="fas fa-clock">
+         </i>
+         <span class="has-text-weight-semibold">
+          4 min
+         </span>
+         read
+        </div>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="blog-card" data-tags="Volunteering, Mentoring">
+     <div class="columns has-text-centered" id="blog-card">
+      <div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet">
+       <div class="image is-16by9" style="background-image: url(/assets/images/covers/Blogs/HelpingStudentsWithProgrammingProblemSolving.png);">
+       </div>
+      </div>
+      <a href="blog\helping-students-with-programming-problem-solving.html">
+       <div class="column has-text-left-desktop has-text-left-tablet">
+        <h1 class="title is-size-4-touch">
+         Helping Students With Programming &amp; Problem Solving
+        </h1>
+        <div class="content has-text-grey">
+         Shortly after volunteering to mentor at an Into Games event, I had found an opportunity to help students solve any problems with programming in a Gamejam using Twine, which is a tool I've not used before!
+         <hr class="styled-hr"/>
+         <p>
+          <i class="fas fa-tags">
+          </i>
+          <span class="tag is-link tag-default">
+           Volunteering
+          </span>
+          <span class="tag is-link tag-default">
+           Mentoring
+          </span>
+         </p>
+         <span class="has-text-grey">
+          Published on
+          <span class="has-text-weight-semibold">
+           November 13, 2021
+          </span>
+         </span>
+         |
+         <i class="fas fa-clock">
+         </i>
+         <span class="has-text-weight-semibold">
+          4 min
+         </span>
+         read
+        </div>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="blog-card" data-tags="Jagex, C++ Programming, Proprietary Engine, Internship/Placement">
+     <div class="columns has-text-centered" id="blog-card">
+      <div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet">
+       <div class="image is-16by9" style="background-image: url(/assets/images/covers/Blogs/MyTimeWorkingOnOldSchoolRuneScapesEngineTeam.jpg);">
+       </div>
+      </div>
+      <a href="blog\my-time-working-on-old-school-runescapes-engine-team.html">
+       <div class="column has-text-left-desktop has-text-left-tablet">
+        <h1 class="title is-size-4-touch">
+         My Time Working On Old School RuneScape's Engine Team
+        </h1>
+        <div class="content has-text-grey">
+         I was given the opportunity to work on engine programming for Old School RuneScape's C++ Client, this helped me learn lots about how game engines work.
+         <hr class="styled-hr"/>
+         <p>
+          <i class="fas fa-tags">
+          </i>
+          <span class="tag is-link tag-default">
+           Jagex
+          </span>
+          <span class="tag is-link tag-default">
+           C++ Programming
+          </span>
+          <span class="tag is-link tag-default">
+           Proprietary Engine
+          </span>
+          <span class="tag is-link tag-default">
+           Internship/Placement
+          </span>
+         </p>
+         <span class="has-text-grey">
+          Published on
+          <span class="has-text-weight-semibold">
+           August 17, 2021
+          </span>
+         </span>
+         |
+         <i class="fas fa-clock">
+         </i>
+         <span class="has-text-weight-semibold">
+          7 min
+         </span>
+         read
+        </div>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="blog-card" data-tags="Jagex, C++ Programming, Unreal Engine, Internship/Placement">
+     <div class="columns has-text-centered" id="blog-card">
+      <div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet">
+       <div class="image is-16by9" style="background-image: url(/assets/images/covers/Blogs/WhatILearntWorkingOnJagexsUnannouncedMMORPG.png);">
+       </div>
+      </div>
+      <a href="blog\what-ive-learnt-working-on-jagexs-unannounced-mmorpg.html">
+       <div class="column has-text-left-desktop has-text-left-tablet">
+        <h1 class="title is-size-4-touch">
+         What I've Learnt Working On Jagex's Unannounced MMORPG
+        </h1>
+        <div class="content has-text-grey">
+         One morning, I woke up to an email titled 'Welcome to Jagex Games Studio' - I could barely believe it!
+         <hr class="styled-hr"/>
+         <p>
+          <i class="fas fa-tags">
+          </i>
+          <span class="tag is-link tag-default">
+           Jagex
+          </span>
+          <span class="tag is-link tag-default">
+           C++ Programming
+          </span>
+          <span class="tag is-link tag-default">
+           Unreal Engine
+          </span>
+          <span class="tag is-link tag-default">
+           Internship/Placement
+          </span>
+         </p>
+         <span class="has-text-grey">
+          Published on
+          <span class="has-text-weight-semibold">
+           July 17, 2021
+          </span>
+         </span>
+         |
+         <i class="fas fa-clock">
+         </i>
+         <span class="has-text-weight-semibold">
+          10 min
+         </span>
+         read
+        </div>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="blog-card" data-tags="Misc, University">
+     <div class="columns has-text-centered" id="blog-card">
+      <div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet">
+       <div class="image is-16by9" style="background-image: url(/assets/images/covers/Blogs/WhatsTheDifferenceBetweenActionAdventureThirdPersonShooters.png);">
+       </div>
+      </div>
+      <a href="blog\whats-the-difference-between-action-adventure-and-third-person-shooters.html">
+       <div class="column has-text-left-desktop has-text-left-tablet">
+        <h1 class="title is-size-4-touch">
+         What's The Difference Between Action-Adventure &amp; Third Person Shooters?
+        </h1>
+        <div class="content has-text-grey">
+         This blog will compare and define the games Resident Evil 4, (2005) and Twilight Princess, (2006), and their respective genres.
+         <hr class="styled-hr"/>
+         <p>
+          <i class="fas fa-tags">
+          </i>
+          <span class="tag is-link tag-default">
+           Misc
+          </span>
+          <span class="tag is-link tag-default">
+           University
+          </span>
+         </p>
+         <span class="has-text-grey">
+          Published on
+          <span class="has-text-weight-semibold">
+           May 13, 2021
+          </span>
+         </span>
+         |
+         <i class="fas fa-clock">
+         </i>
+         <span class="has-text-weight-semibold">
+          10 min
+         </span>
+         read
+        </div>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="blog-card" data-tags="Dev Blog, College">
+     <div class="columns has-text-centered" id="blog-card">
+      <div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet">
+       <div class="image is-16by9" style="background-image: url(/assets/images/covers/Blogs/BCFinalEvaluation.png);">
+       </div>
+      </div>
+      <a href="blog\final-evaluation.html">
+       <div class="column has-text-left-desktop has-text-left-tablet">
+        <h1 class="title is-size-4-touch">
+         <span class="tag is-medium has-text-weight-bold" style="background-color: #300CC9; color: #fff;">
+          Beat City / Dev Blog
+                  
+                  #12
+         </span>
+         Final Evaluation
+        </h1>
+        <div class="content has-text-grey">
+         This project helped me learn so much, in this final evaluation, I look through what I've learnt over the 8 weeks of working on Beat City.
+         <hr class="styled-hr"/>
+         <p>
+          <i class="fas fa-tags">
+          </i>
+          <span class="tag is-link tag-default">
+           Dev Blog
+          </span>
+          <span class="tag is-link tag-default">
+           College
+          </span>
+         </p>
+         <span class="has-text-grey">
+          Published on
+          <span class="has-text-weight-semibold">
+           January 22, 2020
+          </span>
+         </span>
+         |
+         <i class="fas fa-clock">
+         </i>
+         <span class="has-text-weight-semibold">
+          9 min
+         </span>
+         read
+        </div>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="blog-card" data-tags="C# Programming, Unity, 2D Art, Dev Blog, College">
+     <div class="columns has-text-centered" id="blog-card">
+      <div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet">
+       <div class="image is-16by9" style="background-image: url(/assets/images/covers/Blogs/BCDevelopment5.png);">
+       </div>
+      </div>
+      <a href="blog\development-blog-5.html">
+       <div class="column has-text-left-desktop has-text-left-tablet">
+        <h1 class="title is-size-4-touch">
+         <span class="tag is-medium has-text-weight-bold" style="background-color: #300CC9; color: #fff;">
+          Beat City / Dev Blog
+                  
+                  #11
+         </span>
+         Development Blog (Week 8)
+        </h1>
+        <div class="content has-text-grey">
+         This is where I was wrapping up everything. I implemented SFX, and Save Data, as well as making some 2D art for a final UI update, and then making a stable build, as well as advertisements and setting up the itch.io page for the game.
+         <hr class="styled-hr"/>
+         <p>
+          <i class="fas fa-tags">
+          </i>
+          <span class="tag is-link tag-default">
+           C# Programming
+          </span>
+          <span class="tag is-link tag-default">
+           Unity
+          </span>
+          <span class="tag is-link tag-default">
+           2D Art
+          </span>
+          <span class="tag is-link tag-default">
+           Dev Blog
+          </span>
+          <span class="tag is-link tag-default">
+           College
+          </span>
+         </p>
+         <span class="has-text-grey">
+          Published on
+          <span class="has-text-weight-semibold">
+           January 20, 2020
+          </span>
+         </span>
+         |
+         <i class="fas fa-clock">
+         </i>
+         <span class="has-text-weight-semibold">
+          15 min
+         </span>
+         read
+        </div>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="blog-card" data-tags="C# Programming, Unity, User Interface, Dev Blog, College">
+     <div class="columns has-text-centered" id="blog-card">
+      <div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet">
+       <div class="image is-16by9" style="background-image: url(/assets/images/covers/Blogs/BCDevelopment4.png);">
+       </div>
+      </div>
+      <a href="blog\development-blog-4.html">
+       <div class="column has-text-left-desktop has-text-left-tablet">
+        <h1 class="title is-size-4-touch">
+         <span class="tag is-medium has-text-weight-bold" style="background-color: #300CC9; color: #fff;">
+          Beat City / Dev Blog
+                  
+                  #10
+         </span>
+         Development Blog (Week 7)
+        </h1>
+        <div class="content has-text-grey">
+         I have got song functionality/song selection working, and I have also concepted and created a death screen, as well as other small UI improvements.
+         <hr class="styled-hr"/>
+         <p>
+          <i class="fas fa-tags">
+          </i>
+          <span class="tag is-link tag-default">
+           C# Programming
+          </span>
+          <span class="tag is-link tag-default">
+           Unity
+          </span>
+          <span class="tag is-link tag-default">
+           User Interface
+          </span>
+          <span class="tag is-link tag-default">
+           Dev Blog
+          </span>
+          <span class="tag is-link tag-default">
+           College
+          </span>
+         </p>
+         <span class="has-text-grey">
+          Published on
+          <span class="has-text-weight-semibold">
+           January 13, 2020
+          </span>
+         </span>
+         |
+         <i class="fas fa-clock">
+         </i>
+         <span class="has-text-weight-semibold">
+          12 min
+         </span>
+         read
+        </div>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="blog-card" data-tags="C# Programming, Unity, User Interface, Dev Blog, College">
+     <div class="columns has-text-centered" id="blog-card">
+      <div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet">
+       <div class="image is-16by9" style="background-image: url(/assets/images/covers/Blogs/BCDevelopment3.png);">
+       </div>
+      </div>
+      <a href="blog\development-blog-3.html">
+       <div class="column has-text-left-desktop has-text-left-tablet">
+        <h1 class="title is-size-4-touch">
+         <span class="tag is-medium has-text-weight-bold" style="background-color: #300CC9; color: #fff;">
+          Beat City / Dev Blog
+                  
+                  #9
+         </span>
+         Development Blog (Week 6)
+        </h1>
+        <div class="content has-text-grey">
+         I have been carrying on my work on the user interface for the game, making menus functional, as well as a proper gameplay loop with UI.
+         <hr class="styled-hr"/>
+         <p>
+          <i class="fas fa-tags">
+          </i>
+          <span class="tag is-link tag-default">
+           C# Programming
+          </span>
+          <span class="tag is-link tag-default">
+           Unity
+          </span>
+          <span class="tag is-link tag-default">
+           User Interface
+          </span>
+          <span class="tag is-link tag-default">
+           Dev Blog
+          </span>
+          <span class="tag is-link tag-default">
+           College
+          </span>
+         </p>
+         <span class="has-text-grey">
+          Published on
+          <span class="has-text-weight-semibold">
+           January 06, 2020
+          </span>
+         </span>
+         |
+         <i class="fas fa-clock">
+         </i>
+         <span class="has-text-weight-semibold">
+          16 min
+         </span>
+         read
+        </div>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="blog-card" data-tags="C# Programming, Unity, Design &amp; Research, Shaders &amp; Technical Art, Dev Blog, College">
+     <div class="columns has-text-centered" id="blog-card">
+      <div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet">
+       <div class="image is-16by9" style="background-image: url(/assets/images/covers/Blogs/BCDevelopment2.jpg);">
+       </div>
+      </div>
+      <a href="blog\development-blog-2.html">
+       <div class="column has-text-left-desktop has-text-left-tablet">
+        <h1 class="title is-size-4-touch">
+         <span class="tag is-medium has-text-weight-bold" style="background-color: #300CC9; color: #fff;">
+          Beat City / Dev Blog
+                  
+                  #8
+         </span>
+         Development Blog (Week 5)
+        </h1>
+        <div class="content has-text-grey">
+         I've been working on the UI for the game, in particular, the score and combo system, creating a fire shader to tie into this combo system. I also investigated a mobile version of the game.
+         <hr class="styled-hr"/>
+         <p>
+          <i class="fas fa-tags">
+          </i>
+          <span class="tag is-link tag-default">
+           C# Programming
+          </span>
+          <span class="tag is-link tag-default">
+           Unity
+          </span>
+          <span class="tag is-link tag-default">
+           Design &amp; Research
+          </span>
+          <span class="tag is-link tag-default">
+           Shaders &amp; Technical Art
+          </span>
+          <span class="tag is-link tag-default">
+           Dev Blog
+          </span>
+          <span class="tag is-link tag-default">
+           College
+          </span>
+         </p>
+         <span class="has-text-grey">
+          Published on
+          <span class="has-text-weight-semibold">
+           December 16, 2019
+          </span>
+         </span>
+         |
+         <i class="fas fa-clock">
+         </i>
+         <span class="has-text-weight-semibold">
+          12 min
+         </span>
+         read
+        </div>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="blog-card" data-tags="C# Programming, Unity, Shaders &amp; Technical Art, Dev Blog, College">
+     <div class="columns has-text-centered" id="blog-card">
+      <div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet">
+       <div class="image is-16by9" style="background-image: url(/assets/images/covers/Blogs/BCDevelopment1.png);">
+       </div>
+      </div>
+      <a href="blog\development-blog-1.html">
+       <div class="column has-text-left-desktop has-text-left-tablet">
+        <h1 class="title is-size-4-touch">
+         <span class="tag is-medium has-text-weight-bold" style="background-color: #300CC9; color: #fff;">
+          Beat City / Dev Blog
+                  
+                  #7
+         </span>
+         Development Blog (Week 4)
+        </h1>
+        <div class="content has-text-grey">
+         I added in lose conditions, scoring and combo systems, as well as visual changes like creating a shader which makes buildings crack!
+         <hr class="styled-hr"/>
+         <p>
+          <i class="fas fa-tags">
+          </i>
+          <span class="tag is-link tag-default">
+           C# Programming
+          </span>
+          <span class="tag is-link tag-default">
+           Unity
+          </span>
+          <span class="tag is-link tag-default">
+           Shaders &amp; Technical Art
+          </span>
+          <span class="tag is-link tag-default">
+           Dev Blog
+          </span>
+          <span class="tag is-link tag-default">
+           College
+          </span>
+         </p>
+         <span class="has-text-grey">
+          Published on
+          <span class="has-text-weight-semibold">
+           December 09, 2019
+          </span>
+         </span>
+         |
+         <i class="fas fa-clock">
+         </i>
+         <span class="has-text-weight-semibold">
+          20 min
+         </span>
+         read
+        </div>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="blog-card" data-tags="C# Programming, Unity, 3D Art, Shaders &amp; Technical Art, Dev Blog, College">
+     <div class="columns has-text-centered" id="blog-card">
+      <div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet">
+       <div class="image is-16by9" style="background-image: url(/assets/images/covers/Blogs/BCVisualIdeasTests2.png);">
+       </div>
+      </div>
+      <a href="blog\visual-ideas-and-tests-2.html">
+       <div class="column has-text-left-desktop has-text-left-tablet">
+        <h1 class="title is-size-4-touch">
+         <span class="tag is-medium has-text-weight-bold" style="background-color: #300CC9; color: #fff;">
+          Beat City / Dev Blog
+                  
+                  #6
+         </span>
+         Visual Ideas &amp; Tests (Week 3)
+        </h1>
+        <div class="content has-text-grey">
+         I have adjusted the city model so it scales nicer from its pivot point, I fixed some bugs, and I made a sun shader, as well as a few other things.
+         <hr class="styled-hr"/>
+         <p>
+          <i class="fas fa-tags">
+          </i>
+          <span class="tag is-link tag-default">
+           C# Programming
+          </span>
+          <span class="tag is-link tag-default">
+           Unity
+          </span>
+          <span class="tag is-link tag-default">
+           3D Art
+          </span>
+          <span class="tag is-link tag-default">
+           Shaders &amp; Technical Art
+          </span>
+          <span class="tag is-link tag-default">
+           Dev Blog
+          </span>
+          <span class="tag is-link tag-default">
+           College
+          </span>
+         </p>
+         <span class="has-text-grey">
+          Published on
+          <span class="has-text-weight-semibold">
+           December 02, 2019
+          </span>
+         </span>
+         |
+         <i class="fas fa-clock">
+         </i>
+         <span class="has-text-weight-semibold">
+          9 min
+         </span>
+         read
+        </div>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="blog-card" data-tags="Unity, C# Programming, Shaders &amp; Technical Art, Project Management &amp; Production, Music, Design &amp; Research, 3D Art, Dev Blog, College">
+     <div class="columns has-text-centered" id="blog-card">
+      <div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet">
+       <div class="image is-16by9" style="background-image: url(/assets/images/covers/Blogs/BCVisualIdeasTests1.png);">
+       </div>
+      </div>
+      <a href="blog\visual-ideas-and-tests-1.html">
+       <div class="column has-text-left-desktop has-text-left-tablet">
+        <h1 class="title is-size-4-touch">
+         <span class="tag is-medium has-text-weight-bold" style="background-color: #300CC9; color: #fff;">
+          Beat City / Dev Blog
+                  
+                  #5
+         </span>
+         Visual Ideas &amp; Tests (Week 2)
+        </h1>
+        <div class="content has-text-grey">
+         I go through my production plans, some music I've made, sketches I've done, shaders I've made in Unity, code for audio visualisation, and finally some 3D modelling.
+         <hr class="styled-hr"/>
+         <p>
+          <i class="fas fa-tags">
+          </i>
+          <span class="tag is-link tag-default">
+           Unity
+          </span>
+          <span class="tag is-link tag-default">
+           C# Programming
+          </span>
+          <span class="tag is-link tag-default">
+           Shaders &amp; Technical Art
+          </span>
+          <span class="tag is-link tag-default">
+           Project Management &amp; Production
+          </span>
+          <span class="tag is-link tag-default">
+           Music
+          </span>
+          <span class="tag is-link tag-default">
+           Design &amp; Research
+          </span>
+          <span class="tag is-link tag-default">
+           3D Art
+          </span>
+          <span class="tag is-link tag-default">
+           Dev Blog
+          </span>
+          <span class="tag is-link tag-default">
+           College
+          </span>
+         </p>
+         <span class="has-text-grey">
+          Published on
+          <span class="has-text-weight-semibold">
+           November 25, 2019
+          </span>
+         </span>
+         |
+         <i class="fas fa-clock">
+         </i>
+         <span class="has-text-weight-semibold">
+          22 min
+         </span>
+         read
+        </div>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="blog-card" data-tags="Design &amp; Research, Dev Blog, College">
+     <div class="columns has-text-centered" id="blog-card">
+      <div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet">
+       <div class="image is-16by9" style="background-image: url(/assets/images/covers/Blogs/BCSpecificIdeasResearch.jpg);">
+       </div>
+      </div>
+      <a href="blog\specific-ideas-research.html">
+       <div class="column has-text-left-desktop has-text-left-tablet">
+        <h1 class="title is-size-4-touch">
+         <span class="tag is-medium has-text-weight-bold" style="background-color: #300CC9; color: #fff;">
+          Beat City / Dev Blog
+                  
+                  #4
+         </span>
+         Specific Ideas Research (Week 1)
+        </h1>
+        <div class="content has-text-grey">
+         This is the specific research I have gathered for my game, Beat City. Youtube videos which I have studied on the topics of game mechanics an audio visualization.
+         <hr class="styled-hr"/>
+         <p>
+          <i class="fas fa-tags">
+          </i>
+          <span class="tag is-link tag-default">
+           Design &amp; Research
+          </span>
+          <span class="tag is-link tag-default">
+           Dev Blog
+          </span>
+          <span class="tag is-link tag-default">
+           College
+          </span>
+         </p>
+         <span class="has-text-grey">
+          Published on
+          <span class="has-text-weight-semibold">
+           November 17, 2019
+          </span>
+         </span>
+         |
+         <i class="fas fa-clock">
+         </i>
+         <span class="has-text-weight-semibold">
+          5 min
+         </span>
+         read
+        </div>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="blog-card" data-tags="Design &amp; Research, Dev Blog, College">
+     <div class="columns has-text-centered" id="blog-card">
+      <div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet">
+       <div class="image is-16by9" style="background-image: url(/assets/images/covers/Blogs/BCProposal.jpg);">
+       </div>
+      </div>
+      <a href="blog\proposal.html">
+       <div class="column has-text-left-desktop has-text-left-tablet">
+        <h1 class="title is-size-4-touch">
+         <span class="tag is-medium has-text-weight-bold" style="background-color: #300CC9; color: #fff;">
+          Beat City / Dev Blog
+                  
+                  #3
+         </span>
+         Proposal (Week 1)
+        </h1>
+        <div class="content has-text-grey">
+         This is my proposal for my Beat City project. Talking about my outline for the project, a plan of what I want to include and create, my workflow and presentation.
+         <hr class="styled-hr"/>
+         <p>
+          <i class="fas fa-tags">
+          </i>
+          <span class="tag is-link tag-default">
+           Design &amp; Research
+          </span>
+          <span class="tag is-link tag-default">
+           Dev Blog
+          </span>
+          <span class="tag is-link tag-default">
+           College
+          </span>
+         </p>
+         <span class="has-text-grey">
+          Published on
+          <span class="has-text-weight-semibold">
+           November 16, 2019
+          </span>
+         </span>
+         |
+         <i class="fas fa-clock">
+         </i>
+         <span class="has-text-weight-semibold">
+          6 min
+         </span>
+         read
+        </div>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="blog-card" data-tags="Design &amp; Research, Dev Blog, College">
+     <div class="columns has-text-centered" id="blog-card">
+      <div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet">
+       <div class="image is-16by9" style="background-image: url(/assets/images/covers/Blogs/BCInitialIdeas.jpg);">
+       </div>
+      </div>
+      <a href="blog\initial-ideas.html">
+       <div class="column has-text-left-desktop has-text-left-tablet">
+        <h1 class="title is-size-4-touch">
+         <span class="tag is-medium has-text-weight-bold" style="background-color: #300CC9; color: #fff;">
+          Beat City / Dev Blog
+                  
+                  #2
+         </span>
+         Initial Ideas (Week 1)
+        </h1>
+        <div class="content has-text-grey">
+         I write about the initial ideas I have for my Beat City project. The different engines I can use, and approached I can take to fit the theme.
+         <hr class="styled-hr"/>
+         <p>
+          <i class="fas fa-tags">
+          </i>
+          <span class="tag is-link tag-default">
+           Design &amp; Research
+          </span>
+          <span class="tag is-link tag-default">
+           Dev Blog
+          </span>
+          <span class="tag is-link tag-default">
+           College
+          </span>
+         </p>
+         <span class="has-text-grey">
+          Published on
+          <span class="has-text-weight-semibold">
+           November 15, 2019
+          </span>
+         </span>
+         |
+         <i class="fas fa-clock">
+         </i>
+         <span class="has-text-weight-semibold">
+          7 min
+         </span>
+         read
+        </div>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="blog-card" data-tags="Design &amp; Research, Dev Blog, College">
+     <div class="columns has-text-centered" id="blog-card">
+      <div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet">
+       <div class="image is-16by9" style="background-image: url(/assets/images/covers/Blogs/BCGeneralCyberpunkResearch.jpg);">
+       </div>
+      </div>
+      <a href="blog\general-cyberpunk-research.html">
+       <div class="column has-text-left-desktop has-text-left-tablet">
+        <h1 class="title is-size-4-touch">
+         <span class="tag is-medium has-text-weight-bold" style="background-color: #300CC9; color: #fff;">
+          Beat City / Dev Blog
+                  
+                  #1
+         </span>
+         General Cyberpunk Research (Week 1)
+        </h1>
+        <div class="content has-text-grey">
+         In this blog I research the history, themes and aesthetics of Cyberpunk to help me develop my game, Beat City.
+         <hr class="styled-hr"/>
+         <p>
+          <i class="fas fa-tags">
+          </i>
+          <span class="tag is-link tag-default">
+           Design &amp; Research
+          </span>
+          <span class="tag is-link tag-default">
+           Dev Blog
+          </span>
+          <span class="tag is-link tag-default">
+           College
+          </span>
+         </p>
+         <span class="has-text-grey">
+          Published on
+          <span class="has-text-weight-semibold">
+           November 14, 2019
+          </span>
+         </span>
+         |
+         <i class="fas fa-clock">
+         </i>
+         <span class="has-text-weight-semibold">
+          13 min
+         </span>
+         read
+        </div>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="blog-card" data-tags="Dev Blog, College">
+     <div class="columns has-text-centered" id="blog-card">
+      <div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet">
+       <div class="image is-16by9" style="background-image: url(/assets/images/covers/Blogs/WRWIP.png);">
+       </div>
+      </div>
+      <a href="blog\work-in-progress.html">
+       <div class="column has-text-left-desktop has-text-left-tablet">
+        <h1 class="title is-size-4-touch">
+         <span class="tag is-medium has-text-weight-bold" style="background-color: #FF0001; color: #fff;">
+          Western Runner / Dev Blog
+                  
+                  #6
+         </span>
+         Work In Progress
+        </h1>
+        <div class="content has-text-grey">
+         Im in the process of porting my Western Runner WordPress blogs over to this portfolio. In the meantime, you can find links to the original WordPress posts within this blog.
+         <hr class="styled-hr"/>
+         <p>
+          <i class="fas fa-tags">
+          </i>
+          <span class="tag is-link tag-default">
+           Dev Blog
+          </span>
+          <span class="tag is-link tag-default">
+           College
+          </span>
+         </p>
+         <span class="has-text-grey">
+          Published on
+          <span class="has-text-weight-semibold">
+           September 16, 2019
+          </span>
+         </span>
+         |
+         <i class="fas fa-photo-video">
+         </i>
+         <span class="has-text-weight-semibold">
+          Multimedia
+         </span>
+        </div>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="blog-card" data-tags="Unreal Engine, Blueprints, Dev Blog, College">
+     <div class="columns has-text-centered" id="blog-card">
+      <div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet">
+       <div class="image is-16by9" style="background-image: url(/assets/images/covers/Blogs/WRProrotypingGameplay.png);">
+       </div>
+      </div>
+      <a href="blog\prototyping-gameplay.html">
+       <div class="column has-text-left-desktop has-text-left-tablet">
+        <h1 class="title is-size-4-touch">
+         <span class="tag is-medium has-text-weight-bold" style="background-color: #FF0001; color: #fff;">
+          Western Runner / Dev Blog
+                  
+                  #5
+         </span>
+         Prototyping Gameplay Mechanics (Weeks 2 - 5)
+        </h1>
+        <div class="content has-text-grey">
+         I began prototyping the gameplay mechanics for my endless runner game, Western Runner.
+         <hr class="styled-hr"/>
+         <p>
+          <i class="fas fa-tags">
+          </i>
+          <span class="tag is-link tag-default">
+           Unreal Engine
+          </span>
+          <span class="tag is-link tag-default">
+           Blueprints
+          </span>
+          <span class="tag is-link tag-default">
+           Dev Blog
+          </span>
+          <span class="tag is-link tag-default">
+           College
+          </span>
+         </p>
+         <span class="has-text-grey">
+          Published on
+          <span class="has-text-weight-semibold">
+           September 15, 2019
+          </span>
+         </span>
+         |
+         <i class="fas fa-clock">
+         </i>
+         <span class="has-text-weight-semibold">
+          30 min
+         </span>
+         read
+        </div>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="blog-card" data-tags="Design &amp; Research, Dev Blog, College">
+     <div class="columns has-text-centered" id="blog-card">
+      <div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet">
+       <div class="image is-16by9" style="background-image: url(/assets/images/covers/Blogs/WRMechanicsPlanning.png);">
+       </div>
+      </div>
+      <a href="blog\mechanics-planning.html">
+       <div class="column has-text-left-desktop has-text-left-tablet">
+        <h1 class="title is-size-4-touch">
+         <span class="tag is-medium has-text-weight-bold" style="background-color: #FF0001; color: #fff;">
+          Western Runner / Dev Blog
+                  
+                  #4
+         </span>
+         Mechanics Planning (Weeks 2 - 5)
+        </h1>
+        <div class="content has-text-grey">
+         For my planning, I thought it would be a good idea to make some flow diagrams of how I roughly want my code to work out.
+         <hr class="styled-hr"/>
+         <p>
+          <i class="fas fa-tags">
+          </i>
+          <span class="tag is-link tag-default">
+           Design &amp; Research
+          </span>
+          <span class="tag is-link tag-default">
+           Dev Blog
+          </span>
+          <span class="tag is-link tag-default">
+           College
+          </span>
+         </p>
+         <span class="has-text-grey">
+          Published on
+          <span class="has-text-weight-semibold">
+           September 14, 2019
+          </span>
+         </span>
+         |
+         <i class="fas fa-clock">
+         </i>
+         <span class="has-text-weight-semibold">
+          5 min
+         </span>
+         read
+        </div>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="blog-card" data-tags="Unreal Engine, Design &amp; Research, 2D Art, Dev Blog, College">
+     <div class="columns has-text-centered" id="blog-card">
+      <div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet">
+       <div class="image is-16by9" style="background-image: url(/assets/images/covers/Blogs/WRLevelDesignMaps.png);">
+       </div>
+      </div>
+      <a href="blog\level-planning-asset-research.html">
+       <div class="column has-text-left-desktop has-text-left-tablet">
+        <h1 class="title is-size-4-touch">
+         <span class="tag is-medium has-text-weight-bold" style="background-color: #FF0001; color: #fff;">
+          Western Runner / Dev Blog
+                  
+                  #3
+         </span>
+         Level Planning &amp; Asset Research (Weeks 2 - 5)
+        </h1>
+        <div class="content has-text-grey">
+         This is my level planning, I drew out some level plans, and done some research into the assets I can use for the environment.
+         <hr class="styled-hr"/>
+         <p>
+          <i class="fas fa-tags">
+          </i>
+          <span class="tag is-link tag-default">
+           Unreal Engine
+          </span>
+          <span class="tag is-link tag-default">
+           Design &amp; Research
+          </span>
+          <span class="tag is-link tag-default">
+           2D Art
+          </span>
+          <span class="tag is-link tag-default">
+           Dev Blog
+          </span>
+          <span class="tag is-link tag-default">
+           College
+          </span>
+         </p>
+         <span class="has-text-grey">
+          Published on
+          <span class="has-text-weight-semibold">
+           September 13, 2019
+          </span>
+         </span>
+         |
+         <i class="fas fa-clock">
+         </i>
+         <span class="has-text-weight-semibold">
+          24 min
+         </span>
+         read
+        </div>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="blog-card" data-tags="Design &amp; Research, Dev Blog, College">
+     <div class="columns has-text-centered" id="blog-card">
+      <div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet">
+       <div class="image is-16by9" style="background-image: url(/assets/images/covers/Blogs/WRIdeasResearch.jpg);">
+       </div>
+      </div>
+      <a href="blog\ideas-research.html">
+       <div class="column has-text-left-desktop has-text-left-tablet">
+        <h1 class="title is-size-4-touch">
+         <span class="tag is-medium has-text-weight-bold" style="background-color: #FF0001; color: #fff;">
+          Western Runner / Dev Blog
+                  
+                  #2
+         </span>
+         Ideas Research (Week 1)
+        </h1>
+        <div class="content has-text-grey">
+         I have come up with three ideas, and I have researched into how I can make them, and how they would meet my audiences needs.
+         <hr class="styled-hr"/>
+         <p>
+          <i class="fas fa-tags">
+          </i>
+          <span class="tag is-link tag-default">
+           Design &amp; Research
+          </span>
+          <span class="tag is-link tag-default">
+           Dev Blog
+          </span>
+          <span class="tag is-link tag-default">
+           College
+          </span>
+         </p>
+         <span class="has-text-grey">
+          Published on
+          <span class="has-text-weight-semibold">
+           September 12, 2019
+          </span>
+         </span>
+         |
+         <i class="fas fa-clock">
+         </i>
+         <span class="has-text-weight-semibold">
+          17 min
+         </span>
+         read
+        </div>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="blog-card" data-tags="Design &amp; Research, Dev Blog, College">
+     <div class="columns has-text-centered" id="blog-card">
+      <div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet">
+       <div class="image is-16by9" style="background-image: url(/assets/images/covers/Blogs/WRGeneralWesternResearch.jpg);">
+       </div>
+      </div>
+      <a href="blog\general-western-research.html">
+       <div class="column has-text-left-desktop has-text-left-tablet">
+        <h1 class="title is-size-4-touch">
+         <span class="tag is-medium has-text-weight-bold" style="background-color: #FF0001; color: #fff;">
+          Western Runner / Dev Blog
+                  
+                  #1
+         </span>
+         General Western Research (Week 1)
+        </h1>
+        <div class="content has-text-grey">
+         I research the history, environments, tv shows, films and games around the theme of 'Western'
+         <hr class="styled-hr"/>
+         <p>
+          <i class="fas fa-tags">
+          </i>
+          <span class="tag is-link tag-default">
+           Design &amp; Research
+          </span>
+          <span class="tag is-link tag-default">
+           Dev Blog
+          </span>
+          <span class="tag is-link tag-default">
+           College
+          </span>
+         </p>
+         <span class="has-text-grey">
+          Published on
+          <span class="has-text-weight-semibold">
+           September 11, 2019
+          </span>
+         </span>
+         |
+         <i class="fas fa-clock">
+         </i>
+         <span class="has-text-weight-semibold">
+          11 min
+         </span>
+         read
+        </div>
+       </div>
+      </a>
+     </div>
+    </div>
+   </div>
+  </section>
+  <br/>
+  <!--Footer begins here-->
+  <footer id="footer">
+   <!--Footer Button-->
+   <div class="container has-text-centered has-background-grey-darker footer-overlay" id="backtotop">
+    <a class="has-text-white" onclick="window.scroll(0,0)">
+     BACK TO TOP
+    </a>
+   </div>
+   <!--Footer Main Section-->
+   <div class="has-background-grey-darker footer-overlay">
+    <div class="container columns">
+     <!--Name Section-->
+     <div class="column has-text-left-desktop has-text-centered-mobile">
+      <a href="index.html">
+       <div class="columns">
+        <div class="column is-one-fifth-desktop is-one-fifth-fullhd is-one-quarter-tablet">
+         <figure class="image is-64x64">
+          <img class="is-rounded" src="assets\images\profile.png"/>
+         </figure>
+        </div>
+        <div class="column is-marginless">
+         <h5 class="has-text-grey-lighter">
+          Behram Khan
+         </h5>
+         <div class="content has-text-grey">
+          <p>
+           Hi! I'm Amy, a UK-based programmer. I love technical and creative experimentation, often participating in game jams and small projects. I...
+          </p>
+         </div>
+        </div>
+       </div>
+      </a>
+     </div>
+     <!--Social Media Section-->
+     <div class="column has-text-white">
+      <h3>
+       Follow Me
+      </h3>
+      <div class="social-media-icons">
+       <a class="has-text-grey" href="https://www.linkedin.com/in/amy-m-elliott" target="_blank">
+        <i class="fab fa-linkedin">
+        </i>
+       </a>
+       <a class="has-text-grey" href="https://www.github.com/AmyE123" target="_blank">
+        <i class="fab fa-github">
+        </i>
+       </a>
+       <a class="has-text-grey" href="https://amyme.me" target="_blank">
+        <i class="fa fa-house">
+        </i>
+       </a>
+      </div>
+     </div>
+     <!--Blog-post Section-->
+     <div class="column has-text-white">
+      <h3>
+       Recent Posts
+      </h3>
+      <li>
+       <a href="blog\navigating-my-programming-career.html">
+        Navigating My Programming Career: Insights From University
+       </a>
+      </li>
+      <li>
+       <a href="blog\i-learnt-about-sfml-cmake-heres-my-process.html">
+        I Learnt About SFML &amp; CMake. Here's My Process.
+       </a>
+      </li>
+      <li>
+       <a href="blog\collaborating-on-a-game-pitch.html">
+        Collaborating on a Game Pitch
+       </a>
+      </li>
+     </div>
+    </div>
+   </div>
+  </footer>
+  <script src="assets\js\simple-jekyll-search.js">
+  </script>
+  <script>
+   const tagCategories = {
+        'languages': ['C# Programming', 'C++ Programming', 'Blueprints', 'CMake', 'Lua'],
+        'engines/libraries': ['Unity', 'Unreal Engine', 'Proprietary Engine', 'SFML', 'Roblox'],
+        'highlights': ['Dev Blog'],
+        'others': ['Project-Based Learning', 'Volunteering', 'Running A Workshop', 'Sumo Digital', 'Presenting A Lecture/Talk', 'Mentoring', 'Game Jams', 'Internship/Placement', 'Game Design', 'Greyboxing', 'Algorithms', 'Project Management', 'Jagex']
+    };
+
+    const tagColors = {
+        'languages': 'tag-languages', // Add the corresponding CSS class
+        'engines/libraries': 'tag-engines-libs', // Add the corresponding CSS class
+        'highlights': 'tag-highlights', // Add the corresponding CSS class
+        'others': 'tag-others' // Default color
+    };
+
+    function getTagCategory(tag) {
+        for (const category in tagCategories) {
+            if (tagCategories[category].includes(tag)) {
+                return category;
+            }
+        }
+        return 'others';
+    }
+
+    // Collect tags and their counts
+    const tagCounts = {};
+    document.querySelectorAll('.blog-card').forEach(card => {
+        const tags = card.getAttribute('data-tags').split(', ');
+        tags.forEach(tag => {
+            if (!tagCounts[tag]) tagCounts[tag] = 0;
+            tagCounts[tag]++;
+        });
+    });
+
+        let selectedTags = []; // Store the selected tags globally
+
+        function updateTagButtons() {
+            const hideMiscPosts = document.getElementById('hideMiscPosts').checked;
+            const tagFiltersContainer = document.getElementById('tag-filters-container');
+            tagFiltersContainer.innerHTML = '';
+
+            const visibleTagCounts = {};
+
+            // Count tags only for visible posts
+            document.querySelectorAll('.blog-card').forEach(card => {
+                if (card.style.display !== 'none') { // Only count tags for visible posts
+                    const tags = card.getAttribute('data-tags').split(', ');
+                    tags.forEach(tag => {
+                        if (!visibleTagCounts[tag]) visibleTagCounts[tag] = 0;
+                        visibleTagCounts[tag]++;
+                    });
+                }
+            });
+
+            const categories = {
+                'languages': [],
+                'engines/libraries': [],
+                'highlights': [],
+                'others': []
+            };
+
+            Object.keys(visibleTagCounts).forEach(tag => {
+                if (hideMiscPosts && (tag === 'Misc')) {
+                    return; // Skip misc tags if the checkbox is checked
+                }
+
+                const category = getTagCategory(tag);
+                categories[category].push(tag);
+            });
+
+            // Sort tags within each category
+            for (const category in categories) {
+                categories[category].sort();
+            }
+
+            function appendButtons(tags, category) {
+                tags.forEach(tag => {
+                    const button = document.createElement('span');
+                    button.innerText = `${tag} (${visibleTagCounts[tag] || 0})`; // Ensure visible counts only
+                    button.classList.add('tag', 'tag-filter-button', tagColors[category]);
+                    button.setAttribute('data-tag', tag);
+
+                    // Apply the active class if this tag is selected
+                    if (selectedTags.includes(tag)) {
+                        button.classList.add('active');
+                    }
+
+                    tagFiltersContainer.appendChild(button);
+                });
+            }
+
+            appendButtons(categories['languages'], 'languages');
+            appendButtons(categories['engines/libraries'], 'engines/libraries');
+            appendButtons(categories['highlights'], 'highlights');
+            appendButtons(categories['others'], 'others');
+
+            // Reset button logic
+            const resetButton = document.createElement('span');
+            resetButton.innerText = 'Reset Filters';
+            resetButton.classList.add('tag', 'tag-filter-button', 'reset');
+            resetButton.addEventListener('click', () => {
+                // Refresh the page to reset everything
+                location.reload(); // This will refresh the page
+            });
+            tagFiltersContainer.appendChild(resetButton);
+
+            document.querySelectorAll('.tag-filter-button').forEach(button => {
+                button.addEventListener('click', () => {
+                    const tag = button.getAttribute('data-tag');
+
+                    if (!selectedTags.includes(tag)) {
+                        selectedTags.push(tag); // Add tag to selectedTags array
+                        button.classList.add('active');
+                    } else {
+                        selectedTags = selectedTags.filter(t => t !== tag); // Remove tag if it's already selected
+                        button.classList.remove('active');
+                    }
+
+                    filterPosts();
+                });
+            });
+        }
+
+        // Modify filterPosts to use selectedTags array and match all selected tags
+        function filterPosts() {
+            const hideMiscPosts = document.getElementById('hideMiscPosts').checked;
+
+            document.querySelectorAll('.blog-card').forEach(card => {
+                const tags = card.getAttribute('data-tags').split(', ');
+                const isMisc = tags.includes('Misc');
+
+                // Determine if post should be shown based on selected tags and Misc filter
+                let matchesSelectedTags = true; // Default to true (show all) if no tags are selected
+
+                // If tags are selected, check if the post matches all selected tags
+                if (selectedTags.length > 0) {
+                    matchesSelectedTags = selectedTags.every(tag => tags.includes(tag));
+                }
+
+                // Apply the filter logic: hide if Misc is checked and it's a Misc post, or if it doesn't match selected tags
+                if ((hideMiscPosts && isMisc) || !matchesSelectedTags) {
+                    card.style.display = 'none'; // Hide non-matching or miscellaneous posts
+                } else {
+                    card.style.display = ''; // Show matching or all posts
+                }
+            });
+
+            // Update tag buttons after filtering is applied
+            updateTagButtons();
+        }
+
+        document.getElementById('hideMiscPosts').addEventListener('change', filterPosts);
+
+        window.addEventListener('load', () => {
+            // Call updateTagButtons on page load to display the tag buttons initially
+            updateTagButtons();
+            filterPosts(); // Apply filters and show/hide posts on load
+        });
+
+
+    function generateTags(tags) {
+        if (!tags) return '';
+        let tagsArray = tags.split(', ');
+        let tagsHtml = '';
+        tagsArray.forEach(tag => {
+            tagsHtml += `<span class="tag is-link">${tag.trim()}</span> `;
+        });
+        return tagsHtml;
+    }
+
+        SimpleJekyllSearch({
+            searchInput: document.getElementById('search'),
+            resultsContainer: document.getElementById('results-container'),
+            json: '/search.json',
+            searchResultTemplate: `
+        <div style="border: 0.15rem dashed black" class="searchResult columns has-text-centered" id="blog-card">
+            <div class="column is-marginless is-paddingless is-one-third-desktop is-one-third-fullhd is-one-third-tablet">
+                <div class="image is-16by9" style="background-image: url({image});"></div>
+            </div>
+            <a href="{url}">
+                <div class="column has-text-left-desktop has-text-left-tablet">
+                    <h1 class="title is-size-4-touch">{title}</h1>
+                    <div class="content has-text-grey">
+                        {description}
+                        <hr class="has-background-grey">
+                        <p class="subtitle is-uppercase">
+                            <i class="fas fa-tags"></i>
+                            {tags}
+                        </p>
+                        <span class="has-text-grey">Published on <span class="has-text-weight-semibold">{date}</span></span> |
+                        <i class="fas fa-clock"></i> <span class="has-text-weight-semibold">{readtime} min</span> read
+                    </div>
+                </div>
+            </a>
+        </div>`,
+            noResultsText: '<div class="subtitle has-text-centered is-uppercase">No Results Found</div><hr class="has-background-black" style="margin: 0.5rem 5rem 2.5rem 5rem">',
+            fuzzy: false, // Set to false for strict matching
+            searchMiddleware: function (searchTerm, data) {
+                const term = searchTerm.toLowerCase();
+
+                // Filter results based on title, tags, or description matching the term
+                return data.filter(post =>
+                    post.title.toLowerCase().includes(term) ||
+                    (post.tags && post.tags.toLowerCase().includes(term)) ||
+                    post.description.toLowerCase().includes(term)
+                );
+            },
+            templateMiddleware: function (prop, value) {
+                if (prop === 'tags') {
+                    return generateTags(value);
+                }
+                return value;
+            }
+        });
+
+    window.addEventListener('load', () => {
+        filterPosts();
+    });
+  </script>
+  <style>
+   .tag-languages {
+            background-color: #add8e6 !important;
+        }
+
+        .tag-engines-libs {
+            background-color: #c5e5c0 !important;
+        }
+
+        .tag-highlights {
+            background-color: #f0c987 !important;
+        }
+
+        .tag-others {
+            background-color: #eeeeee !important;
+        }
+
+
+
+        .tag-filter-button.active {
+
+            border-color: #ff9900 !important;
+
+        }
+  </style>
+ </body>
+</html>

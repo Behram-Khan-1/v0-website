@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <head>
+   <!-- Include Meta Tags Here -->
+   <meta charset="utf-8"/>
+   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+   <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+   <meta content="width=device-width, height=device-height, initial-scale=1 user-scalable=no, shrink-to-fit=no" name="viewport"/>
+   <meta content="#000000" name="theme-color">
+    <meta content="Portfolio, Programmer, GameDev" name="keywords"/>
+    <title>
+     Behram Khan | Volunteering
+    </title>
+    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta content="Behram Khan | Volunteering" name="og:title"/>
+    <meta content="I'm a Gameplay Programmer!" name="og:description"/>
+    <meta content="/amy-portfolio/assets/images/meta.jpg" name="og:image"/>
+    <meta content="Behram Khan | Volunteering" name="og:image:alt"/>
+    <meta content="/volunteering" name="og:url"/>
+    <meta content="https://www.facebook.com/" name="article:author"/>
+    <meta content="Behram Khan | Volunteering" name="og:site_name"/>
+    <meta content="website" name="og:type"/>
+    <!-- Twitter -->
+    <meta content="summary_large_image" property="twitter:card">
+     <meta content="Behram Khan | Volunteering" name="twitter:title"/>
+     <meta content="I'm a Gameplay Programmer!" name="twitter:description"/>
+     <meta content="@" name="twitter:site"/>
+     <meta content="@" name="twitter:creator"/>
+     <meta content="/amy-portfolio/assets/images/meta.jpg" name="twitter:image:src"/>
+     <!-- Search Engine -->
+     <meta content="I'm a Gameplay Programmer!" name="description"/>
+     <meta content="/amy-portfolio/assets/images/meta.jpg" name="image"/>
+     <!-- Schema.org for Google -->
+     <meta content="Behram Khan | Volunteering" itemprop="name"/>
+     <meta content="Behram Khan" name="author">
+      <meta content="I'm a Gameplay Programmer!" itemprop="description"/>
+      <meta content="/amy-portfolio/assets/images/meta.jpg" itemprop="image"/>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SJTTGX1K8N">
+      </script>
+      <script>
+       window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-SJTTGX1K8N');
+      </script>
+      <title>
+       Behram Khan
+      </title>
+      <link href="assets\css\style.css" rel="stylesheet"/>
+      <script crossorigin="anonymous" src="https://kit.fontawesome.com/6a97161b76.js">
+      </script>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+      <link href="assets\images\logo.png" rel="shortcut icon" type="image/x-icon"/>
+      <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js">
+      </script>
+     </meta>
+    </meta>
+   </meta>
+  </head>
+  <style>
+   .experience-card {
+            position: relative;
+            cursor: pointer;
+            background-color: #f5f5f5;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+            .experience-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            .experience-card .title {
+                font-size: clamp(1rem, 2vw, 1.25rem);
+                font-weight: bold;
+                margin-bottom: 0; /* Remove spacing here */
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                /* Force consistent height as if all titles are 2 lines */
+                min-height: 2.5rem; /* Adjust if needed to match your font scaling */
+            }
+
+            .experience-card .subtitle-org {
+                font-size: 1rem;
+                font-weight: bold;
+                color: #888;
+                margin-bottom: 0.5rem; /* Ensures padding is applied below the subtitle */
+            }
+
+            @media (max-width: 768px) {
+                .experience-card .subtitle-org {
+                    font-size: clamp(0.7rem, 2vw, 1rem); /* Same size or smaller */
+                }
+            }
+
+            .experience-card .dates {
+                font-size: 0.9rem;
+                color: #777;
+            }
+
+        .tag {
+            background-color: #3273dc !important;
+            color: white !important;
+            margin: 5px !important;
+            padding: 0.25em 0.5em;
+            border-radius: 0.25rem;
+            display: inline-block;
+        }
+
+        @media (max-width: 768px) {
+            .column.is-two-fifths-mobile {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        #modal-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.25rem;
+        }
+
+        #modal-org {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 0.5rem;
+        }
+
+        #modal-dates {
+            font-size: 0.9rem;
+            color: #777;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        #modal-description {
+            line-height: 1.6;
+        }
+
+        #modal-links-container .button {
+            background-color: #3273dc;
+            color: #fff;
+            border: none;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.85rem;
+        }
+
+            #modal-links-container .button:hover {
+                background-color: #275fad;
+            }
+
+        .modal-content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 90%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            overflow-y: auto;
+            max-height: 80%;
+            position: relative;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: #aaa;
+        }
+
+            .close-button:hover {
+                color: #333;
+            }
+
+        .card-image .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+  </style>
+ </head>
+ <body>
+  <nav aria-label="main navigation" class="navbar is-black is-fixed-top" id="navbar" role="navigation">
+   <div class="container">
+    <!-- logo or branding image on left side -->
+    <div class="navbar-brand">
+     <a class="navbar-item" href="index.html">
+      <strong>
+       Behram Khan
+      </strong>
+     </a>
+     <div class="navbar-burger" data-target="navbar-menu">
+      <span>
+      </span>
+      <span>
+      </span>
+      <span>
+      </span>
+     </div>
+    </div>
+    <!-- children of navbar-menu must be navbar-start and/or navbar-end -->
+    <div class="navbar-menu has-background-black" id="navbar-menu">
+     <!-- navbar items | left side -->
+     <!-- <div class="navbar-start">
+            </div> -->
+     <!-- navbar items | right side -->
+     <div class="navbar-end">
+      <a class="navbar-item" href="index.html">
+       HOME
+      </a>
+      <a class="navbar-item" href="index.html">
+       HIGHLIGHTS
+      </a>
+      <a class="navbar-item" href="index.html">
+       ABOUT
+      </a>
+      <a class="navbar-item" href="games.html">
+       GAMES
+      </a>
+      <a class="navbar-item" href="projects.html">
+       PROJECTS
+      </a>
+      <a class="navbar-item" href="blog.html">
+       BLOG
+      </a>
+      <div class="navbar-item has-dropdown is-hoverable">
+       <a class="navbar-link">
+        MORE
+       </a>
+       <div class="navbar-dropdown has-background-black is-left">
+        <a class="navbar-item has-text-grey-light" href="curriculum-vitae.html">
+         Curriculum Vitae
+        </a>
+        <a class="navbar-item has-text-grey-light" href="devblogs.html">
+         All Dev Blogs
+        </a>
+        <a class="navbar-item has-text-grey-light" href="honours-awards.html">
+         Honours &amp; Awards
+        </a>
+        <a class="navbar-item has-text-grey-light" href="studying.html">
+         Studying
+        </a>
+        <a class="navbar-item has-text-grey-light is-active" href="volunteering.html">
+         Volunteering
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </nav>
+  <!-- Bulma Navbar JS -->
+  <script>
+   document.addEventListener('DOMContentLoaded', function () {
+        /* Get all "navbar-burger" elements */
+        var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+        /* Check if there are any navbar burgers */
+        if ($navbarBurgers.length > 0) {
+            /* Add a click event on each of them */
+            $navbarBurgers.forEach(function ($el) {
+                $el.addEventListener('click', function () {
+                    /* Get the target from the "data-target" attribute */
+                    var target = $el.dataset.target;
+                    var $target = document.getElementById(target);
+                    /* Toggle the class on both the "navbar-burger" and the "navbar-menu" */
+                    $el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+                });
+            });
+        }
+    });
+  </script>
+  <section class="hero is-fullheight">
+   <div class="hero-body">
+    <div class="container has-text-centered">
+     <div class="section">
+      <h1 class="title is-uppercase has-text-weight-bold">
+       Volunteering
+      </h1>
+      <p>
+       Here are my volunteering experiences. Click on a card for more information.
+      </p>
+      <hr/>
+      <div class="columns is-centered is-multiline is-mobile">
+       <div class="column has-text-centered is-marginless is-one-third-widescreen is-one-third-desktop is-one-third-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch">
+        <div class="card experience-card" onclick="openModal(0)">
+         <div class="card-image">
+          <figure class="image is-2by1">
+           <img alt="Year 8 Careers Event: 'Women Mean Business'" src="assets\images\covers\Volunteering\WomenMeanBusiness.jpg"/>
+          </figure>
+         </div>
+         <div class="card-content">
+          <h2 class="title">
+           Year 8 Careers Event: 'Women Mean Business'
+          </h2>
+          <h3 class="subtitle-org">
+           Portsmouth Highschool for Girls
+          </h3>
+          <span class="tag">
+           Workshop
+          </span>
+          <p class="dates">
+           June 2025
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="column has-text-centered is-marginless is-one-third-widescreen is-one-third-desktop is-one-third-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch">
+        <div class="card experience-card" onclick="openModal(1)">
+         <div class="card-image">
+          <figure class="image is-2by1">
+           <img alt="AI &amp; Creative Industries: Are jobs changing?" src="assets\images\covers\Volunteering\AICreativeIndustries.png"/>
+          </figure>
+         </div>
+         <div class="card-content">
+          <h2 class="title">
+           AI &amp; Creative Industries: Are jobs changing?
+          </h2>
+          <h3 class="subtitle-org">
+           Skreenskills, Discover! &amp; ERIC
+          </h3>
+          <span class="tag">
+           Panellist
+          </span>
+          <p class="dates">
+           March 2025
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="column has-text-centered is-marginless is-one-third-widescreen is-one-third-desktop is-one-third-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch">
+        <div class="card experience-card" onclick="openModal(2)">
+         <div class="card-image">
+          <figure class="image is-2by1">
+           <img alt="Game Dev Volunteer" src="assets\images\covers\Volunteering\BrightonMET.jpg"/>
+          </figure>
+         </div>
+         <div class="card-content">
+          <h2 class="title">
+           Game Dev Volunteer
+          </h2>
+          <h3 class="subtitle-org">
+           Brighton MET College
+          </h3>
+          <span class="tag">
+           Workshop
+          </span>
+          <p class="dates">
+           January 2025
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="column has-text-centered is-marginless is-one-third-widescreen is-one-third-desktop is-one-third-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch">
+        <div class="card experience-card" onclick="openModal(3)">
+         <div class="card-image">
+          <figure class="image is-2by1">
+           <img alt="Tools Development in Games" src="assets\images\covers\Volunteering\GamesTalksLive.jpg"/>
+          </figure>
+         </div>
+         <div class="card-content">
+          <h2 class="title">
+           Tools Development in Games
+          </h2>
+          <h3 class="subtitle-org">
+           Games Talks Live: Scotland 2024
+          </h3>
+          <span class="tag">
+           Conference Talk
+          </span>
+          <p class="dates">
+           November 2024
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="column has-text-centered is-marginless is-one-third-widescreen is-one-third-desktop is-one-third-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch">
+        <div class="card experience-card" onclick="openModal(4)">
+         <div class="card-image">
+          <figure class="image is-2by1">
+           <img alt="Building Efficient Custom Tools" src="assets\images\covers\Volunteering\BuildingEfficientCustomTools.png"/>
+          </figure>
+         </div>
+         <div class="card-content">
+          <h2 class="title">
+           Building Efficient Custom Tools
+          </h2>
+          <h3 class="subtitle-org">
+           Develop: North 2024
+          </h3>
+          <span class="tag">
+           Conference Talk
+          </span>
+          <p class="dates">
+           November 2024
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="column has-text-centered is-marginless is-one-third-widescreen is-one-third-desktop is-one-third-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch">
+        <div class="card experience-card" onclick="openModal(5)">
+         <div class="card-image">
+          <figure class="image is-2by1">
+           <img alt="Career's Day Volunteer" src="assets\images\covers\Volunteering\GameAcademyCareersDay.png"/>
+          </figure>
+         </div>
+         <div class="card-content">
+          <h2 class="title">
+           Career's Day Volunteer
+          </h2>
+          <h3 class="subtitle-org">
+           Game Academy
+          </h3>
+          <span class="tag">
+           1-2-1 Workshop
+          </span>
+          <p class="dates">
+           July 2024
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="column has-text-centered is-marginless is-one-third-widescreen is-one-third-desktop is-one-third-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch">
+        <div class="card experience-card" onclick="openModal(6)">
+         <div class="card-image">
+          <figure class="image is-2by1">
+           <img alt="You're not a student - you're a junior who hasn't started yet!" src="assets\images\covers\Volunteering\WIGYoureNotAStudent.jpg"/>
+          </figure>
+         </div>
+         <div class="card-content">
+          <h2 class="title">
+           You're not a student - you're a junior who hasn't started yet!
+          </h2>
+          <h3 class="subtitle-org">
+           Women in Games
+          </h3>
+          <span class="tag">
+           Panel Host
+          </span>
+          <p class="dates">
+           September 2022
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="column has-text-centered is-marginless is-one-third-widescreen is-one-third-desktop is-one-third-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch">
+        <div class="card experience-card" onclick="openModal(7)">
+         <div class="card-image">
+          <figure class="image is-2by1">
+           <img alt="Writing For Games - Tell Me More!" src="assets\images\covers\Volunteering\WritingForGamesTellMeMore.jpg"/>
+          </figure>
+         </div>
+         <div class="card-content">
+          <h2 class="title">
+           Writing For Games - Tell Me More!
+          </h2>
+          <h3 class="subtitle-org">
+           Game Dev London
+          </h3>
+          <span class="tag">
+           Panel Host
+          </span>
+          <p class="dates">
+           September 2022
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="column has-text-centered is-marginless is-one-third-widescreen is-one-third-desktop is-one-third-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch">
+        <div class="card experience-card" onclick="openModal(8)">
+         <div class="card-image">
+          <figure class="image is-2by1">
+           <img alt="Game Dev Volunteer &amp; Tech Workshop Volunteer" src="assets\images\covers\Volunteering\GameDevVolunteerTechWorkshop.jpg"/>
+          </figure>
+         </div>
+         <div class="card-content">
+          <h2 class="title">
+           Game Dev Volunteer &amp; Tech Workshop Volunteer
+          </h2>
+          <h3 class="subtitle-org">
+           Ahead Partnership
+          </h3>
+          <span class="tag">
+           Workshop
+          </span>
+          <p class="dates">
+           July 2022
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="column has-text-centered is-marginless is-one-third-widescreen is-one-third-desktop is-one-third-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch">
+        <div class="card experience-card" onclick="openModal(9)">
+         <div class="card-image">
+          <figure class="image is-2by1">
+           <img alt="Guest Speaker &amp; Game Dev Workshop" src="assets\images\covers\Volunteering\GuestSpeakerGameDevWorkshop.png"/>
+          </figure>
+         </div>
+         <div class="card-content">
+          <h2 class="title">
+           Guest Speaker &amp; Game Dev Workshop
+          </h2>
+          <h3 class="subtitle-org">
+           Ahead Partnership
+          </h3>
+          <span class="tag">
+           Speaker
+          </span>
+          <p class="dates">
+           April 2022
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="column has-text-centered is-marginless is-one-third-widescreen is-one-third-desktop is-one-third-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch">
+        <div class="card experience-card" onclick="openModal(10)">
+         <div class="card-image">
+          <figure class="image is-2by1">
+           <img alt="Guest Speaker" src="assets\images\covers\Volunteering\GuestSpeakerUAL.png"/>
+          </figure>
+         </div>
+         <div class="card-content">
+          <h2 class="title">
+           Guest Speaker
+          </h2>
+          <h3 class="subtitle-org">
+           University of the Arts London
+          </h3>
+          <span class="tag">
+           Speaker
+          </span>
+          <p class="dates">
+           April 2022
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="column has-text-centered is-marginless is-one-third-widescreen is-one-third-desktop is-one-third-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch">
+        <div class="card experience-card" onclick="openModal(11)">
+         <div class="card-image">
+          <figure class="image is-2by1">
+           <img alt="Careers and Networking Expo" src="assets\images\covers\Volunteering\CareersNetworkingExpoWIG22.jpg"/>
+          </figure>
+         </div>
+         <div class="card-content">
+          <h2 class="title">
+           Careers and Networking Expo
+          </h2>
+          <h3 class="subtitle-org">
+           Women in Games
+          </h3>
+          <span class="tag">
+           Panel Host
+          </span>
+          <p class="dates">
+           March 2022
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="column has-text-centered is-marginless is-one-third-widescreen is-one-third-desktop is-one-third-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch">
+        <div class="card experience-card" onclick="openModal(12)">
+         <div class="card-image">
+          <figure class="image is-2by1">
+           <img alt="Guest Speaker" src="assets\images\covers\Volunteering\GuestSpeakerNorthbrook.png"/>
+          </figure>
+         </div>
+         <div class="card-content">
+          <h2 class="title">
+           Guest Speaker
+          </h2>
+          <h3 class="subtitle-org">
+           Northbrook College
+          </h3>
+          <span class="tag">
+           Speaker
+          </span>
+          <p class="dates">
+           January 2022
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="column has-text-centered is-marginless is-one-third-widescreen is-one-third-desktop is-one-third-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch">
+        <div class="card experience-card" onclick="openModal(13)">
+         <div class="card-image">
+          <figure class="image is-2by1">
+           <img alt="Guest Speaker" src="assets\images\covers\Volunteering\GuestSpeakerSchool.jpg"/>
+          </figure>
+         </div>
+         <div class="card-content">
+          <h2 class="title">
+           Guest Speaker
+          </h2>
+          <h3 class="subtitle-org">
+           School
+          </h3>
+          <span class="tag">
+           Speaker
+          </span>
+          <p class="dates">
+           November 2021
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="column has-text-centered is-marginless is-one-third-widescreen is-one-third-desktop is-one-third-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch">
+        <div class="card experience-card" onclick="openModal(14)">
+         <div class="card-image">
+          <figure class="image is-2by1">
+           <img alt="Global Conference" src="assets\images\covers\Volunteering\WIGGlobalConference.jpg"/>
+          </figure>
+         </div>
+         <div class="card-content">
+          <h2 class="title">
+           Global Conference
+          </h2>
+          <h3 class="subtitle-org">
+           Women in Games
+          </h3>
+          <span class="tag">
+           Panel Host
+          </span>
+          <p class="dates">
+           September 2021
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="column has-text-centered is-marginless is-one-third-widescreen is-one-third-desktop is-one-third-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch">
+        <div class="card experience-card" onclick="openModal(15)">
+         <div class="card-image">
+          <figure class="image is-2by1">
+           <img alt="Programming Mentor" src="assets\images\covers\Volunteering\ProgrammingMentorSidefest.png"/>
+          </figure>
+         </div>
+         <div class="card-content">
+          <h2 class="title">
+           Programming Mentor
+          </h2>
+          <h3 class="subtitle-org">
+           SideFest
+          </h3>
+          <span class="tag">
+           Teaching/Mentoring
+          </span>
+          <p class="dates">
+           July 2021
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="column has-text-centered is-marginless is-one-third-widescreen is-one-third-desktop is-one-third-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch">
+        <div class="card experience-card" onclick="openModal(16)">
+         <div class="card-image">
+          <figure class="image is-2by1">
+           <img alt="Project Manager/Mentor" src="assets\images\covers\Volunteering\ProjectManagerMentorIntoGames.jpg"/>
+          </figure>
+         </div>
+         <div class="card-content">
+          <h2 class="title">
+           Project Manager/Mentor
+          </h2>
+          <h3 class="subtitle-org">
+           Into Games
+          </h3>
+          <span class="tag">
+           Teaching/Mentoring
+          </span>
+          <p class="dates">
+           July 2021
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="column has-text-centered is-marginless is-one-third-widescreen is-one-third-desktop is-one-third-fullhd is-one-third-tablet is-two-fifths-mobile is-three-quarters-touch">
+        <div class="card experience-card" onclick="openModal(17)">
+         <div class="card-image">
+          <figure class="image is-2by1">
+           <img alt="Exhibitor" src="assets\images\covers\Volunteering\BetterBusinessShowExhibit.jpg"/>
+          </figure>
+         </div>
+         <div class="card-content">
+          <h2 class="title">
+           Exhibitor
+          </h2>
+          <h3 class="subtitle-org">
+           Better Business Show
+          </h3>
+          <span class="tag">
+           Exhibitor
+          </span>
+          <p class="dates">
+           February 2020
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="modal" id="modal" onclick="closeModal(event)">
+    <div class="modal-content">
+     <span class="close-button" onclick="closeModal(event)">
+      ×
+     </span>
+     <h2 id="modal-title">
+     </h2>
+     <h3 id="modal-org">
+     </h3>
+     <div id="modal-tags">
+     </div>
+     <p id="modal-dates">
+     </p>
+     <hr/>
+     <div id="modal-links-container" style="margin-bottom: 1rem; text-align: left;">
+     </div>
+     <div id="modal-description">
+     </div>
+    </div>
+   </div>
+   <footer id="footer">
+    <!--Footer Button-->
+    <div class="container has-text-centered has-background-grey-darker footer-overlay" id="backtotop">
+     <a class="has-text-white" onclick="window.scroll(0,0)">
+      BACK TO TOP
+     </a>
+    </div>
+    <!--Footer Main Section-->
+    <div class="has-background-grey-darker footer-overlay">
+     <div class="container columns">
+      <!--Name Section-->
+      <div class="column has-text-left-desktop has-text-centered-mobile">
+       <a href="index.html">
+        <div class="columns">
+         <div class="column is-one-fifth-desktop is-one-fifth-fullhd is-one-quarter-tablet">
+          <figure class="image is-64x64">
+           <img class="is-rounded" src="assets\images\profile.png"/>
+          </figure>
+         </div>
+         <div class="column is-marginless">
+          <h5 class="has-text-grey-lighter">
+           Behram Khan
+          </h5>
+          <div class="content has-text-grey">
+           <p>
+            Hi! I'm Amy, a UK-based programmer. I love technical and creative experimentation, often participating in game jams and small projects. I...
+           </p>
+          </div>
+         </div>
+        </div>
+       </a>
+      </div>
+      <!--Social Media Section-->
+      <div class="column has-text-white">
+       <h3>
+        Follow Me
+       </h3>
+       <div class="social-media-icons">
+        <a class="has-text-grey" href="https://www.linkedin.com/in/amy-m-elliott" target="_blank">
+         <i class="fab fa-linkedin">
+         </i>
+        </a>
+        <a class="has-text-grey" href="https://www.github.com/AmyE123" target="_blank">
+         <i class="fab fa-github">
+         </i>
+        </a>
+        <a class="has-text-grey" href="https://amyme.me" target="_blank">
+         <i class="fa fa-house">
+         </i>
+        </a>
+       </div>
+      </div>
+      <!--Blog-post Section-->
+      <div class="column has-text-white">
+       <h3>
+        Recent Posts
+       </h3>
+       <li>
+        <a href="blog\navigating-my-programming-career.html">
+         Navigating My Programming Career: Insights From University
+        </a>
+       </li>
+       <li>
+        <a href="blog\i-learnt-about-sfml-cmake-heres-my-process.html">
+         I Learnt About SFML &amp; CMake. Here's My Process.
+        </a>
+       </li>
+       <li>
+        <a href="blog\collaborating-on-a-game-pitch.html">
+         Collaborating on a Game Pitch
+        </a>
+       </li>
+      </div>
+     </div>
+    </div>
+   </footer>
+  </section>
+  <script>
+   const data = [{"role":"Year 8 Careers Event: 'Women Mean Business'","organisation":"Portsmouth Highschool for Girls","date":"June 2025","image":"/assets/images/covers/Volunteering/WomenMeanBusiness.jpg","content":"/content/volunteering/WomenMeanBusiness.md","tags":["Workshop"],"links":[{"title":"News Post","url":"https://www.portsmouthhigh.co.uk/welcome/heads-blog/full-time-careers-adviser-helps-girls-ambitions-take-off-at-portsmouth-high-school-gdst"}]},{"role":"AI & Creative Industries: Are jobs changing?","organisation":"Skreenskills, Discover! & ERIC","date":"March 2025","image":"/assets/images/covers/Volunteering/AICreativeIndustries.png","content":"/content/volunteering/AICreativeIndustries.md","tags":["Panellist"],"links":[{"title":"AI and the Creative Industries: Are jobs changing?","url":"https://youtu.be/P17bdxp-Zxs?si=hf_wWl5gWNMzoUiY"},{"title":"AI and Games Insight Session","url":"https://discovercreative.careers/teachers-career-leaders/online-career-insight-events/focus-on-ai-games/"}]},{"role":"Game Dev Volunteer","organisation":"Brighton MET College","date":"January 2025","image":"/assets/images/covers/Volunteering/BrightonMET.jpg","content":"/content/volunteering/BrightonMETVolunteer.md","tags":["Workshop"]},{"role":"Tools Development in Games","organisation":"Games Talks Live: Scotland 2024","date":"November 2024","image":"/assets/images/covers/Volunteering/GamesTalksLive.jpg","description":"I gave a talk at the Games Talks Live events in Edinburugh, Dundee and Glasgow. There was at least 100+ people at each location. This was a condensed version of my Develop North 2024 tools talk. I really enjoyed giving these talks.","tags":["Conference Talk"],"links":[{"title":"Games Talks Live 2024 Highlight Reel","url":"https://youtu.be/Bk3X7qxl70Y?si=3dDLdSPXqQd_nyZO"}]},{"role":"Building Efficient Custom Tools","organisation":"Develop: North 2024","date":"November 2024","image":"/assets/images/covers/Volunteering/BuildingEfficientCustomTools.png","description":"I did my first talk at a games conference! I talked about how useful tools development is in games development. This talk went really well, the room was full, and the participants were very engaged! I had lots of questions from people at the end of the presentation.","tags":["Conference Talk"],"links":[{"title":"Speaker Page","url":"https://www.developconference.com/north/speakers/amy-elliott"}]},{"role":"Career's Day Volunteer","organisation":"Game Academy","date":"July 2024","image":"/assets/images/covers/Volunteering/GameAcademyCareersDay.png","description":"I volunteered in NextGen | Game Academy Careers Advice Day. Working closely with a small group of students to give them CV/Portfolio feedback and career advice.","tags":["1-2-1 Workshop"]},{"role":"You're not a student - you're a junior who hasn't started yet!","organisation":"Women in Games","date":"September 2022","image":"/assets/images/covers/Volunteering/WIGYoureNotAStudent.jpg","description":"I hosted a panel with Auguste and Zoe, we chatted about the different non-typical routes a person could take to get into the industry before graduation, amongst a few other tips and tricks!","tags":["Panel Host"]},{"role":"Writing For Games - Tell Me More!","organisation":"Game Dev London","date":"September 2022","image":"/assets/images/covers/Volunteering/WritingForGamesTellMeMore.jpg","description":"I hosted a live-event panel at EGX at the community hub stage where I discussed with 4 other panelists how their different roles interact with the narrative in games they've worked on! Running a Q&A session at the end as well.","tags":["Panel Host"]},{"role":"Game Dev Volunteer & Tech Workshop Volunteer","organisation":"Ahead Partnership","date":"July 2022","image":"/assets/images/covers/Volunteering/GameDevVolunteerTechWorkshop.jpg","description":"Helped run a SUMO Game Pitch day at West Coventry Academy. Me and my colleagues guided 100~ Year 8 students as they created their own game pitches. I helped in the code workshop that ran during the morning where the students had to fix bugs in a Python game.","tags":["Workshop"]},{"role":"Guest Speaker & Game Dev Workshop","organisation":"Ahead Partnership","date":"April 2022","image":"/assets/images/covers/Volunteering/GuestSpeakerGameDevWorkshop.png","description":"I spoke to 200~ secondary school aged students on a stage about how they can use their current school subjects to help them start up a portfolio for the Tech Industry (With a Games Industry focus). Ran a Game Dev workshop representing Sumo Digital with 2 colleagues where we helped out students with Coding, doing the Art and Designing for their own prototype game! We called this a 'paper gamejam'.","tags":["Speaker"]},{"role":"Guest Speaker","organisation":"University of the Arts London","date":"April 2022","image":"/assets/images/covers/Volunteering/GuestSpeakerUAL.png","description":"I chatted to a class of students taking the Games Development course at UAL about internships and placements they can apply themselves to, as well as stuff they can do outside of university hours to help them grow their portfolio.","tags":["Speaker"]},{"role":"Careers and Networking Expo","organisation":"Women in Games","date":"March 2022","image":"/assets/images/covers/Volunteering/CareersNetworkingExpoWIG22.jpg","description":"I was at Sumo Digital Ltd 's code panel, chatting about all things programming with other amazing, talented programmers from Sumo! It was so much fun and we got some great questions from the audience!","tags":["Panel Host"]},{"role":"Guest Speaker","organisation":"Northbrook College","date":"January 2022","image":"/assets/images/covers/Volunteering/GuestSpeakerNorthbrook.png","description":"I attended the colleges' industry day to talk to students taking a Games Development course about the games industry. In my presentation, I talked about 10 different ways the students can prepare themselves for the games industry. (Visit conferences, do game jams etc!)","tags":["Speaker"]},{"role":"Guest Speaker","organisation":"School","date":"November 2021","image":"/assets/images/covers/Volunteering/GuestSpeakerSchool.jpg","description":"I attended my old high-school for a few hours and talked to students about the Games Industry, and how many different technical roles there are.","tags":["Speaker"]},{"role":"Global Conference","organisation":"Women in Games","date":"September 2021","image":"/assets/images/covers/Volunteering/WIGGlobalConference.jpg","description":"We chatted about our journey into the games industry, how much fun programming is and how education should cater to code more!","tags":["Panel Host"]},{"role":"Programming Mentor","organisation":"SideFest","date":"July 2021","image":"/assets/images/covers/Volunteering/ProgrammingMentorSidefest.png","description":"I helped college students find resources, manage their workload, give feedback and solve any problems they had with programming in a week long Gamejam using Twine.","tags":["Teaching/Mentoring"]},{"role":"Project Manager/Mentor","organisation":"Into Games","date":"July 2021","image":"/assets/images/covers/Volunteering/ProjectManagerMentorIntoGames.jpg","description":"I helped a group of college students at Access Creative College for a week with project management for designing and prototyping a mining game loop.","tags":["Teaching/Mentoring"]},{"role":"Exhibitor","organisation":"Better Business Show","date":"February 2020","image":"/assets/images/covers/Volunteering/BetterBusinessShowExhibit.jpg","description":"I showcased my college game 'Beat City' at the better business show to represent Northbrook College.","tags":["Exhibitor"]}];
+
+        function openModal(index) {
+            const experience = data[index];
+
+            document.getElementById('modal-title').innerText = experience.role;
+            document.getElementById('modal-org').innerText = experience.organisation;
+            document.getElementById('modal-dates').innerText = experience.date;
+
+            const linksContainer = document.getElementById('modal-links-container');
+            if (experience.links && experience.links.length > 0) {
+                linksContainer.innerHTML = experience.links.map(link =>
+                    `<a href="${link.url}" target="_blank" class="button is-primary" style="margin: 0.25rem;">${link.title}</a>`
+                ).join('');
+            } else {
+                linksContainer.innerHTML = ''; // Clear the container if no links are provided
+            }
+
+            const modalTags = document.getElementById('modal-tags');
+            modalTags.innerHTML = '';
+            experience.tags.forEach(tag => {
+                const span = document.createElement('span');
+                span.className = 'tag';
+                span.innerText = tag;
+                modalTags.appendChild(span);
+            });
+
+            // Fetch Markdown content and render it
+            if (experience.content) {
+                fetch(experience.content)
+                    .then(response => response.text())
+                    .then(markdown => {
+                        const htmlContent = marked.parse(markdown); // Using 'marked.js' to convert markdown
+                        document.getElementById('modal-description').innerHTML = htmlContent;
+                    })
+                    .catch(error => {
+                        console.error('Error loading content:', error);
+                        document.getElementById('modal-description').innerText = 'Content unavailable.';
+                    });
+            } else {
+                document.getElementById('modal-description').innerText = experience.description;
+            }
+
+            document.getElementById('modal').style.display = 'flex';
+        }
+
+        function closeModal(event) {
+            if (event.target.classList.contains('modal') || event.target.classList.contains('close-button')) {
+                document.getElementById('modal').style.display = 'none';
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            function adjustSubtitlePadding() {
+                const cards = document.querySelectorAll('.experience-card');
+
+                cards.forEach(card => {
+                    const title = card.querySelector('.title');
+                    const subtitle = card.querySelector('.subtitle-org');
+
+                    if (!subtitle) return; // Skip if no subtitle present
+
+                    subtitle.classList.remove('dynamic-padding'); // Reset any previous padding
+
+                    const lineHeight = parseFloat(window.getComputedStyle(title).lineHeight);
+                    const height = title.getBoundingClientRect().height;
+
+                    if (height >= lineHeight * 1.5) {
+                        subtitle.classList.add('dynamic-padding');
+                    }
+                });
+            }
+
+            adjustSubtitlePadding();
+            window.addEventListener('resize', adjustSubtitlePadding);
+        });
+  </script>
+ </body>
+</html>

@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <!-- Include Meta Tags Here -->
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, height=device-height, initial-scale=1 user-scalable=no, shrink-to-fit=no" name="viewport"/>
+  <meta content="#000000" name="theme-color">
+   <meta content="Portfolio, Programmer, GameDev" name="keywords"/>
+   <title>
+    Behram Khan | All Dev Blogs
+   </title>
+   <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+   <meta content="Behram Khan | All Dev Blogs" name="og:title"/>
+   <meta content="I'm a Gameplay Programmer!" name="og:description"/>
+   <meta content="/amy-portfolio/assets/images/meta.jpg" name="og:image"/>
+   <meta content="Behram Khan | All Dev Blogs" name="og:image:alt"/>
+   <meta content="/devblogs" name="og:url"/>
+   <meta content="https://www.facebook.com/" name="article:author"/>
+   <meta content="Behram Khan | All Dev Blogs" name="og:site_name"/>
+   <meta content="website" name="og:type"/>
+   <!-- Twitter -->
+   <meta content="summary_large_image" property="twitter:card">
+    <meta content="Behram Khan | All Dev Blogs" name="twitter:title"/>
+    <meta content="I'm a Gameplay Programmer!" name="twitter:description"/>
+    <meta content="@" name="twitter:site"/>
+    <meta content="@" name="twitter:creator"/>
+    <meta content="/amy-portfolio/assets/images/meta.jpg" name="twitter:image:src"/>
+    <!-- Search Engine -->
+    <meta content="I'm a Gameplay Programmer!" name="description"/>
+    <meta content="/amy-portfolio/assets/images/meta.jpg" name="image"/>
+    <!-- Schema.org for Google -->
+    <meta content="Behram Khan | All Dev Blogs" itemprop="name"/>
+    <meta content="Behram Khan" name="author">
+     <meta content="I'm a Gameplay Programmer!" itemprop="description"/>
+     <meta content="/amy-portfolio/assets/images/meta.jpg" itemprop="image"/>
+     <!-- Global site tag (gtag.js) - Google Analytics -->
+     <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SJTTGX1K8N">
+     </script>
+     <script>
+      window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-SJTTGX1K8N');
+     </script>
+     <title>
+      Behram Khan
+     </title>
+     <link href="assets\css\style.css" rel="stylesheet"/>
+     <script crossorigin="anonymous" src="https://kit.fontawesome.com/6a97161b76.js">
+     </script>
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+     <link href="assets\images\logo.png" rel="shortcut icon" type="image/x-icon"/>
+     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js">
+     </script>
+    </meta>
+   </meta>
+  </meta>
+ </head>
+ <body>
+  <nav aria-label="main navigation" class="navbar is-black is-fixed-top" id="navbar" role="navigation">
+   <div class="container">
+    <!-- logo or branding image on left side -->
+    <div class="navbar-brand">
+     <a class="navbar-item" href="index.html">
+      <strong>
+       Behram Khan
+      </strong>
+     </a>
+     <div class="navbar-burger" data-target="navbar-menu">
+      <span>
+      </span>
+      <span>
+      </span>
+      <span>
+      </span>
+     </div>
+    </div>
+    <!-- children of navbar-menu must be navbar-start and/or navbar-end -->
+    <div class="navbar-menu has-background-black" id="navbar-menu">
+     <!-- navbar items | left side -->
+     <!-- <div class="navbar-start">
+            </div> -->
+     <!-- navbar items | right side -->
+     <div class="navbar-end">
+      <a class="navbar-item" href="index.html">
+       HOME
+      </a>
+      <a class="navbar-item" href="index.html">
+       HIGHLIGHTS
+      </a>
+      <a class="navbar-item" href="index.html">
+       ABOUT
+      </a>
+      <a class="navbar-item" href="games.html">
+       GAMES
+      </a>
+      <a class="navbar-item" href="projects.html">
+       PROJECTS
+      </a>
+      <a class="navbar-item" href="blog.html">
+       BLOG
+      </a>
+      <div class="navbar-item has-dropdown is-hoverable">
+       <a class="navbar-link">
+        MORE
+       </a>
+       <div class="navbar-dropdown has-background-black is-left">
+        <a class="navbar-item has-text-grey-light" href="curriculum-vitae.html">
+         Curriculum Vitae
+        </a>
+        <a class="navbar-item has-text-grey-light is-active" href="devblogs.html">
+         All Dev Blogs
+        </a>
+        <a class="navbar-item has-text-grey-light" href="honours-awards.html">
+         Honours &amp; Awards
+        </a>
+        <a class="navbar-item has-text-grey-light" href="studying.html">
+         Studying
+        </a>
+        <a class="navbar-item has-text-grey-light" href="volunteering.html">
+         Volunteering
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </nav>
+  <!-- Bulma Navbar JS -->
+  <script>
+   document.addEventListener('DOMContentLoaded', function () {
+        /* Get all "navbar-burger" elements */
+        var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+        /* Check if there are any navbar burgers */
+        if ($navbarBurgers.length > 0) {
+            /* Add a click event on each of them */
+            $navbarBurgers.forEach(function ($el) {
+                $el.addEventListener('click', function () {
+                    /* Get the target from the "data-target" attribute */
+                    var target = $el.dataset.target;
+                    var $target = document.getElementById(target);
+                    /* Toggle the class on both the "navbar-burger" and the "navbar-menu" */
+                    $el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+                });
+            });
+        }
+    });
+  </script>
+  <section class="hero is-fullheight" id="blog">
+   <div class="hero-body">
+    <div class="container">
+     <h1 class="title is-2 has-text-centered">
+      Dev Blogs
+     </h1>
+     <!--<div class="buttons has-text-centered">
+                    
+                    
+                    <button class="button is-primary" onclick="scrollToSection('beat-city')">Beat City</button>
+                    
+                    <button class="button is-primary" onclick="scrollToSection('western-runner')">Western Runner</button>
+                    
+                </div>-->
+    </div>
+   </div>
+   <!-- Dev Blogs Section -->
+   <div id="dev-blogs-section">
+    <div class="container">
+     <div class="game-section" id="beat-city">
+      <h2 class="title is-3 has-text-centered" style="color: #4A90E2; border-bottom: 2px solid #4A90E2; padding-bottom: 10px;">
+       <span class="tag status-tag archived" style="margin-right: 10px; font-size: 0.4em;">
+        Archived
+       </span>
+       Beat City
+      </h2>
+      <br/>
+      <div class="columns is-centered is-multiline">
+       <div class="column is-one-quarter-desktop is-two-thirds-tablet">
+        <div class="dev-blog-card" style="background-color: transparent; box-shadow: none; border-radius: 5px; position: relative;">
+         <a class="blog-highlight-card" href="blog\final-evaluation.html" id="blog-highlight-card" target="_blank">
+          <div class="image" style="background-image: url(/assets/images/covers/Blogs/BCFinalEvaluation.png);">
+          </div>
+          <div class="content" style="padding:5px">
+           <h1 style="font-size: 0.8em">
+            <span class="tag" style="background-color: #300CC9; color: #fff; font-size: 0.6em;">
+             #12
+            </span>
+            Final Evaluation
+           </h1>
+           <div class="has-text-grey">
+            Published on
+            <span class="has-text-weight-semibold">
+             January 22, 2020
+            </span>
+           </div>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div class="column is-one-quarter-desktop is-two-thirds-tablet">
+        <div class="dev-blog-card" style="background-color: transparent; box-shadow: none; border-radius: 5px; position: relative;">
+         <a class="blog-highlight-card" href="blog\development-blog-5.html" id="blog-highlight-card" target="_blank">
+          <div class="image" style="background-image: url(/assets/images/covers/Blogs/BCDevelopment5.png);">
+          </div>
+          <div class="content" style="padding:5px">
+           <h1 style="font-size: 0.8em">
+            <span class="tag" style="background-color: #300CC9; color: #fff; font-size: 0.6em;">
+             #11
+            </span>
+            Development Blog (Week 8)
+           </h1>
+           <div class="has-text-grey">
+            Published on
+            <span class="has-text-weight-semibold">
+             January 20, 2020
+            </span>
+           </div>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div class="column is-one-quarter-desktop is-two-thirds-tablet">
+        <div class="dev-blog-card" style="background-color: transparent; box-shadow: none; border-radius: 5px; position: relative;">
+         <a class="blog-highlight-card" href="blog\development-blog-4.html" id="blog-highlight-card" target="_blank">
+          <div class="image" style="background-image: url(/assets/images/covers/Blogs/BCDevelopment4.png);">
+          </div>
+          <div class="content" style="padding:5px">
+           <h1 style="font-size: 0.8em">
+            <span class="tag" style="background-color: #300CC9; color: #fff; font-size: 0.6em;">
+             #10
+            </span>
+            Development Blog (Week 7)
+           </h1>
+           <div class="has-text-grey">
+            Published on
+            <span class="has-text-weight-semibold">
+             January 13, 2020
+            </span>
+           </div>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="has-text-centered">
+       <button class="button is-link is-small" id="beat-city-show-more" onclick="showMore('beat-city')">
+        Show More...
+       </button>
+      </div>
+      <div id="beat-city-extra-posts" style="display: none;">
+       <div class="columns is-centered is-multiline">
+        <div class="column is-one-quarter-desktop is-two-thirds-tablet">
+         <div class="dev-blog-card" style="background-color: transparent; box-shadow: none; border-radius: 5px;">
+          <a class="blog-highlight-card" href="blog\development-blog-3.html" id="blog-highlight-card" target="_blank">
+           <div class="image" style="background-image: url(/assets/images/covers/Blogs/BCDevelopment3.png);">
+           </div>
+           <div class="content" style="padding:5px">
+            <h1 style="font-size: 0.8em">
+             <span class="tag" style="background-color: #300CC9; color: #fff; font-size: 0.6em;">
+              #9
+             </span>
+             Development Blog (Week 6)
+            </h1>
+            <div class="has-text-grey">
+             Published on
+             <span class="has-text-weight-semibold">
+              January 06, 2020
+             </span>
+            </div>
+           </div>
+          </a>
+         </div>
+        </div>
+        <div class="column is-one-quarter-desktop is-two-thirds-tablet">
+         <div class="dev-blog-card" style="background-color: transparent; box-shadow: none; border-radius: 5px;">
+          <a class="blog-highlight-card" href="blog\development-blog-2.html" id="blog-highlight-card" target="_blank">
+           <div class="image" style="background-image: url(/assets/images/covers/Blogs/BCDevelopment2.jpg);">
+           </div>
+           <div class="content" style="padding:5px">
+            <h1 style="font-size: 0.8em">
+             <span class="tag" style="background-color: #300CC9; color: #fff; font-size: 0.6em;">
+              #8
+             </span>
+             Development Blog (Week 5)
+            </h1>
+            <div class="has-text-grey">
+             Published on
+             <span class="has-text-weight-semibold">
+              December 16, 2019
+             </span>
+            </div>
+           </div>
+          </a>
+         </div>
+        </div>
+        <div class="column is-one-quarter-desktop is-two-thirds-tablet">
+         <div class="dev-blog-card" style="background-color: transparent; box-shadow: none; border-radius: 5px;">
+          <a class="blog-highlight-card" href="blog\development-blog-1.html" id="blog-highlight-card" target="_blank">
+           <div class="image" style="background-image: url(/assets/images/covers/Blogs/BCDevelopment1.png);">
+           </div>
+           <div class="content" style="padding:5px">
+            <h1 style="font-size: 0.8em">
+             <span class="tag" style="background-color: #300CC9; color: #fff; font-size: 0.6em;">
+              #7
+             </span>
+             Development Blog (Week 4)
+            </h1>
+            <div class="has-text-grey">
+             Published on
+             <span class="has-text-weight-semibold">
+              December 09, 2019
+             </span>
+            </div>
+           </div>
+          </a>
+         </div>
+        </div>
+        <div class="column is-one-quarter-desktop is-two-thirds-tablet">
+         <div class="dev-blog-card" style="background-color: transparent; box-shadow: none; border-radius: 5px;">
+          <a class="blog-highlight-card" href="blog\visual-ideas-and-tests-2.html" id="blog-highlight-card" target="_blank">
+           <div class="image" style="background-image: url(/assets/images/covers/Blogs/BCVisualIdeasTests2.png);">
+           </div>
+           <div class="content" style="padding:5px">
+            <h1 style="font-size: 0.8em">
+             <span class="tag" style="background-color: #300CC9; color: #fff; font-size: 0.6em;">
+              #6
+             </span>
+             Visual Ideas &amp; Tests (Week 3)
+            </h1>
+            <div class="has-text-grey">
+             Published on
+             <span class="has-text-weight-semibold">
+              December 02, 2019
+             </span>
+            </div>
+           </div>
+          </a>
+         </div>
+        </div>
+        <div class="column is-one-quarter-desktop is-two-thirds-tablet">
+         <div class="dev-blog-card" style="background-color: transparent; box-shadow: none; border-radius: 5px;">
+          <a class="blog-highlight-card" href="blog\visual-ideas-and-tests-1.html" id="blog-highlight-card" target="_blank">
+           <div class="image" style="background-image: url(/assets/images/covers/Blogs/BCVisualIdeasTests1.png);">
+           </div>
+           <div class="content" style="padding:5px">
+            <h1 style="font-size: 0.8em">
+             <span class="tag" style="background-color: #300CC9; color: #fff; font-size: 0.6em;">
+              #5
+             </span>
+             Visual Ideas &amp; Tests (Week 2)
+            </h1>
+            <div class="has-text-grey">
+             Published on
+             <span class="has-text-weight-semibold">
+              November 25, 2019
+             </span>
+            </div>
+           </div>
+          </a>
+         </div>
+        </div>
+        <div class="column is-one-quarter-desktop is-two-thirds-tablet">
+         <div class="dev-blog-card" style="background-color: transparent; box-shadow: none; border-radius: 5px;">
+          <a class="blog-highlight-card" href="blog\specific-ideas-research.html" id="blog-highlight-card" target="_blank">
+           <div class="image" style="background-image: url(/assets/images/covers/Blogs/BCSpecificIdeasResearch.jpg);">
+           </div>
+           <div class="content" style="padding:5px">
+            <h1 style="font-size: 0.8em">
+             <span class="tag" style="background-color: #300CC9; color: #fff; font-size: 0.6em;">
+              #4
+             </span>
+             Specific Ideas Research (Week 1)
+            </h1>
+            <div class="has-text-grey">
+             Published on
+             <span class="has-text-weight-semibold">
+              November 17, 2019
+             </span>
+            </div>
+           </div>
+          </a>
+         </div>
+        </div>
+        <div class="column is-one-quarter-desktop is-two-thirds-tablet">
+         <div class="dev-blog-card" style="background-color: transparent; box-shadow: none; border-radius: 5px;">
+          <a class="blog-highlight-card" href="blog\proposal.html" id="blog-highlight-card" target="_blank">
+           <div class="image" style="background-image: url(/assets/images/covers/Blogs/BCProposal.jpg);">
+           </div>
+           <div class="content" style="padding:5px">
+            <h1 style="font-size: 0.8em">
+             <span class="tag" style="background-color: #300CC9; color: #fff; font-size: 0.6em;">
+              #3
+             </span>
+             Proposal (Week 1)
+            </h1>
+            <div class="has-text-grey">
+             Published on
+             <span class="has-text-weight-semibold">
+              November 16, 2019
+             </span>
+            </div>
+           </div>
+          </a>
+         </div>
+        </div>
+        <div class="column is-one-quarter-desktop is-two-thirds-tablet">
+         <div class="dev-blog-card" style="background-color: transparent; box-shadow: none; border-radius: 5px;">
+          <a class="blog-highlight-card" href="blog\initial-ideas.html" id="blog-highlight-card" target="_blank">
+           <div class="image" style="background-image: url(/assets/images/covers/Blogs/BCInitialIdeas.jpg);">
+           </div>
+           <div class="content" style="padding:5px">
+            <h1 style="font-size: 0.8em">
+             <span class="tag" style="background-color: #300CC9; color: #fff; font-size: 0.6em;">
+              #2
+             </span>
+             Initial Ideas (Week 1)
+            </h1>
+            <div class="has-text-grey">
+             Published on
+             <span class="has-text-weight-semibold">
+              November 15, 2019
+             </span>
+            </div>
+           </div>
+          </a>
+         </div>
+        </div>
+        <div class="column is-one-quarter-desktop is-two-thirds-tablet">
+         <div class="dev-blog-card" style="background-color: transparent; box-shadow: none; border-radius: 5px;">
+          <a class="blog-highlight-card" href="blog\general-cyberpunk-research.html" id="blog-highlight-card" target="_blank">
+           <div class="image" style="background-image: url(/assets/images/covers/Blogs/BCGeneralCyberpunkResearch.jpg);">
+           </div>
+           <div class="content" style="padding:5px">
+            <h1 style="font-size: 0.8em">
+             <span class="tag" style="background-color: #300CC9; color: #fff; font-size: 0.6em;">
+              #1
+             </span>
+             General Cyberpunk Research (Week 1)
+            </h1>
+            <div class="has-text-grey">
+             Published on
+             <span class="has-text-weight-semibold">
+              November 14, 2019
+             </span>
+            </div>
+           </div>
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="has-text-centered" style="margin-top: 20px;">
+        <button class="button is-link is-small" onclick="showLess('beat-city')">
+         Show Less
+        </button>
+       </div>
+      </div>
+     </div>
+     <div class="game-section" id="western-runner">
+      <h2 class="title is-3 has-text-centered" style="color: #4A90E2; border-bottom: 2px solid #4A90E2; padding-bottom: 10px;">
+       <span class="tag status-tag archived" style="margin-right: 10px; font-size: 0.4em;">
+        Archived
+       </span>
+       Western Runner
+      </h2>
+      <br/>
+      <div class="columns is-centered is-multiline">
+       <div class="column is-one-quarter-desktop is-two-thirds-tablet">
+        <div class="dev-blog-card" style="background-color: transparent; box-shadow: none; border-radius: 5px; position: relative;">
+         <a class="blog-highlight-card" href="blog\work-in-progress.html" id="blog-highlight-card" target="_blank">
+          <div class="image" style="background-image: url(/assets/images/covers/Blogs/WRWIP.png);">
+          </div>
+          <div class="content" style="padding:5px">
+           <h1 style="font-size: 0.8em">
+            <span class="tag" style="background-color: #FF0001; color: #fff; font-size: 0.6em;">
+             #6
+            </span>
+            Work In Progress
+           </h1>
+           <div class="has-text-grey">
+            Published on
+            <span class="has-text-weight-semibold">
+             September 16, 2019
+            </span>
+           </div>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div class="column is-one-quarter-desktop is-two-thirds-tablet">
+        <div class="dev-blog-card" style="background-color: transparent; box-shadow: none; border-radius: 5px; position: relative;">
+         <a class="blog-highlight-card" href="blog\prototyping-gameplay.html" id="blog-highlight-card" target="_blank">
+          <div class="image" style="background-image: url(/assets/images/covers/Blogs/WRProrotypingGameplay.png);">
+          </div>
+          <div class="content" style="padding:5px">
+           <h1 style="font-size: 0.8em">
+            <span class="tag" style="background-color: #FF0001; color: #fff; font-size: 0.6em;">
+             #5
+            </span>
+            Prototyping Gameplay Mechanics (...
+           </h1>
+           <div class="has-text-grey">
+            Published on
+            <span class="has-text-weight-semibold">
+             September 15, 2019
+            </span>
+           </div>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div class="column is-one-quarter-desktop is-two-thirds-tablet">
+        <div class="dev-blog-card" style="background-color: transparent; box-shadow: none; border-radius: 5px; position: relative;">
+         <a class="blog-highlight-card" href="blog\mechanics-planning.html" id="blog-highlight-card" target="_blank">
+          <div class="image" style="background-image: url(/assets/images/covers/Blogs/WRMechanicsPlanning.png);">
+          </div>
+          <div class="content" style="padding:5px">
+           <h1 style="font-size: 0.8em">
+            <span class="tag" style="background-color: #FF0001; color: #fff; font-size: 0.6em;">
+             #4
+            </span>
+            Mechanics Planning (Weeks 2 - 5)
+           </h1>
+           <div class="has-text-grey">
+            Published on
+            <span class="has-text-weight-semibold">
+             September 14, 2019
+            </span>
+           </div>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="has-text-centered">
+       <button class="button is-link is-small" id="western-runner-show-more" onclick="showMore('western-runner')">
+        Show More...
+       </button>
+      </div>
+      <div id="western-runner-extra-posts" style="display: none;">
+       <div class="columns is-centered is-multiline">
+        <div class="column is-one-quarter-desktop is-two-thirds-tablet">
+         <div class="dev-blog-card" style="background-color: transparent; box-shadow: none; border-radius: 5px;">
+          <a class="blog-highlight-card" href="blog\level-planning-asset-research.html" id="blog-highlight-card" target="_blank">
+           <div class="image" style="background-image: url(/assets/images/covers/Blogs/WRLevelDesignMaps.png);">
+           </div>
+           <div class="content" style="padding:5px">
+            <h1 style="font-size: 0.8em">
+             <span class="tag" style="background-color: #FF0001; color: #fff; font-size: 0.6em;">
+              #3
+             </span>
+             Level Planning &amp; Asset Research ...
+            </h1>
+            <div class="has-text-grey">
+             Published on
+             <span class="has-text-weight-semibold">
+              September 13, 2019
+             </span>
+            </div>
+           </div>
+          </a>
+         </div>
+        </div>
+        <div class="column is-one-quarter-desktop is-two-thirds-tablet">
+         <div class="dev-blog-card" style="background-color: transparent; box-shadow: none; border-radius: 5px;">
+          <a class="blog-highlight-card" href="blog\ideas-research.html" id="blog-highlight-card" target="_blank">
+           <div class="image" style="background-image: url(/assets/images/covers/Blogs/WRIdeasResearch.jpg);">
+           </div>
+           <div class="content" style="padding:5px">
+            <h1 style="font-size: 0.8em">
+             <span class="tag" style="background-color: #FF0001; color: #fff; font-size: 0.6em;">
+              #2
+             </span>
+             Ideas Research (Week 1)
+            </h1>
+            <div class="has-text-grey">
+             Published on
+             <span class="has-text-weight-semibold">
+              September 12, 2019
+             </span>
+            </div>
+           </div>
+          </a>
+         </div>
+        </div>
+        <div class="column is-one-quarter-desktop is-two-thirds-tablet">
+         <div class="dev-blog-card" style="background-color: transparent; box-shadow: none; border-radius: 5px;">
+          <a class="blog-highlight-card" href="blog\general-western-research.html" id="blog-highlight-card" target="_blank">
+           <div class="image" style="background-image: url(/assets/images/covers/Blogs/WRGeneralWesternResearch.jpg);">
+           </div>
+           <div class="content" style="padding:5px">
+            <h1 style="font-size: 0.8em">
+             <span class="tag" style="background-color: #FF0001; color: #fff; font-size: 0.6em;">
+              #1
+             </span>
+             General Western Research (Week 1)
+            </h1>
+            <div class="has-text-grey">
+             Published on
+             <span class="has-text-weight-semibold">
+              September 11, 2019
+             </span>
+            </div>
+           </div>
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="has-text-centered" style="margin-top: 20px;">
+        <button class="button is-link is-small" onclick="showLess('western-runner')">
+         Show Less
+        </button>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Footer begins here -->
+  <footer id="footer">
+   <!--Footer Button-->
+   <div class="container has-text-centered has-background-grey-darker footer-overlay" id="backtotop">
+    <a class="has-text-white" onclick="window.scroll(0,0)">
+     BACK TO TOP
+    </a>
+   </div>
+   <!--Footer Main Section-->
+   <div class="has-background-grey-darker footer-overlay">
+    <div class="container columns">
+     <!--Name Section-->
+     <div class="column has-text-left-desktop has-text-centered-mobile">
+      <a href="index.html">
+       <div class="columns">
+        <div class="column is-one-fifth-desktop is-one-fifth-fullhd is-one-quarter-tablet">
+         <figure class="image is-64x64">
+          <img class="is-rounded" src="assets\images\profile.png"/>
+         </figure>
+        </div>
+        <div class="column is-marginless">
+         <h5 class="has-text-grey-lighter">
+          Behram Khan
+         </h5>
+         <div class="content has-text-grey">
+          <p>
+           Hi! I'm Amy, a UK-based programmer. I love technical and creative experimentation, often participating in game jams and small projects. I...
+          </p>
+         </div>
+        </div>
+       </div>
+      </a>
+     </div>
+     <!--Social Media Section-->
+     <div class="column has-text-white">
+      <h3>
+       Follow Me
+      </h3>
+      <div class="social-media-icons">
+       <a class="has-text-grey" href="https://www.linkedin.com/in/amy-m-elliott" target="_blank">
+        <i class="fab fa-linkedin">
+        </i>
+       </a>
+       <a class="has-text-grey" href="https://www.github.com/AmyE123" target="_blank">
+        <i class="fab fa-github">
+        </i>
+       </a>
+       <a class="has-text-grey" href="https://amyme.me" target="_blank">
+        <i class="fa fa-house">
+        </i>
+       </a>
+      </div>
+     </div>
+     <!--Blog-post Section-->
+     <div class="column has-text-white">
+      <h3>
+       Recent Posts
+      </h3>
+      <li>
+       <a href="blog\navigating-my-programming-career.html">
+        Navigating My Programming Career: Insights From University
+       </a>
+      </li>
+      <li>
+       <a href="blog\i-learnt-about-sfml-cmake-heres-my-process.html">
+        I Learnt About SFML &amp; CMake. Here's My Process.
+       </a>
+      </li>
+      <li>
+       <a href="blog\collaborating-on-a-game-pitch.html">
+        Collaborating on a Game Pitch
+       </a>
+      </li>
+     </div>
+    </div>
+   </div>
+  </footer>
+  <style>
+   .hero-body {
+            background: linear-gradient(135deg, #4A90E2, #50E3C2);
+            color: white;
+        }
+
+        .dev-blog-card {
+            transition: transform 0.2s ease;
+        }
+
+            .dev-blog-card:hover {
+                transform: translateY(-5px);
+            }
+
+        .columns {
+            gap: 20px; /* Increased gap between cards */
+            justify-content: center; /* Centered the cards */
+        }
+
+        .dev-blog-card {
+            border: none;
+            width: 100%;
+        }
+
+        .game-section {
+            margin-top: 80px; /* Increased space between header and cards */
+        }
+
+            .game-section h2 .is-size-6 {
+                font-weight: normal;
+                margin-left: 10px;
+            }
+
+        .status-tag {
+            padding: 2px 8px; /* Reduced padding for a smaller appearance */
+            border-radius: 3px; /* Slightly rounded corners */
+            font-size: 0.75em; /* Smaller font size */
+            font-weight: bold; /* Keep text bold for emphasis */
+            text-transform: uppercase; /* Keep text in uppercase */
+            color: #fff; /* White text for readability */
+            display: inline-block; /* Ensures proper spacing */
+            vertical-align: middle; /* Aligns nicely with the title */
+        }
+
+            .status-tag.archived {
+                background-color: #b0b0b0; /* Grey for archived */
+            }
+
+            .status-tag.ongoing {
+                background-color: #2ecc71; /* Green for ongoing */
+            }
+
+            .status-tag.paused {
+                background-color: #3498db; /* Blue for paused */
+            }
+
+        .new-tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #e74c3c; /* Red background */
+            color: #fff; /* White text */
+            font-size: 0.7em; /* Small font size */
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 3px 6px; /* Padding for better visibility */
+            border-radius: 3px; /* Slightly rounded corners */
+            z-index: 10; /* Ensure it appears on top */
+        }
+
+        .buttons.has-text-centered {
+            display: flex;
+            justify-content: center; /* Center buttons horizontally */
+            gap: 15px; /* Space between buttons */
+            padding-top: 20px;
+        }
+
+        .button.is-primary {
+            background-color: #50E3C2; /* Vibrant greenish color */
+            color: white; /* White text for contrast */
+            border: none; /* Remove borders */
+            border-radius: 25px; /* Rounded buttons */
+            padding: 10px 20px; /* Add padding for a larger button */
+            font-size: 1rem; /* Adjust font size */
+            font-weight: bold; /* Bold text for emphasis */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            transition: all 0.3s ease; /* Smooth transition for hover effect */
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+
+            .button.is-primary:hover {
+                background-color: #4A90E2; /* Slightly darker color on hover */
+                transform: translateY(-3px); /* Lift effect on hover */
+            }
+  </style>
+  <script>
+   function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+        }
+
+        function showMore(id) {
+            const extraPosts = document.getElementById(`${id}-extra-posts`);
+            const showMoreButton = document.getElementById(`${id}-show-more`);
+            extraPosts.style.display = "block";
+            showMoreButton.style.display = "none";
+        }
+
+        function showLess(id) {
+            const extraPosts = document.getElementById(`${id}-extra-posts`);
+            const showMoreButton = document.getElementById(`${id}-show-more`);
+            extraPosts.style.display = "none";
+            showMoreButton.style.display = "inline-block";
+        }
+  </script>
+ </body>
+</html>
