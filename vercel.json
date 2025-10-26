@@ -1,3 +1,25 @@
 {
-  "outputDirectory": "."
+  "outputDirectory": ".",
+  "rewrites": [
+    {
+      "source": "/admin/:path*",
+      "destination": "/app/admin/:path*"
+    },
+    {
+      "source": "/api/:path*",
+      "destination": "/app/api/:path*"
+    },
+    {
+      "source": "/blogs/:path*",
+      "destination": "/app/blogs/:path*"
+    },
+    {
+      "source": "/projects/:path*",
+      "destination": "/app/projects/:path*"
+    },
+    {
+      "source": "/games/:path*",
+      "destination": "/app/games/:path*"
+    }
+  ]
 }
