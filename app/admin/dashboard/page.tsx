@@ -1,23 +1,32 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
-import { signOut } from "@/lib/supabase/auth"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { BlogsList } from "@/components/admin/blogs-list"
-import { ProjectsList } from "@/components/admin/projects-list"
-import { GamesList } from "@/components/admin/games-list"
+import { Alert, AlertDescription } from "@/components/ui/alert"
 
 export default function AdminDashboard() {
   const router = useRouter()
   const [activeTab, setActiveTab] = useState("blogs")
+  const [mounted, setMounted] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   const handleLogout = async () => {
-    await signOut()
-    router.push("/admin/login")
+    try {
+      await fetch("/api/auth/logout", { method: "POST" })
+      router.push("/admin/login")
+    } catch (err) {
+      setError("Logout failed")
+    }
   }
+
+  if (!mounted) return null
 
   return (
     <div className="min-h-screen bg-background">
@@ -33,6 +42,12 @@ export default function AdminDashboard() {
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 py-8">
+        {error && (
+          <Alert variant="destructive" className="mb-4">
+            <AlertDescription>{error}</AlertDescription>
+          </Alert>
+        )}
+
         <Tabs value={activeTab} onValueChange={setActiveTab}>
           <TabsList className="grid w-full grid-cols-3">
             <TabsTrigger value="blogs">Blogs</TabsTrigger>
@@ -47,7 +62,7 @@ export default function AdminDashboard() {
                 <Button>Create New Blog</Button>
               </Link>
             </div>
-            <BlogsList />
+            <p className="text-muted-foreground">Blog management coming soon...</p>
           </TabsContent>
 
           <TabsContent value="projects" className="space-y-4">
@@ -57,7 +72,7 @@ export default function AdminDashboard() {
                 <Button>Create New Project</Button>
               </Link>
             </div>
-            <ProjectsList />
+            <p className="text-muted-foreground">Project management coming soon...</p>
           </TabsContent>
 
           <TabsContent value="games" className="space-y-4">
@@ -67,7 +82,7 @@ export default function AdminDashboard() {
                 <Button>Create New Game</Button>
               </Link>
             </div>
-            <GamesList />
+            <p className="text-muted-foreground">Game management coming soon...</p>
           </TabsContent>
         </Tabs>
       </main>

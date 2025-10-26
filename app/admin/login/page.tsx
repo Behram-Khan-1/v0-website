@@ -1,10 +1,8 @@
 "use client"
 
 import type React from "react"
-
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
-import { signInWithEmail } from "@/lib/supabase/auth"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -16,24 +14,40 @@ export default function AdminLoginPage() {
   const [password, setPassword] = useState("")
   const [error, setError] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault()
     setError(null)
     setLoading(true)
 
-    const { data, error: authError } = await signInWithEmail(email, password)
+    try {
+      const response = await fetch("/api/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      })
 
-    if (authError) {
-      setError(authError.message)
-      setLoading(false)
-      return
-    }
+      const data = await response.json()
 
-    if (data.user) {
+      if (!response.ok) {
+        setError(data.error || "Login failed")
+        setLoading(false)
+        return
+      }
+
       router.push("/admin/dashboard")
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "An error occurred")
+      setLoading(false)
     }
   }
+
+  if (!mounted) return null
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-background p-4">
