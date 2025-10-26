@@ -1,0 +1,14 @@
+-- Add year and tags columns to existing tables
+ALTER TABLE blogs ADD COLUMN IF NOT EXISTS year TEXT;
+ALTER TABLE blogs ADD COLUMN IF NOT EXISTS tags TEXT[] DEFAULT ARRAY[]::TEXT[];
+
+ALTER TABLE projects ADD COLUMN IF NOT EXISTS year TEXT;
+ALTER TABLE projects ADD COLUMN IF NOT EXISTS tags TEXT[] DEFAULT ARRAY[]::TEXT[];
+
+ALTER TABLE games ADD COLUMN IF NOT EXISTS year TEXT;
+ALTER TABLE games ADD COLUMN IF NOT EXISTS tags TEXT[] DEFAULT ARRAY[]::TEXT[];
+
+-- Create indexes for tags
+CREATE INDEX IF NOT EXISTS idx_blogs_tags ON blogs USING GIN(tags);
+CREATE INDEX IF NOT EXISTS idx_projects_tags ON projects USING GIN(tags);
+CREATE INDEX IF NOT EXISTS idx_games_tags ON games USING GIN(tags);

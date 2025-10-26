@@ -6,6 +6,8 @@ import { getSupabaseClient } from "@/lib/supabase/client"
 import { RichEditor, type ContentBlock } from "@/components/admin/rich-editor"
 import { Button } from "@/components/ui/button"
 import { Alert, AlertDescription } from "@/components/ui/alert"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
 
 export default function EditorPage() {
   const router = useRouter()
@@ -16,6 +18,8 @@ export default function EditorPage() {
   const [title, setTitle] = useState("")
   const [excerpt, setExcerpt] = useState("")
   const [featuredImage, setFeaturedImage] = useState("")
+  const [year, setYear] = useState("")
+  const [tagsInput, setTagsInput] = useState("")
   const [blocks, setBlocks] = useState<ContentBlock[]>([])
   const [isDraft, setIsDraft] = useState(true)
   const [loading, setLoading] = useState(id !== "new")
@@ -46,6 +50,8 @@ export default function EditorPage() {
       setTitle(data.title)
       setExcerpt(data.excerpt || "")
       setFeaturedImage(data.featured_image_url || "")
+      setYear(data.year || "")
+      setTagsInput(data.tags ? data.tags.join(", ") : "")
       setBlocks(data.content || [])
       setIsDraft(data.is_draft)
     }
@@ -72,12 +78,18 @@ export default function EditorPage() {
     const supabase = getSupabaseClient()
     const slug = generateSlug(title)
     const tableName = type + "s"
+    const tags = tagsInput
+      .split(",")
+      .map((tag) => tag.trim())
+      .filter((tag) => tag.length > 0)
 
     const payload = {
       title,
       slug,
       excerpt,
       featured_image_url: featuredImage,
+      year,
+      tags,
       content: blocks,
       is_draft: !publish,
       updated_at: new Date().toISOString(),
@@ -123,6 +135,29 @@ export default function EditorPage() {
             <AlertDescription>{error}</AlertDescription>
           </Alert>
         )}
+
+        <div className="space-y-4 mb-6 p-4 border rounded-lg bg-muted/50">
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <Label htmlFor="year">Year / Date</Label>
+              <Input
+                id="year"
+                placeholder="e.g., 2024, April 2024, Ongoing"
+                value={year}
+                onChange={(e) => setYear(e.target.value)}
+              />
+            </div>
+            <div>
+              <Label htmlFor="tags">Tags (comma-separated)</Label>
+              <Input
+                id="tags"
+                placeholder="e.g., Solo, Tools, UGC"
+                value={tagsInput}
+                onChange={(e) => setTagsInput(e.target.value)}
+              />
+            </div>
+          </div>
+        </div>
 
         <RichEditor
           title={title}
