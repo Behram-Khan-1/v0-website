@@ -1,6 +1,8 @@
+// app/lib/supabase/auth.ts
 import { getSupabaseClient } from "./client"
 import { getSupabaseServer } from "./server"
 
+// Your existing functions remain the same...
 export async function signInWithEmail(email: string, password: string) {
   const supabase = getSupabaseClient()
   const { data, error } = await supabase.auth.signInWithPassword({
